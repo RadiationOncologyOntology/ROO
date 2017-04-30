@@ -215,7 +215,7 @@
     <!-- http://www.cancerdata.org/roo/100020 -->
 
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100020">
-        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100022"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100082"/>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16960"/>
         <rdfs:range rdf:resource="http://purl.bioontology.org/ontology/STY/T191"/>
         <dc:creator>Andre Dekker</dc:creator>
@@ -1011,21 +1011,7 @@
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100248">
         <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100214"/>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94488"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100027"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000015"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100042"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94488"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">has_body_height</rdfs:label>
     </owl:ObjectProperty>
@@ -1037,21 +1023,7 @@
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100249">
         <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100214"/>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81328"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100027"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000009"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100042"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81328"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">has_body_weight</rdfs:label>
     </owl:ObjectProperty>
@@ -7781,6 +7753,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UO_0000099 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000095"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/UO</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Liter</rdfs:label>
+        <skos:definition xml:lang="en">A volume unit which is equal to one millionth of a cubic meter or 10^[-9] m^[3], or to 1 ml.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UO_0000127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000127">
@@ -11373,6 +11356,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     
 
 
+    <!-- http://www.cancerdata.org/roo/100011 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100011">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100012"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100352"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Delivered Radiotherapy Total Treatment Dose</rdfs:label>
+        <skos:definition xml:lang="en">The total absorbed radiation dose delivered to a tumor in a complete radiotherapy treatment.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.cancerdata.org/roo/100012 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100012">
@@ -11560,10 +11555,44 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/100056 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100056">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C49236"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Radiotherapy Fraction</rdfs:label>
         <skos:definition xml:lang="en">A therapeutic procedure or session in which part of the full radiotherapy course is delivered. Commonly  radiotherapy is given in daily fractions. This allows healthy cells to recover between fractions.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100057 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100057">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100013"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100352"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Prescribed Radiotherapy Total Treatment Dose</rdfs:label>
+        <skos:definition xml:lang="en">The total absorbed radiation dose prescribed to a tumor in a complete radiotherapy treatment.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100058 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100058">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100056"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">First Radiotherapy fraction</rdfs:label>
+        <skos:definition xml:lang="en">The first fraction of a radiotherapy treatment.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100059 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100059">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100056"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Last Radiotherapy fraction</rdfs:label>
+        <skos:definition xml:lang="en">The last fraction of a radiotherapy treatment.</skos:definition>
     </owl:Class>
     
 
