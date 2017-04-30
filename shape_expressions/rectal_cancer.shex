@@ -7,8 +7,6 @@ PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX icd:<http://purl.bioontology.org/ontology/ICD10/>
 PREFIX uo:<http://purl.obolibrary.org/obo/>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-prefix shex: <http://www.w3.org/2013/ShEx/ns#>
-prefix mySet:<http://SP4-JOHAN.ad.maastro.nl/rdf/>
 
 start = <http://johanvansoest.nl/shex/PatientShape>
 
