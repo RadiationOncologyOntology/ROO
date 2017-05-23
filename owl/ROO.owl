@@ -1662,6 +1662,26 @@
     
 
 
+    <!-- http://www.cancerdata.org/roo/100331 -->
+
+    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100331">
+        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100022"/>
+        <dc:creator>Johan van Soest</dc:creator>
+        <rdfs:label xml:lang="nl">has_recurrence_status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100332 -->
+
+    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100332">
+        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100022"/>
+        <dc:creator>Johan van Soest</dc:creator>
+        <rdfs:label xml:lang="nl">has_recurrence_time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cancerdata.org/roo/100343 -->
 
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100343">

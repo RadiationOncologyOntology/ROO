@@ -377,7 +377,7 @@ map:lrStatusMapping a d2rq:TranslationTable;
 #link the vitalStatus resource to the patient resource
 map:lrStatusPatient a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:patient;
-	d2rq:property roo:100028;
+	d2rq:property roo:100331;
 	d2rq:refersToClassMap map:localRecurrenceStatusResource;
 	d2rq:condition "patients.lrstatus IS NOT NULL OR patients.lrstatus != ''";
 	.
@@ -418,7 +418,7 @@ map:localRecurrenceInfoResourceUnit a d2rq:ClassMap;
 #link the survival info to patient
 map:patientLRStatusPatient a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:patient;
-	d2rq:property roo:100026;
+	d2rq:property roo:100332;
 	d2rq:refersToClassMap map:localRecurrenceInfoResource;
 	.
 	
