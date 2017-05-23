@@ -350,7 +350,93 @@ map:sbrtSurvivalLink a d2rq:PropertyBridge;
 	d2rq:property time:after;
 	d2rq:refersToClassMap map:sbrtResource;
 	.
+
+##################
+# add LR status
+##################
+#create an vitalStatus resource
+map:localRecurrenceStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrStatus_C0045I@@patients.cat_id@@";
+	.
+
+# Link to the vitalStatus object of the NCI thesaurus
+map:patientLRStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "patients.lrstatus";
+	d2rq:translateWith map:lrStatusMapping;
+	.
 	
+#create mapping between vital status and NCI code
+map:lrStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "no local recurrence"; d2rq:rdfValue ncit:C40413; ];
+    d2rq:translation [ d2rq:databaseValue "local recurrence"; d2rq:rdfValue ncit:C55072; ];
+    .
+
+#link the vitalStatus resource to the patient resource
+map:lrStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100028;
+	d2rq:refersToClassMap map:localRecurrenceStatusResource;
+	d2rq:condition "patients.lrstatus IS NOT NULL OR patients.lrstatus != ''";
+	.
+
+##################
+# add local recurrence (and time) since treatment
+##################
+#create object when local control/recurrence was determined
+map:localRecurrenceInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrFU_@@rt.id@@";
+	d2rq:class roo:100328;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+
+#add the value property to the local recurrence resource
+map:survivalInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100042;
+	d2rq:sqlExpression "(((DATE_PART('year', patients.lastfollowupdate) - DATE_PART('year', rt.startofrt))*12) + (DATE_PART('month', patients.lastfollowupdate) - DATE_PART('month', rt.startofrt)))";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the local recurrence resource
+map:localRecurrenceInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:localRecurrenceInfoResourceUnit;
+	.
+	
+#create for local recurrence status units
+map:localRecurrenceInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitLRFU_C0045I@@rt.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the survival info to patient
+map:patientLRStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the survival info to LR Status
+map:LRVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the survival info to the treatment
+map:treatmentLRLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:sbrtResource;
+	.
+
+
 ############################################
 # FEV1 as volumetric measure
 ############################################
