@@ -425,7 +425,7 @@ map:patientLRStatusPatient a d2rq:PropertyBridge;
 #link the survival info to LR Status
 map:LRVitalStatus a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
-	d2rq:property roo:100026;
+	d2rq:property roo:100332;
 	d2rq:refersToClassMap map:localRecurrenceInfoResource;
 	.
 	
