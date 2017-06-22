@@ -1682,6 +1682,16 @@
     
 
 
+    <!-- http://www.cancerdata.org/roo/100337 -->
+
+    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100337">
+        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100228"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">has_chemo_end_date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cancerdata.org/roo/100343 -->
 
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100343">
