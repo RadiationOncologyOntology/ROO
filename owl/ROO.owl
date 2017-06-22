@@ -2582,6 +2582,18 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade</rdfs:label>
+        <skos:altLabel xml:lang="en">TRG</skos:altLabel>
+        <skos:definition xml:lang="en">A pathologic grading system used to evaluate the tumor response to preoperative chemotherapy and radiation.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197">
@@ -18850,6 +18862,200 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">FUMIR Regimen</rdfs:label>
         <skos:definition xml:lang="en">Regimen combining Mitomycin and Fluorouracil (with concurrent radiation)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100622 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100622">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade - Dworak</rdfs:label>
+        <skos:definition xml:lang="en">Tumor regression grade according to the Dworak system.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100623 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100623">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade - Mandard</rdfs:label>
+        <skos:definition xml:lang="en">Tumor regression grade according to the Mandard system.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100624 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100624">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100625"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG1 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100625 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100625">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Complete Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100626 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100626">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Near Complete Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100627 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100627">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Moderate Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100628 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100628">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Minimal Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100629 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100629">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">No Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100630 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100630">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100626"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG2 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100631 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100631">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100627"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG3 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100632 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100632">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100628"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG4 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100633 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100633">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100629"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG5 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100634 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100634">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100629"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG0 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100635 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100635">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100628"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG1 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100636 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100636">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100627"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG2 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100637 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100637">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100626"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG3 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100638 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100638">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100625"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG4 - Dworak</rdfs:label>
     </owl:Class>
     
 
