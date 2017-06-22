@@ -2582,6 +2582,37 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FOLFOX Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">CF/5-FU/L-OHP</skos:altLabel>
+        <skos:altLabel xml:lang="en">Fluorouracil/Leucovorin Calcium/Oxaliplatin</skos:altLabel>
+        <skos:definition xml:lang="en">One of several chemotherapy regimens that include leucovorin calcium (calcium folinate), 5-fluorouracil and oxaliplatin and which may be used in the treatment of advanced-stage and metastatic colorectal cancer. FOLFOX regimens differ in agent dosing and administration schedule and include FOLFOX 4, FOLFOX 6, modified FOLFOX 6 (mFOLFOX 6) and FOLFOX 7.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112376 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112376">
@@ -2628,6 +2659,16 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Oxaliplatin</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C118286 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C118286">
@@ -2647,6 +2688,17 @@
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25681"/>
         <rdfs:label xml:lang="en">Tumor Size</rdfs:label>
         <skos:definition xml:lang="en">The size of a tumor in its greatest dimension.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15697"/>
+        <rdfs:isDefinedBy xml:lang="en">http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Chemotherapy Regimen or Agent Combination</rdfs:label>
+        <skos:definition xml:lang="en">A combination of multiple drugs used in standard or clinical trial treatments. The order, dosage or dosing interval of the individual ingredients may not be specified.</skos:definition>
     </owl:Class>
     
 
@@ -3210,6 +3262,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Capecitabine</rdfs:label>
+        <skos:altLabel xml:lang="en">Xeloda</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000">
@@ -3241,6 +3304,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Diagnostic Procedure</rdfs:label>
         <skos:definition xml:lang="en">Any procedure or test to diagnose a disease or disorder.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1804 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1804">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Raltitrexed</rdfs:label>
+        <skos:altLabel xml:lang="en">Tomudex</skos:altLabel>
+        <skos:definition xml:lang="en">An anticancer drug that stops tumor cells from growing by blocking the ability of cells to make DNA. It belongs to the family of drugs called thymidylate synthase inhibitors.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T195"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mitomycin</rdfs:label>
+        <skos:altLabel xml:lang="en">Mitomycin-C</skos:altLabel>
+        <skos:definition xml:lang="en">A methylazirinopyrroloindoledione antineoplastic antibiotic isolated from the bacterium Streptomyces caespitosus and other Streptomyces bacterial species. Bioreduced mitomycin C generates oxygen radicals, alkylates DNA, and produces interstrand DNA cross-links, thereby inhibiting DNA synthesis. Preferentially toxic to hypoxic cells, mitomycin C also inhibits RNA and protein synthesis at high concentrations.</skos:definition>
     </owl:Class>
     
 
@@ -4668,6 +4755,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Fluorouracil</rdfs:label>
+        <skos:altLabel xml:lang="en">5-FU</skos:altLabel>
+        <skos:altLabel xml:lang="en">5-Fluorouracil</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50646 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50646">
@@ -5109,6 +5208,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Leucovorin Calcium</rdfs:label>
+        <skos:altLabel xml:lang="en">Calcium Folinate</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61614 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61614">
@@ -5169,6 +5279,34 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63388 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63388">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FU-LV Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">Fluorouracil-Leucovorin Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Mayo Clinic Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Roswell Park Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">de Gramont Regimen</skos:altLabel>
+        <skos:definition xml:lang="en">A regimen consisting of fluorouracil and leucovorin, used in both the adjuvant and metastatic disease setting, for the treatment of colorectal cancer. This regimen is also combined with radiation for the treatment of gastric and esophageal cancer.
+The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are different in the doses and times at which the two drugs are given.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63536 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63536">
@@ -5176,6 +5314,72 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Study</rdfs:label>
         <skos:definition xml:lang="en">A detailed examination, analysis, or critical inspection of a subject designed to discover facts about it.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218"/>
+        <rdfs:label xml:lang="en">Chemotherapy Regimen Used to Treat Colorectal Carcinoma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63593 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63593">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FOLFIRI Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">FOLFIRI</skos:altLabel>
+        <skos:altLabel xml:lang="en">Folinic Acid-Fluorouracil-Irinotecan Regimen</skos:altLabel>
+        <skos:definition xml:lang="en">A chemotherapy regimen consisting of leucovorin calcium (calcium folinate), 5-fluorouracil, and irinotecan used in the treatment of advanced-stage and metastatic colorectal cancer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63597 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63597">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">XELOX regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">XELOX</skos:altLabel>
+        <skos:altLabel xml:lang="en">Xeloda-Oxaliplatin Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Xeloda/Oxalipaltin</skos:altLabel>
+        <skos:definition xml:lang="en">A regimen consisting of capecitabine and oxaliplatin used for the treatment of advanced stage colorectal cancer. This regimen differs from a similar regimen, CAPOX, with regards to the dosing schedule for oxaliplatin.</skos:definition>
     </owl:Class>
     
 
@@ -18623,6 +18827,29 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Metabolic Tumor Volume</rdfs:label>
         <skos:definition xml:lang="en">Metabolic tumor volume (MTV) is the volume of tumor tissues with increased FDG uptake measured by an 18F-FDG PET scan.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100620 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100620">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">FUMIR Regimen</rdfs:label>
+        <skos:definition xml:lang="en">Regimen combining Mitomycin and Fluorouracil (with concurrent radiation)</skos:definition>
     </owl:Class>
     
 
