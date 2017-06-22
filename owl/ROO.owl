@@ -2671,6 +2671,33 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4-Dimensional Conformal Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">3-Dimensional conformal radiation therapy that is designed to compensate for motion of the tumor and surrounding normal tissue during each treatment session.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116441 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116441">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4-Dimensional Computed Tomography</rdfs:label>
+        <skos:altLabel xml:lang="en">4DCT</skos:altLabel>
+        <skos:altLabel xml:lang="en">RC-CT</skos:altLabel>
+        <skos:altLabel xml:lang="en">Respiratory Correlated CT</skos:altLabel>
+        <skos:definition xml:lang="en">Computed tomography scans designed to minimize motion artifacts. 4DCT can be accomplished by collecting data for the duration of the patient&apos;s respiratory cycle and by oversampling CT data acquisition at each slice.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181">
@@ -2759,6 +2786,19 @@
         <rdfs:label xml:lang="en">Supratentorial Brain</rdfs:label>
         <skos:definition xml:lang="en">The part of the brain above the tentorium cerebellum. (NCI)
 For most authors, this is the cerebral hemispheres plus the basal ganglia, but most clinicians do not include the basal ganglia.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125609 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125609">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4D PET Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">4D Gated PET Scan</skos:altLabel>
+        <skos:definition xml:lang="en">Positron emission tomography imaging collected over time. It is designed to capture the internal movement of organs and the metabolism of the tumor. It creates the most complete and accurate information on the tumor and provides information how the tumor moves with breathing and other body motions.</skos:definition>
     </owl:Class>
     
 
@@ -3211,6 +3251,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Patient</rdfs:label>
         <skos:definition xml:lang="en">A person who receives medical attention, care, or treatment, or who is registered with medical professional or institution with the purpose to receive medical care when necessary.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18020"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Positron Emission Tomography</rdfs:label>
+        <skos:altLabel xml:lang="en">PET Scan</skos:altLabel>
+        <skos:definition xml:lang="en">A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.</skos:definition>
     </owl:Class>
     
 
@@ -19056,6 +19108,75 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">TRG4 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100639 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100639">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25218"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Motion Management Procedure</rdfs:label>
+        <skos:definition xml:lang="en">A procedure in which internal motion is managed of organs and/or regions of interest (e.g. tumors) during radiotherapy or imaging or another therapeutic or imaging procedure. This management can be implicit in the procedure (e.g. 4D-CT) are added to any procedure (e.g. breath hold). The motion can be due to respiration, circulation, peristalsis, swallowing, etc. Both procedures to prevent motion (e.g. breath hold) and/or deal with motion (e.g. gating) are part of this class of concepts. Not meant here are procedures meant to deal with the overal motion of the patient (e.g immobilisation).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100644 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100644">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100645"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Deep Inspiration Breath-Hold</rdfs:label>
+        <skos:altLabel xml:lang="en">DIBH</skos:altLabel>
+        <skos:definition xml:lang="en">Deep Inspiration Breath-Hold is mostly used in radiotherapy and involves the patient inspiring to a specified threshold and then holding that level of inspiration during the delivery of radiation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100645 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100645">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Breathing Modification Procedure</rdfs:label>
+        <skos:definition xml:lang="en">A class of procedures where respiratory motion is managed by patients temporarily changing the way they breath, either forced or voluntary and for either therapeutic or diagnostic procedures.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100646 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100646">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100645"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Abdominal Compression</rdfs:label>
+        <skos:definition xml:lang="en">A procedure which compresses the abdomen and thereby forcing the patient to use shallow breathing. This in turn reduces the motion associated with respiration.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100647 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100647">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Respiratory Gated Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">In respiratory gated radiation therapy the beam is switched on when the tumor is in the right phase of the respiration.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100648 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100648">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Tumor Tracking Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">In tumor tracking radiation therapy the beam is always on and follows the tumor during respiration. It often involves implanting fiducial markers into the tumor.</skos:definition>
     </owl:Class>
     
 
