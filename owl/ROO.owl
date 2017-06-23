@@ -2663,8 +2663,8 @@
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20Y4"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Low Anterior Resection</rdfs:label>
         <skos:definition xml:lang="en">Resection of the rectum for cancer through an incision in the lower abdomen.</skos:definition>
@@ -2983,6 +2983,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Taxane Compound</rdfs:label>
         <skos:definition xml:lang="en">A type of drug that blocks cell growth by stopping mitosis (cell division). Taxanes interfere with microtubules (cellular structures that help move chromosomes during mitosis). They are used to treat cancer. A taxane is a type of mitotic inhibitor and a type of antimicrotubule agent.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15211 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15211">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Colostomy</rdfs:label>
+        <skos:definition xml:lang="en">An opening into the colon from the outside of the body. A colostomy provides a new path for waste material to leave the body after part of the colon has been removed.</skos:definition>
     </owl:Class>
     
 
@@ -4148,7 +4160,6 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3367 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3367">
-        <owl:equivalentClass rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T077"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Finding</rdfs:label>
@@ -6496,6 +6507,16 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/X20Y4 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X20Y4">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anterior resection of rectum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/X7A6g -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X7A6g">
@@ -6556,6 +6577,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/Xa1oS -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/Xa1oS">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Excision of lesion of rectum</rdfs:label>
+        <skos:definition xml:lang="en">Local excision</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/4I28 -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/4I28">
@@ -6563,6 +6595,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Saliva sample</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/77201 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/77201">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Hartmann&apos;s procedure</rdfs:label>
+        <skos:definition xml:lang="en">Rectosigmoidectomy, closure of rectal stump and exteriorisation of bowel.</skos:definition>
     </owl:Class>
     
 
@@ -19265,6 +19308,19 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Tumor Tracking Radiation Therapy</rdfs:label>
         <skos:definition xml:lang="en">In tumor tracking radiation therapy the beam is always on and follows the tumor during respiration. It often involves implanting fiducial markers into the tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100660 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100660">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Partial Mesorectal Excision</rdfs:label>
+        <skos:altLabel xml:lang="en">PME</skos:altLabel>
+        <skos:definition xml:lang="en">Surgical procedure for rectosigmoid and upper rectal cancers where the rectum is transected 5 cm below the tumor.</skos:definition>
     </owl:Class>
     
 
