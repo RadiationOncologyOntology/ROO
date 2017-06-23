@@ -2778,6 +2778,19 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Pathologic Complete Response</rdfs:label>
+        <skos:altLabel xml:lang="en">Complete Pathological Response</skos:altLabel>
+        <skos:altLabel xml:lang="en">pCR</skos:altLabel>
+        <skos:definition xml:lang="en">The disappearance of all signs of cancer, supported by pathological examination.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12512 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12512">
@@ -4838,6 +4851,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Medical Contraindication</rdfs:label>
         <skos:definition xml:lang="en">A symptom or medical condition that makes a particular treatment or procedure inadvisable because a person is likely to have a bad reaction.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Disease Response</rdfs:label>
+        <skos:altLabel xml:lang="en">Response</skos:altLabel>
+        <skos:definition xml:lang="en">The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.</skos:definition>
     </owl:Class>
     
 
