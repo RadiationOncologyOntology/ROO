@@ -2663,7 +2663,6 @@
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20Y4"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Low Anterior Resection</rdfs:label>
@@ -2865,6 +2864,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T020"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stoma</rdfs:label>
+        <skos:definition xml:lang="en">A surgically created opening from an area inside the body to the outside.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1411 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1411">
@@ -2983,18 +2993,6 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Taxane Compound</rdfs:label>
         <skos:definition xml:lang="en">A type of drug that blocks cell growth by stopping mitosis (cell division). Taxanes interfere with microtubules (cellular structures that help move chromosomes during mitosis). They are used to treat cancer. A taxane is a type of mitotic inhibitor and a type of antimicrotubule agent.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15211 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15211">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Colostomy</rdfs:label>
-        <skos:definition xml:lang="en">An opening into the colon from the outside of the body. A colostomy provides a new path for waste material to leave the body after part of the colon has been removed.</skos:definition>
     </owl:Class>
     
 
@@ -5090,6 +5088,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53288 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53288">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C21514"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Temporary</rdfs:label>
+        <skos:definition xml:lang="en">Not permanent; not lasting; lacking continuity or regularity.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53781 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53781">
@@ -6507,12 +6516,34 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/X20XN -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X20XN">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Colostomy operation</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation or closure of an opening between the colon and the surface of the body.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/X20Y4 -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X20Y4">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Anterior resection of rectum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/X78tq -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X78tq">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C21514"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Permanent</rdfs:label>
     </owl:Class>
     
 
@@ -6553,6 +6584,51 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/XC0fs -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XC0fs">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Colostomy - stoma</rdfs:label>
+        <skos:altLabel xml:lang="en">Colostomy</skos:altLabel>
+        <skos:definition xml:lang="en">A stoma to the colon.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DI -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DI">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Construction of temporary colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation of a temporary colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DJ -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DJ">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Construction of permanent colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation of a permanent colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DK -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DK">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Closure of colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical closure of a colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/Xa0fY -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/Xa0fY">
@@ -6581,6 +6657,7 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/Xa1oS">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Excision of lesion of rectum</rdfs:label>
         <skos:definition xml:lang="en">Local excision</skos:definition>
@@ -6603,6 +6680,7 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/77201">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Hartmann&apos;s procedure</rdfs:label>
         <skos:definition xml:lang="en">Rectosigmoidectomy, closure of rectal stump and exteriorisation of bowel.</skos:definition>
