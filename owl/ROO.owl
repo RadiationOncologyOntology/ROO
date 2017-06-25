@@ -6700,6 +6700,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/5146 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/5146">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C101642"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Radiotherapy - postoperative control</rdfs:label>
+        <skos:definition xml:lang="en">A postoperative course of radiotherapy.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/77201 -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/77201">
