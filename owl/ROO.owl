@@ -2464,6 +2464,17 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C103267 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C103267">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Narrow Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">An indication that a surgical margin is in close proximity to the excised tumor.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104933 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104933">
@@ -2729,6 +2740,28 @@
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">SBRT</skos:altLabel>
         <skos:definition xml:lang="en">Stereotactic radiation therapy in which one or several maximum dose radiation treatments are delivered targeting cancers of the body, excluding the brain or spine.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120274 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120274">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Macroscopically Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">The presence of macroscopically visible residual tumor at the edge of a surgically excised specimen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120277 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120277">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grossly Negative and Microscopically Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">The presence of microscopically visible residual tumor at the edge of a surgically excised specimen that otherwise looks macroscopically normal.</skos:definition>
     </owl:Class>
     
 
@@ -3796,6 +3829,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Margin</rdfs:label>
+        <skos:definition xml:lang="en">A boundary line or the area immediately inside the boundary.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25613 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25613">
@@ -4354,6 +4398,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331">
@@ -4395,6 +4450,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Doxorubicin</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">An anthracycline antibiotic with antineoplastic activity. Doxorubicin, isolated from the bacterium Streptomyces peucetius var. caesius, is the hydroxylated congener of daunorubicin. Doxorubicin intercalates between base pairs in the DNA helix, thereby preventing DNA replication and ultimately inhibiting protein synthesis. Additionally, doxorubicin inhibits topoisomerase II which results in an increased and stabilized cleavable enzyme-DNA linked complex during DNA replication and subsequently prevents the ligation of the nucleotide strand after double-strand breakage. Doxorubicin also forms oxygen free radicals resulting in cytotoxicity secondary to lipid peroxidation of cell membrane lipids; the formation of oxygen free radicals also contributes to the toxicity of the anthracycline antibiotics, namely the cardiac and cutaneous vascular effects.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46085 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46085">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Circumferential Resection Margin</rdfs:label>
+        <skos:definition xml:lang="en">The distance between the radial extent of the tumor and the surgical incision used to excise the tumor. This distance is measured microscopically.</skos:definition>
     </owl:Class>
     
 
@@ -4452,6 +4518,28 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Cancer TNM Finding</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A cancer finding in the TNM system that is relevant to the diagnosis of cancer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">Indicates the presence of tumor cells at the edge of a surgically excised specimen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48621 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48621">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Negative Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">Indicates the absence of tumor cells at the edge of a surgically excised specimen.</skos:definition>
     </owl:Class>
     
 
@@ -12306,7 +12394,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/100071 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100071">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Radiotherapy Margin</rdfs:label>
         <skos:definition xml:lang="en">A radiotherapy margin provides a buffer in the delineation of tissues to account for uncertainties. (ICRU 83)</skos:definition>
