@@ -3067,6 +3067,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15329"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Lymphadenectomy</rdfs:label>
+        <skos:altLabel xml:lang="en">Lymph Node Dissection</skos:altLabel>
+        <skos:definition xml:lang="en">Surgical removal of lymph nodes, usually done to assess the spread of cancer.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15305 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15305">
@@ -4905,6 +4917,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Pathologic Primary Tumor TNM Finding</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A pathologic finding about one or more characteristics of a specific cancer, following the rules of the TNM classification system as they pertain to staging of the primary tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Regional Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Surgical removal of the lymph nodes located in a particular anatomic region. This procedure is commonly performed as a component of cancer staging.</skos:definition>
     </owl:Class>
     
 
@@ -19534,6 +19557,28 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <rdfs:label xml:lang="en">Partial Mesorectal Excision</rdfs:label>
         <skos:altLabel xml:lang="en">PME</skos:altLabel>
         <skos:definition xml:lang="en">Surgical procedure for rectosigmoid and upper rectal cancers where the rectum is transected 5 cm below the tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100684 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100684">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Unilateral Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Lymph node dissection on only one side of regional lymph nodes. This is usually done when the tumor is located on that side of the body.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100685 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100685">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Bilateral Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Lymph node dissection on both sides of regional lymph nodes. This is usually done when the tumor is centrally located .</skos:definition>
     </owl:Class>
     
 
