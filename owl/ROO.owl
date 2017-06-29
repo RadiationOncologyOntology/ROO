@@ -4245,6 +4245,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3577 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3577">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Lung</rdfs:label>
+        <skos:altLabel xml:lang="en">Lung Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">The spread of a malignant neoplasm to the lung. This may be from a primary lung malignant neoplasm, or from a malignant neoplasm at a distant site.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3580 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3580">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Bone</rdfs:label>
+        <skos:altLabel xml:lang="en">Bone Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">The spread of a malignant neoplasm from a primary site to the skeletal system. The majority of metastatic neoplasms to the bone are carcinomas.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933">
@@ -4374,6 +4398,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Forced Expiratory Volume in 1 Second</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A test of lung function, the FEV1 is the volume exhaled during the first second of a forced expiratory maneuver started from the level of total lung capacity. It is the most frequently used index for assessing bronchoconstriction or bronchodilatation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3813 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3813">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Brain</rdfs:label>
+        <skos:altLabel xml:lang="en">Brain Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant neoplasm that has spread to the brain from another anatomic site or system. The majority are carcinomas (usually lung or breast carcinomas).</skos:definition>
     </owl:Class>
     
 
@@ -4544,6 +4580,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Neoplasm by Morphology</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A classification system grouping neoplasms according to their cellular characteristics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4758 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4758">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Liver</rdfs:label>
+        <skos:altLabel xml:lang="en">Liver Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant neoplasm that has spread to the liver from another (primary) anatomic site. Such malignant neoplasms may be carcinomas, lymphomas, melanomas, or sarcomas.</skos:definition>
     </owl:Class>
     
 
