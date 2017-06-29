@@ -4245,6 +4245,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Distantly Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Distant Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant tumor that has spread from its original (primary) site of growth to another site distant from the primary site.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35934 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35934">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Locally Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Regional Cancer</skos:altLabel>
+        <skos:definition xml:lang="en">Refers to cancer that has grown beyond the original (primary) tumor to nearby lymph nodes or organs and tissues.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36255 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36255">
@@ -4252,6 +4276,19 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Secondary Neoplasm</rdfs:label>
         <skos:definition xml:lang="en">A neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3262"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T191"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant tumor that has spread from its original (primary) site of growth to another site close to or distant from the primary site.</skos:definition>
     </owl:Class>
     
 
@@ -6188,6 +6225,18 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Sleeve Lobectomy</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Surgery to remove a lung tumor in a lobe of the lung and a part of the main bronchus (airway). The ends of the bronchus are rejoined and any remaining lobes are reattached to the bronchus. This surgery is done to save part of the lung.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94461 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94461">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastasectomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical removal of metastases.</skos:definition>
     </owl:Class>
     
 
