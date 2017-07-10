@@ -2682,6 +2682,18 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113730 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113730">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade X</rdfs:label>
+        <skos:altLabel xml:lang="en">GX</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that the grade of a neoplasm cannot be assessed.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430">
@@ -3469,6 +3481,7 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T080"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Histologic Grade</rdfs:label>
@@ -4034,6 +4047,65 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Stage II</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Disease Grade Qualifier</rdfs:label>
+        <skos:definition xml:lang="en">A term that refers to the cellular differentiation of a malignant cellular infiltrate. A cancer is defined through grades I-IV (or 1-4), or as well, moderately, poorly differentiated or undifferentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28077 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28077">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 1</rdfs:label>
+        <skos:altLabel xml:lang="en">G1</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is well differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28078 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28078">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 2</rdfs:label>
+        <skos:altLabel xml:lang="en">G2</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is moderately differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28079 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28079">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 3</rdfs:label>
+        <skos:altLabel xml:lang="en">G3</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is poorly differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28082 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28082">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 4</rdfs:label>
+        <skos:altLabel xml:lang="en">G4</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is undifferentiated.</skos:definition>
     </owl:Class>
     
 
