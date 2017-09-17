@@ -9562,6 +9562,16 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://purl.org/sig/ont/fma/fma323954 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma323954">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma70776"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mesorectal lymph node group</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sig/ont/fma/fma35178 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma35178">
@@ -10809,6 +10819,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Cerebellum</rdfs:label>
         <skos:definition xml:lang="en">Segment of neuraxis that has as its parts the cerebellar cortex, cerebellar nuclear complex and cerebellar white matter. Examples: There is only one cerebellum.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma70776 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma70776">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T023"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Lymph node group</rdfs:label>
+        <skos:definition xml:lang="en">Set of organ components of lymphatic tree organ consisting of lymph nodes without connecting lymphatic vessels.</skos:definition>
     </owl:Class>
     
 
@@ -19759,6 +19780,22 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Bilateral Lymph Node Dissection</rdfs:label>
         <skos:definition xml:lang="en">Lymph node dissection on both sides of regional lymph nodes. This is usually done when the tumor is centrally located .</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100701 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100701">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://purl.org/sig/ont/fma/fma323954"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma70776"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Extra mesorectal lymph node group</rdfs:label>
+        <skos:definition>Lymph nodes outside the mesorectum.</skos:definition>
     </owl:Class>
     
 
