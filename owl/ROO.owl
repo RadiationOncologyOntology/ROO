@@ -3832,6 +3832,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25419 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25419">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T023"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anal Margin</rdfs:label>
+        <skos:altLabel xml:lang="en">Anal Verge</skos:altLabel>
+        <skos:definition xml:lang="en">The transitional zone between the moist, hairless, modified skin of the anal canal and the perianal skin.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463">
@@ -15466,7 +15478,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100328">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82572"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">Local control time</rdfs:label>
+        <rdfs:label xml:lang="en">Local control time</rdfs:label>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elapsed time that a person has been living with/without a related observation/procedure/event/finding of local control/recurrence.</skos:definition>
     </owl:Class>
     
@@ -15488,7 +15500,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100330">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82572"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">Distant control time</rdfs:label>
+        <rdfs:label xml:lang="en">Distant control time</rdfs:label>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elapsed time that a person has been living with/without a related observation/procedure/event/finding of distant control/recurrence.</skos:definition>
     </owl:Class>
     
