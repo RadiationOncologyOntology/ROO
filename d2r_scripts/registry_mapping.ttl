@@ -394,10 +394,10 @@ map:localRecurrenceInfoResource a d2rq:ClassMap;
 	.
 
 #add the value property to the local recurrence resource
-map:survivalInfoValue a d2rq:PropertyBridge;
+map:localRecurrenceInfoValue a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
 	d2rq:property roo:100042;
-	d2rq:sqlExpression "(((DATE_PART('year', patients.lastfollowupdate) - DATE_PART('year', rt.startofrt))*12) + (DATE_PART('month', patients.lastfollowupdate) - DATE_PART('month', rt.startofrt)))";
+	d2rq:sqlExpression "(((DATE_PART('year', patients.lrMeasurementDate) - DATE_PART('year', rt.endofrt))*12) + (DATE_PART('month', patients.lrMeasurementDate) - DATE_PART('month', rt.endofrt)))";
 	d2rq:datatype xsd:int;
 	.
 	
@@ -415,21 +415,21 @@ map:localRecurrenceInfoResourceUnit a d2rq:ClassMap;
 	d2rq:class uo:UO_0000035;
 	.
 	
-#link the survival info to patient
+#link the LR info to patient
 map:patientLRStatusPatient a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:patient;
 	d2rq:property roo:100332;
 	d2rq:refersToClassMap map:localRecurrenceInfoResource;
 	.
 	
-#link the survival info to LR Status
+#link the LR time info to LR Status
 map:LRVitalStatus a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
 	d2rq:property roo:100332;
 	d2rq:refersToClassMap map:localRecurrenceInfoResource;
 	.
 	
-#link the survival info to the treatment
+#link the LR info to the treatment
 map:treatmentLRLink a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
 	d2rq:property time:after;
