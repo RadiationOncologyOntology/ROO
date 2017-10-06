@@ -208,7 +208,7 @@ map:lrStatusMapping a d2rq:TranslationTable;
 
 #link the vitalStatus resource to the patient resource
 map:lrStatusPatient a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:patient;
+	d2rq:belongsToClassMap map:disease;
 	d2rq:property roo:100331;
 	d2rq:refersToClassMap map:localRecurrenceStatusResource;
 	#d2rq:condition "derived.LR IS NOT NULL";
