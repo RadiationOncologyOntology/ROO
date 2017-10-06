@@ -208,7 +208,7 @@ map:lrStatusMapping a d2rq:TranslationTable;
 
 #link the vitalStatus resource to the patient resource
 map:lrStatusPatient a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:disease;
+	d2rq:belongsToClassMap map:patient_disease_obj;
 	d2rq:property roo:100331;
 	d2rq:refersToClassMap map:localRecurrenceStatusResource;
 	#d2rq:condition "derived.LR IS NOT NULL";
@@ -263,6 +263,91 @@ map:LRVitalStatus a d2rq:PropertyBridge;
 #link the LR info to the treatment
 map:treatmentLRLink a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:rtResource;
+	.
+
+
+##################
+# add DM status
+##################
+#create an dmStatus resource
+map:distantRecurrenceStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dmStatus@@derived.id@@";
+	.
+
+# Link to the dmStatus object of the NCI thesaurus
+map:patientDMStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:distantRecurrenceStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "derived.DM";
+	d2rq:translateWith map:dmStatusMapping;
+	.
+	
+#create mapping between DM status and NCI code
+map:dmStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "FALSE"; d2rq:rdfValue ncit:C48558; ];
+    d2rq:translation [ d2rq:databaseValue "TRUE"; d2rq:rdfValue ncit:C55073; ];
+    .
+
+#link the dmStatus resource to the patient resource
+map:dmStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100331;
+	d2rq:refersToClassMap map:distantRecurrenceStatusResource;
+	#d2rq:condition "derived.LR IS NOT NULL";
+	.
+
+##################
+# add distant mets (and time) since treatment
+##################
+#create object when local control/recurrence was determined
+map:distantRecurrenceInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dmFU_@@derived.id@@";
+	d2rq:class roo:100330;
+	.
+
+#add the value property to the distant recurrence resource
+map:distantRecurrenceInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:distantRecurrenceInfoResource;
+	d2rq:property roo:100042;
+	d2rq:pattern "@@derived.timeDM@@";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the distant recurrence resource
+map:distantRecurrenceInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:distantRecurrenceInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:distantRecurrenceInfoResourceUnit;
+	.
+	
+#create for distant recurrence status units
+map:distantRecurrenceInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitDMFU@@derived.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the DM info to patient
+map:patientDMStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:distantRecurrenceInfoResource;
+	.
+	
+#link the DM time info to DM Status
+map:DMVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:distantRecurrenceStatusResource;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:distantRecurrenceInfoResource;
+	.
+	
+#link the LR info to the treatment
+map:treatmentDMLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:distantRecurrenceInfoResource;
 	d2rq:property time:after;
 	d2rq:refersToClassMap map:rtResource;
 	.
