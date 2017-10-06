@@ -1,0 +1,268 @@
+@prefix map: <> .
+@prefix roo:<http://www.cancerdata.org/roo/>.
+@prefix ncit:<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix uo: <http://purl.obolibrary.org/obo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix icdcm: <http://purl.bioontology.org/ontology/ICD10CM/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix ctcae: <http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#>.
+@prefix fma: <http://purl.org/sig/ont/fma/>.
+
+# JDBC driver can be found and downloaded from http://csvjdbc.sourceforge.net
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "org.relique.jdbc.csv.CsvDriver";
+	d2rq:jdbcDSN "jdbc:relique:csv:/path/to/folder";
+	.
+
+# Table patient
+map:patient a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "patient_@@derived.id@@";
+	d2rq:class ncit:C16960;
+	.
+	
+map:patient__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property rdfs:label;
+	d2rq:pattern "patient #@@derived.id@@";
+	d2rq:datatype xsd:String;
+	.
+
+map:patient_gender_obj a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "gender_@@derived.id@@";
+	#d2rq:condition "derived.sex IS NOT NULL";
+	.
+	
+# Link to the gender object of the NCI thesaurus
+map:patient_gender_uri_obj a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100018;
+	d2rq:refersToClassMap map:patient_gender_obj;
+	.
+	
+# Link to the gender object of the NCI thesaurus
+map:patient_gender_uri a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_gender_obj;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "derived.sex";
+	d2rq:translateWith map:genderMapping;
+	.
+
+#create mapping between gender and NCI code
+map:genderMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "female"; d2rq:rdfValue ncit:C16576; ];
+	d2rq:translation [ d2rq:databaseValue "male"; d2rq:rdfValue ncit:C20197; ];
+    .
+	
+#create a disease resource for this patient
+map:patient_disease_obj a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "disease_@@derived.id@@";
+	d2rq:class icd:C20;
+	.
+	
+# Map the disease to the patient instance
+map:patient_disease_link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100008;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	.
+
+############################################
+# Add radiation treatment
+############################################
+
+#create Radiation therapy object
+map:rtResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "rt_@@derived.id@@";
+	d2rq:class ncit:C118286;
+	.
+
+# link radiotherapy resource to patient
+map:patientRtBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100301;
+	d2rq:refersToClassMap map:rtResource;
+	.
+	
+# link radiotherapy resource to disease
+map:diagnosisRtBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:rtResource;
+	d2rq:property roo:100402;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	.
+
+##################
+# add vital status
+##################
+#create an vitalStatus resource
+map:vitalStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "vitalStatus@@derived.id@@";
+	.
+
+# Link to the vitalStatus object of the NCI thesaurus
+map:patientVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:vitalStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "derived.OS";
+	d2rq:translateWith map:diedStatusMapping;
+	.
+	
+#create mapping between vital status and NCI code
+map:diedStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "TRUE"; d2rq:rdfValue ncit:C37987; ];
+    d2rq:translation [ d2rq:databaseValue "FALSE"; d2rq:rdfValue ncit:C28554; ];
+    .
+
+#link the vitalStatus resource to the patient resource
+map:vitalStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100028;
+	d2rq:refersToClassMap map:vitalStatusResource;
+	#d2rq:condition "derived.OS IS NOT NULL";
+	.
+
+##################
+# add survival time since treatment
+##################
+#create object when vital status was determined (survival)
+map:survivalInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lastFU_@@derived.id@@";
+	d2rq:class roo:100063;
+	.
+
+#add the value property to the survival resource
+map:survivalInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property roo:100042;
+	d2rq:pattern "@@derived.timeOS@@";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the survival resource
+map:survivalInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:survivalInfoResourceUnit;
+	.
+	
+#create for survival status units
+map:survivalInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitLastFU_@@derived.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the survival info to patient and vitalStatus
+map:patientVitalStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:survivalInfoResource;
+	.
+	
+#link the survival info to patient and vitalStatus
+map:survivalVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:vitalStatusResource;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:survivalInfoResource;
+	.
+	
+#link the survival info to the treatment
+map:sbrtSurvivalLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:rtResource;
+	.
+
+##################
+# add LR status
+##################
+#create an vitalStatus resource
+map:localRecurrenceStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrStatus@@derived.id@@";
+	.
+
+# Link to the vitalStatus object of the NCI thesaurus
+map:patientLRStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "derived.LR";
+	d2rq:translateWith map:lrStatusMapping;
+	.
+	
+#create mapping between vital status and NCI code
+map:lrStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "FALSE"; d2rq:rdfValue ncit:C40413; ];
+    d2rq:translation [ d2rq:databaseValue "TRUE"; d2rq:rdfValue ncit:C55072; ];
+    .
+
+#link the vitalStatus resource to the patient resource
+map:lrStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100331;
+	d2rq:refersToClassMap map:localRecurrenceStatusResource;
+	#d2rq:condition "derived.LR IS NOT NULL";
+	.
+
+##################
+# add local recurrence (and time) since treatment
+##################
+#create object when local control/recurrence was determined
+map:localRecurrenceInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrFU_@@derived.id@@";
+	d2rq:class roo:100328;
+	.
+
+#add the value property to the local recurrence resource
+map:localRecurrenceInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100042;
+	d2rq:pattern "@@derived.timeLR@@";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the local recurrence resource
+map:localRecurrenceInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:localRecurrenceInfoResourceUnit;
+	.
+	
+#create for local recurrence status units
+map:localRecurrenceInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitLRFU@@derived.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the LR info to patient
+map:patientLRStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the LR time info to LR Status
+map:LRVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the LR info to the treatment
+map:treatmentLRLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:rtResource;
+	.
