@@ -1682,6 +1682,16 @@
     
 
 
+    <!-- http://www.cancerdata.org/roo/100337 -->
+
+    <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100337">
+        <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100228"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">has_chemo_end_date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cancerdata.org/roo/100343 -->
 
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100343">
@@ -2454,6 +2464,17 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C103267 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C103267">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Narrow Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">An indication that a surgical margin is in close proximity to the excised tumor.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104933 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104933">
@@ -2572,6 +2593,49 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade</rdfs:label>
+        <skos:altLabel xml:lang="en">TRG</skos:altLabel>
+        <skos:definition xml:lang="en">A pathologic grading system used to evaluate the tumor response to preoperative chemotherapy and radiation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C11197">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FOLFOX Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">CF/5-FU/L-OHP</skos:altLabel>
+        <skos:altLabel xml:lang="en">Fluorouracil/Leucovorin Calcium/Oxaliplatin</skos:altLabel>
+        <skos:definition xml:lang="en">One of several chemotherapy regimens that include leucovorin calcium (calcium folinate), 5-fluorouracil and oxaliplatin and which may be used in the treatment of advanced-stage and metastatic colorectal cancer. FOLFOX regimens differ in agent dosing and administration schedule and include FOLFOX 4, FOLFOX 6, modified FOLFOX 6 (mFOLFOX 6) and FOLFOX 7.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112376 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C112376">
@@ -2610,10 +2674,71 @@
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113716">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20Y4"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Low Anterior Resection</rdfs:label>
         <skos:definition xml:lang="en">Resection of the rectum for cancer through an incision in the lower abdomen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113730 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113730">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade X</rdfs:label>
+        <skos:altLabel xml:lang="en">GX</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that the grade of a neoplasm cannot be assessed.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116430">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4-Dimensional Conformal Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">3-Dimensional conformal radiation therapy that is designed to compensate for motion of the tumor and surrounding normal tissue during each treatment session.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116441 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116441">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4-Dimensional Computed Tomography</rdfs:label>
+        <skos:altLabel xml:lang="en">4DCT</skos:altLabel>
+        <skos:altLabel xml:lang="en">RC-CT</skos:altLabel>
+        <skos:altLabel xml:lang="en">Respiratory Correlated CT</skos:altLabel>
+        <skos:definition xml:lang="en">Computed tomography scans designed to minimize motion artifacts. 4DCT can be accomplished by collecting data for the duration of the patient&apos;s respiratory cycle and by oversampling CT data acquisition at each slice.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116509 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116509">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15725"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25218"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Robot-Assisted Laparoscopic Surgery</rdfs:label>
+        <skos:definition xml:lang="en">A surgical technique that uses a specially designed robotic system to aid with a laparoscopic surgical procedure.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Oxaliplatin</rdfs:label>
     </owl:Class>
     
 
@@ -2631,12 +2756,45 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120274 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120274">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Macroscopically Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">The presence of macroscopically visible residual tumor at the edge of a surgically excised specimen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120277 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120277">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grossly Negative and Microscopically Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">The presence of microscopically visible residual tumor at the edge of a surgically excised specimen that otherwise looks macroscopically normal.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120284 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120284">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25681"/>
         <rdfs:label xml:lang="en">Tumor Size</rdfs:label>
         <skos:definition xml:lang="en">The size of a tumor in its greatest dimension.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15697"/>
+        <rdfs:isDefinedBy xml:lang="en">http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Chemotherapy Regimen or Agent Combination</rdfs:label>
+        <skos:definition xml:lang="en">A combination of multiple drugs used in standard or clinical trial treatments. The order, dosage or dosing interval of the individual ingredients may not be specified.</skos:definition>
     </owl:Class>
     
 
@@ -2677,6 +2835,19 @@
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Pathologic Complete Response</rdfs:label>
+        <skos:altLabel xml:lang="en">Complete Pathological Response</skos:altLabel>
+        <skos:altLabel xml:lang="en">pCR</skos:altLabel>
+        <skos:definition xml:lang="en">The disappearance of all signs of cancer, supported by pathological examination.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12512 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12512">
@@ -2685,6 +2856,19 @@
         <rdfs:label xml:lang="en">Supratentorial Brain</rdfs:label>
         <skos:definition xml:lang="en">The part of the brain above the tentorium cerebellum. (NCI)
 For most authors, this is the cerebral hemispheres plus the basal ganglia, but most clinicians do not include the basal ganglia.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125609 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C125609">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">4D PET Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">4D Gated PET Scan</skos:altLabel>
+        <skos:definition xml:lang="en">Positron emission tomography imaging collected over time. It is designed to capture the internal movement of organs and the metabolism of the tumor. It creates the most complete and accurate information on the tumor and provides information how the tumor moves with breathing and other body motions.</skos:definition>
     </owl:Class>
     
 
@@ -2721,6 +2905,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Epipodophyllotoxin Compound</rdfs:label>
         <skos:definition xml:lang="en">An alkaloid isolated or derived synthetically from Podophyllum peltatum that can bind to and inhibit topoisomerase II and its function in ligating cleaved DNA molecules, resulting in the accumulation of single- or double-strand DNA breaks, the inhibition of DNA replication and transcription, and apoptotic cell death.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T020"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stoma</rdfs:label>
+        <skos:definition xml:lang="en">A surgically created opening from an area inside the body to the outside.</skos:definition>
     </owl:Class>
     
 
@@ -2847,6 +3042,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15189 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15189">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18020"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Biopsy</rdfs:label>
+        <skos:definition xml:lang="en">The removal of tissue specimens or fluid from the living body for microscopic examination, performed to establish a diagnosis.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15212 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15212">
@@ -2868,6 +3074,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Docetaxel</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A semi-synthetic, second-generation taxane derived from a compound found in the European yew tree, Taxus baccata. Docetaxel displays potent and broad antineoplastic properties; it binds to and stabilizes tubulin, thereby inhibiting microtubule disassembly which results in cell- cycle arrest at the G2/M phase and cell death. This agent also inhibits pro-angiogenic factors such as vascular endothelial growth factor (VEGF) and displays immunomodulatory and pro-inflammatory properties by inducing various mediators of the inflammatory response. Docetaxel has been studied for use as a radiation-sensitizing agent. (NCI04)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15266 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15266">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15329"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25218"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Laparotomy</rdfs:label>
+        <skos:definition xml:lang="en">Creation of a surgical opening into the abdominal cavity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15329"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Lymphadenectomy</rdfs:label>
+        <skos:altLabel xml:lang="en">Lymph Node Dissection</skos:altLabel>
+        <skos:definition xml:lang="en">Surgical removal of lymph nodes, usually done to assess the spread of cancer.</skos:definition>
     </owl:Class>
     
 
@@ -3023,6 +3253,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15725 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15725">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15329"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25218"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Laparoscopic Surgery</rdfs:label>
+        <skos:definition xml:lang="en">Surgery done with the aid of a laparoscope. A laparoscope is a thin, tube-like instrument with a light and a lens for viewing. It may also have a tool to remove tissue to be checked under a microscope for signs of disease.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16033 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16033">
@@ -3068,6 +3310,19 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">IMRT</skos:altLabel>
         <skos:definition xml:lang="en">An advanced form of 3-Dimensional Conformal Radiation Therapy (3D CRT) that involves the use of varying intensities of small radiation beams to produce dosage distributions that are more precise than those possible with 3D CRT.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16180 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16180">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Total Mesorectal Excision</rdfs:label>
+        <skos:altLabel xml:lang="en">TME</skos:altLabel>
+        <skos:definition xml:lang="en">Surgery for rectal cancer involving precise removal of an intact mesorectal envelope with tumor-free margins. Associated with local recurrence rates below 5% in clinical trials.</skos:definition>
     </owl:Class>
     
 
@@ -3141,6 +3396,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17007">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18020"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Positron Emission Tomography</rdfs:label>
+        <skos:altLabel xml:lang="en">PET Scan</skos:altLabel>
+        <skos:definition xml:lang="en">A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17204">
@@ -3200,9 +3467,21 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Capecitabine</rdfs:label>
+        <skos:altLabel xml:lang="en">Xeloda</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18000">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T080"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Histologic Grade</rdfs:label>
@@ -3231,6 +3510,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Diagnostic Procedure</rdfs:label>
         <skos:definition xml:lang="en">Any procedure or test to diagnose a disease or disorder.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1804 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1804">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Raltitrexed</rdfs:label>
+        <skos:altLabel xml:lang="en">Tomudex</skos:altLabel>
+        <skos:definition xml:lang="en">An anticancer drug that stops tumor cells from growing by blocking the ability of cells to make DNA. It belongs to the family of drugs called thymidylate synthase inhibitors.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T195"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mitomycin</rdfs:label>
+        <skos:altLabel xml:lang="en">Mitomycin-C</skos:altLabel>
+        <skos:definition xml:lang="en">A methylazirinopyrroloindoledione antineoplastic antibiotic isolated from the bacterium Streptomyces caespitosus and other Streptomyces bacterial species. Bioreduced mitomycin C generates oxygen radicals, alkylates DNA, and produces interstrand DNA cross-links, thereby inhibiting DNA synthesis. Preferentially toxic to hypoxic cells, mitomycin C also inhibits RNA and protein synthesis at high concentrations.</skos:definition>
     </owl:Class>
     
 
@@ -3529,6 +3832,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25419 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25419">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T023"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anal Margin</rdfs:label>
+        <skos:altLabel xml:lang="en">Anal Verge</skos:altLabel>
+        <skos:definition xml:lang="en">The transitional zone between the moist, hairless, modified skin of the anal canal and the perianal skin.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463">
@@ -3558,6 +3873,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Fraction</rdfs:label>
         <skos:definition xml:lang="en">A part, a fragment of a whole.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Margin</rdfs:label>
+        <skos:definition xml:lang="en">A boundary line or the area immediately inside the boundary.</skos:definition>
     </owl:Class>
     
 
@@ -3733,6 +4059,65 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Stage II</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Invasive cancer more extensive than stage I, usually involving local lymph nodes without spread to distant anatomic sites.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Disease Grade Qualifier</rdfs:label>
+        <skos:definition xml:lang="en">A term that refers to the cellular differentiation of a malignant cellular infiltrate. A cancer is defined through grades I-IV (or 1-4), or as well, moderately, poorly differentiated or undifferentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28077 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28077">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 1</rdfs:label>
+        <skos:altLabel xml:lang="en">G1</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is well differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28078 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28078">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 2</rdfs:label>
+        <skos:altLabel xml:lang="en">G2</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is moderately differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28079 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28079">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 3</rdfs:label>
+        <skos:altLabel xml:lang="en">G3</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is poorly differentiated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28082 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28082">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28076"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Grade 4</rdfs:label>
+        <skos:altLabel xml:lang="en">G4</skos:altLabel>
+        <skos:definition xml:lang="en">A morphologic qualifier indicating that a cancerous lesion is undifferentiated.</skos:definition>
     </owl:Class>
     
 
@@ -3924,7 +4309,6 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3367 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3367">
-        <owl:equivalentClass rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T077"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Finding</rdfs:label>
@@ -3956,6 +4340,54 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3577 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3577">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Lung</rdfs:label>
+        <skos:altLabel xml:lang="en">Lung Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">The spread of a malignant neoplasm to the lung. This may be from a primary lung malignant neoplasm, or from a malignant neoplasm at a distant site.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3580 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3580">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Bone</rdfs:label>
+        <skos:altLabel xml:lang="en">Bone Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">The spread of a malignant neoplasm from a primary site to the skeletal system. The majority of metastatic neoplasms to the bone are carcinomas.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35933">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Distantly Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Distant Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant tumor that has spread from its original (primary) site of growth to another site distant from the primary site.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35934 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C35934">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Locally Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Regional Cancer</skos:altLabel>
+        <skos:definition xml:lang="en">Refers to cancer that has grown beyond the original (primary) tumor to nearby lymph nodes or organs and tissues.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36255 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36255">
@@ -3963,6 +4395,19 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Secondary Neoplasm</rdfs:label>
         <skos:definition xml:lang="en">A neoplasm that arises from a pre-existing lower grade lesion, or as a result of a primary lesion that has spread to secondary sites, or due to a complication of a cancer treatment.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3262"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T191"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm</rdfs:label>
+        <skos:altLabel xml:lang="en">Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant tumor that has spread from its original (primary) site of growth to another site close to or distant from the primary site.</skos:definition>
     </owl:Class>
     
 
@@ -4052,6 +4497,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3813 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C3813">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Brain</rdfs:label>
+        <skos:altLabel xml:lang="en">Brain Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant neoplasm that has spread to the brain from another anatomic site or system. The majority are carcinomas (usually lung or breast carcinomas).</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38155 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38155">
@@ -4121,6 +4578,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">One of the criteria for assessment of the effectiveness of given surgical procedure in achieving the local control of a neoplasm and the adequacy of tumor removal. It is defined by the tissue plane through which the dissection has been done and the actual or potential neoplastic tissue which has been left outside the boundary of a resected specimen within the patient. There are four types of surgical margins: intracapsular or intralesional, marginal, wide, and radical.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331">
@@ -4166,6 +4634,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46085 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46085">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Circumferential Resection Margin</rdfs:label>
+        <skos:definition xml:lang="en">The distance between the radial extent of the tumor and the surgical incision used to excise the tumor. This distance is measured microscopically.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46109 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C46109">
@@ -4200,6 +4679,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4758 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C4758">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C36263"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastatic Malignant Neoplasm in the Liver</rdfs:label>
+        <skos:altLabel xml:lang="en">Liver Metastasis</skos:altLabel>
+        <skos:definition xml:lang="en">A malignant neoplasm that has spread to the liver from another (primary) anatomic site. Such malignant neoplasms may be carcinomas, lymphomas, melanomas, or sarcomas.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47850 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47850">
@@ -4219,6 +4710,28 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Cancer TNM Finding</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A cancer finding in the TNM system that is relevant to the diagnosis of cancer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48620">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Positive Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">Indicates the presence of tumor cells at the edge of a surgically excised specimen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48621 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48621">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Negative Surgical Margin</rdfs:label>
+        <skos:definition xml:lang="en">Indicates the absence of tumor cells at the edge of a surgically excised specimen.</skos:definition>
     </owl:Class>
     
 
@@ -4588,6 +5101,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15275"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Regional Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Surgical removal of the lymph nodes located in a particular anatomic region. This procedure is commonly performed as a component of cancer staging.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48944 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48944">
@@ -4658,6 +5182,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Fluorouracil</rdfs:label>
+        <skos:altLabel xml:lang="en">5-FU</skos:altLabel>
+        <skos:altLabel xml:lang="en">5-Fluorouracil</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50646 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50646">
@@ -4665,6 +5201,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Medical Contraindication</rdfs:label>
         <skos:definition xml:lang="en">A symptom or medical condition that makes a particular treatment or procedure inadvisable because a person is likely to have a bad reaction.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50995">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Disease Response</rdfs:label>
+        <skos:altLabel xml:lang="en">Response</skos:altLabel>
+        <skos:definition xml:lang="en">The pathologic and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.</skos:definition>
     </owl:Class>
     
 
@@ -4827,6 +5375,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Domestic Partnership</rdfs:label>
         <skos:definition xml:lang="en">Indicates a person who is a member of an unmarried couple, including same sex couples, living together in longstanding relationships, that are registered or unregistered.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53288 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53288">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C21514"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Temporary</rdfs:label>
+        <skos:definition xml:lang="en">Not permanent; not lasting; lacking continuity or regularity.</skos:definition>
     </owl:Class>
     
 
@@ -5099,6 +5658,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T121"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Leucovorin Calcium</rdfs:label>
+        <skos:altLabel xml:lang="en">Calcium Folinate</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61614 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61614">
@@ -5123,6 +5693,30 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62165 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62165">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Prone Position</rdfs:label>
+        <skos:altLabel xml:lang="en">Prone</skos:altLabel>
+        <skos:definition xml:lang="en">An anterior recumbent body position whereby the person lies on its stomach and faces downward.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62167 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62167">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Supine Position</rdfs:label>
+        <skos:altLabel xml:lang="en">Supine</skos:altLabel>
+        <skos:definition xml:lang="en">A posterior recumbent body position whereby the person lies on its back and faces upward.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62220 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62220">
@@ -5131,6 +5725,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Cure</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Serving or tending to restore health; a remedy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62398 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62398">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Transanal Excision</rdfs:label>
+        <skos:definition xml:lang="en">Surgery for rectal cancer that spares the anus and leaves the sphincter intact. Surgery is performed through the anus and removes only the rectal tumor and small amounts of surrounding tissue.</skos:definition>
     </owl:Class>
     
 
@@ -5159,6 +5765,34 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63388 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63388">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FU-LV Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">Fluorouracil-Leucovorin Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Mayo Clinic Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Roswell Park Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">de Gramont Regimen</skos:altLabel>
+        <skos:definition xml:lang="en">A regimen consisting of fluorouracil and leucovorin, used in both the adjuvant and metastatic disease setting, for the treatment of colorectal cancer. This regimen is also combined with radiation for the treatment of gastric and esophageal cancer.
+The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are different in the doses and times at which the two drugs are given.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63536 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63536">
@@ -5166,6 +5800,72 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Study</rdfs:label>
         <skos:definition xml:lang="en">A detailed examination, analysis, or critical inspection of a subject designed to discover facts about it.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12218"/>
+        <rdfs:label xml:lang="en">Chemotherapy Regimen Used to Treat Colorectal Carcinoma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63593 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63593">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">FOLFIRI Regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">FOLFIRI</skos:altLabel>
+        <skos:altLabel xml:lang="en">Folinic Acid-Fluorouracil-Irinotecan Regimen</skos:altLabel>
+        <skos:definition xml:lang="en">A chemotherapy regimen consisting of leucovorin calcium (calcium folinate), 5-fluorouracil, and irinotecan used in the treatment of advanced-stage and metastatic colorectal cancer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63597 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63597">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1181"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1794"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C607"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">XELOX regimen</rdfs:label>
+        <skos:altLabel xml:lang="en">XELOX</skos:altLabel>
+        <skos:altLabel xml:lang="en">Xeloda-Oxaliplatin Regimen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Xeloda/Oxalipaltin</skos:altLabel>
+        <skos:definition xml:lang="en">A regimen consisting of capecitabine and oxaliplatin used for the treatment of advanced stage colorectal cancer. This regimen differs from a similar regimen, CAPOX, with regards to the dosing schedule for oxaliplatin.</skos:definition>
     </owl:Class>
     
 
@@ -5577,6 +6277,7 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C91826 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C91826">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Abdominoperineal Resection</rdfs:label>
@@ -5667,6 +6368,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Sleeve Lobectomy</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Surgery to remove a lung tumor in a lobe of the lung and a part of the main bronchus (airway). The ends of the bronchus are rejoined and any remaining lobes are reattached to the bronchus. This surgery is done to save part of the lung.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94461 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94461">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Metastasectomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical removal of metastases.</skos:definition>
     </owl:Class>
     
 
@@ -6130,6 +6843,38 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/X20XN -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X20XN">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Colostomy operation</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation or closure of an opening between the colon and the surface of the body.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/X20Y4 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X20Y4">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Anterior resection of rectum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/X78tq -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X78tq">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C21514"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Permanent</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/X7A6g -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/X7A6g">
@@ -6166,6 +6911,51 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/XC0fs -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XC0fs">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13345"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Colostomy - stoma</rdfs:label>
+        <skos:altLabel xml:lang="en">Colostomy</skos:altLabel>
+        <skos:definition xml:lang="en">A stoma to the colon.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DI -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DI">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Construction of temporary colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation of a temporary colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DJ -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DJ">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Construction of permanent colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical creation of a permanent colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/XE0DK -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/XE0DK">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/RCD/X20XN"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Closure of colostomy</rdfs:label>
+        <skos:definition xml:lang="en">The surgical closure of a colostomy.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/Xa0fY -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/Xa0fY">
@@ -6190,6 +6980,18 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://purl.bioontology.org/ontology/RCD/Xa1oS -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/Xa1oS">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Excision of lesion of rectum</rdfs:label>
+        <skos:definition xml:lang="en">Local excision</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.bioontology.org/ontology/RCD/4I28 -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/4I28">
@@ -6197,6 +6999,41 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Saliva sample</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/5144 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/5144">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Radiotherapy - preoperative control</rdfs:label>
+        <skos:definition xml:lang="en">The use of radiotherapy prior to the surgical removal of a tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/5146 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/5146">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C101642"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Radiotherapy - postoperative control</rdfs:label>
+        <skos:definition xml:lang="en">A postoperative course of radiotherapy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/RCD/77201 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/RCD/77201">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/RCD</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Hartmann&apos;s procedure</rdfs:label>
+        <skos:definition xml:lang="en">Rectosigmoidectomy, closure of rectal stump and exteriorisation of bowel.</skos:definition>
     </owl:Class>
     
 
@@ -8737,6 +9574,16 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://purl.org/sig/ont/fma/fma323954 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma323954">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma70776"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mesorectal lymph node group</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sig/ont/fma/fma35178 -->
 
     <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma35178">
@@ -9984,6 +10831,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Cerebellum</rdfs:label>
         <skos:definition xml:lang="en">Segment of neuraxis that has as its parts the cerebellar cortex, cerebellar nuclear complex and cerebellar white matter. Examples: There is only one cerebellum.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma70776 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma70776">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T023"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/FMA</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Lymph node group</rdfs:label>
+        <skos:definition xml:lang="en">Set of organ components of lymphatic tree organ consisting of lymph nodes without connecting lymphatic vessels.</skos:definition>
     </owl:Class>
     
 
@@ -11772,7 +12630,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/100071 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100071">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25563"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Radiotherapy Margin</rdfs:label>
         <skos:definition xml:lang="en">A radiotherapy margin provides a buffer in the delineation of tissues to account for uncertainties. (ICRU 83)</skos:definition>
@@ -14620,7 +15478,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100328">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82572"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">Local control time</rdfs:label>
+        <rdfs:label xml:lang="en">Local control time</rdfs:label>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elapsed time that a person has been living with/without a related observation/procedure/event/finding of local control/recurrence.</skos:definition>
     </owl:Class>
     
@@ -14642,7 +15500,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100330">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82572"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">Distant control time</rdfs:label>
+        <rdfs:label xml:lang="en">Distant control time</rdfs:label>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elapsed time that a person has been living with/without a related observation/procedure/event/finding of distant control/recurrence.</skos:definition>
     </owl:Class>
     
@@ -18613,6 +19471,343 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Metabolic Tumor Volume</rdfs:label>
         <skos:definition xml:lang="en">Metabolic tumor volume (MTV) is the volume of tumor tissues with increased FDG uptake measured by an 18F-FDG PET scan.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100620 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100620">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63586"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1820"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cancerdata.org/roo/100205"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">FUMIR Regimen</rdfs:label>
+        <skos:definition xml:lang="en">Regimen combining Mitomycin and Fluorouracil (with concurrent radiation)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100622 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100622">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade - Dworak</rdfs:label>
+        <skos:definition xml:lang="en">Tumor regression grade according to the Dworak system.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100623 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100623">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Tumor Regression Grade - Mandard</rdfs:label>
+        <skos:definition xml:lang="en">Tumor regression grade according to the Mandard system.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100624 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100624">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100625"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG1 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100625 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100625">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Complete Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100626 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100626">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Near Complete Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100627 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100627">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Moderate Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100628 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100628">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Minimal Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100629 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100629">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C106304"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">No Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100630 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100630">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100626"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG2 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100631 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100631">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100627"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG3 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100632 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100632">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100628"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG4 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100633 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100633">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100623"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100629"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/8194005</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG5 - Mandard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100634 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100634">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100629"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG0 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100635 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100635">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100628"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG1 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100636 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100636">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100627"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG2 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100637 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100637">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100626"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG3 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100638 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100638">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100622"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100625"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:isDefinedBy>https://www.ncbi.nlm.nih.gov/pubmed/9112145</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TRG4 - Dworak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100639 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100639">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25218"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Motion Management Procedure</rdfs:label>
+        <skos:definition xml:lang="en">A procedure in which internal motion is managed of organs and/or regions of interest (e.g. tumors) during radiotherapy or imaging or another therapeutic or imaging procedure. This management can be implicit in the procedure (e.g. 4D-CT) are added to any procedure (e.g. breath hold). The motion can be due to respiration, circulation, peristalsis, swallowing, etc. Both procedures to prevent motion (e.g. breath hold) and/or deal with motion (e.g. gating) are part of this class of concepts. Not meant here are procedures meant to deal with the overal motion of the patient (e.g immobilisation).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100644 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100644">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100645"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Deep Inspiration Breath-Hold</rdfs:label>
+        <skos:altLabel xml:lang="en">DIBH</skos:altLabel>
+        <skos:definition xml:lang="en">Deep Inspiration Breath-Hold is mostly used in radiotherapy and involves the patient inspiring to a specified threshold and then holding that level of inspiration during the delivery of radiation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100645 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100645">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Breathing Modification Procedure</rdfs:label>
+        <skos:definition xml:lang="en">A class of procedures where respiratory motion is managed by patients temporarily changing the way they breath, either forced or voluntary and for either therapeutic or diagnostic procedures.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100646 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100646">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100645"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Abdominal Compression</rdfs:label>
+        <skos:definition xml:lang="en">A procedure which compresses the abdomen and thereby forcing the patient to use shallow breathing. This in turn reduces the motion associated with respiration.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100647 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100647">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Respiratory Gated Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">In respiratory gated radiation therapy the beam is switched on when the tumor is in the right phase of the respiration.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100648 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100648">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15313"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100639"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Tumor Tracking Radiation Therapy</rdfs:label>
+        <skos:definition xml:lang="en">In tumor tracking radiation therapy the beam is always on and follows the tumor during respiration. It often involves implanting fiducial markers into the tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100660 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100660">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16120"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64982"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Partial Mesorectal Excision</rdfs:label>
+        <skos:altLabel xml:lang="en">PME</skos:altLabel>
+        <skos:definition xml:lang="en">Surgical procedure for rectosigmoid and upper rectal cancers where the rectum is transected 5 cm below the tumor.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100684 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100684">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Unilateral Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Lymph node dissection on only one side of regional lymph nodes. This is usually done when the tumor is located on that side of the body.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100685 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100685">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48935"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Bilateral Lymph Node Dissection</rdfs:label>
+        <skos:definition xml:lang="en">Lymph node dissection on both sides of regional lymph nodes. This is usually done when the tumor is centrally located .</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/100701 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/100701">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://purl.org/sig/ont/fma/fma323954"/>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sig/ont/fma/fma70776"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Extra mesorectal lymph node group</rdfs:label>
+        <skos:definition>Lymph nodes outside the mesorectum.</skos:definition>
     </owl:Class>
     
 
