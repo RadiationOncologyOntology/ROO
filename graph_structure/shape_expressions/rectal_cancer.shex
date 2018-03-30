@@ -1,0 +1,100 @@
+PREFIX ncit:<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX roo:<http://www.cancerdata.org/roo/>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX icd:<http://purl.bioontology.org/ontology/ICD10/>
+PREFIX uo:<http://purl.obolibrary.org/obo/>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+
+start = <http://johanvansoest.nl/shex/PatientShape>
+
+<http://johanvansoest.nl/shex/PatientShape> {
+    rdf:type [ncit:C16960]{1},
+    roo:100018 @<GenderShape>,
+    roo:100008 @<DiseaseShape>,
+    roo:100016 @<AgeShapeDiagnosis>,
+    roo:100017 @<AgeShapeRT>,
+    roo:100039 IRI,
+    roo:100028 @<VitalStatusShape>?,
+    roo:100026 @<SurvivalInfoShape>?
+}
+
+<GenderShape> {
+    rdf:type [ncit:C16576 ncit:C20197]{1}
+}
+
+<DiseaseShape> {
+    rdf:type [icd:C20]{1},
+    roo:100243 @<ClinicalTNMShape>,
+    roo:100287 @<PathologicTNMShape>
+}
+
+<AgeShapeDiagnosis> {
+    rdf:type [roo:100002]{1},
+    roo:100027 @<AgeShapeType>,
+    roo:100042 LITERAL
+}
+
+<AgeShapeRT> {
+    rdf:type [roo:100003]{1},
+    roo:100027 @<AgeShapeType>,
+    roo:100042 LITERAL
+}
+
+<AgeShapeType> {
+    rdf:type [uo:UO_0000036]{1}
+}
+
+<VitalStatusShape> {
+    rdf:type [ncit:C37987 ncit:C28554]{1}
+}
+
+<SurvivalInfoShape> {
+    rdf:type [roo:100014]{1},
+    roo:100027 @<SurvivalInfoShapeType>,
+    roo:100042 LITERAL
+}
+
+<SurvivalInfoShapeType> {
+    rdf:type [uo:UO_0000035]
+}
+
+<ClinicalTNMShape> {
+    rdf:type [ncit:C48881]{1},
+    roo:100244 @<ClinTnmTShape>,
+    roo:100242 @<ClinTnmNShape>,
+    roo:100241 @<ClinTnmMShape>?
+}
+
+<ClinTnmTShape> {
+    rdf:type [ncit:C48719 ncit:C48720 ncit:C48721 ncit:C48722 ncit:C48723 ncit:C48724 ncit:C48725 ncit:C48726 ncit:C48727 ncit:C48728 ncit:C48732 ncit:C48737 ncit:C48738]{1}
+}
+
+<ClinTnmNShape> {
+    rdf:type [ncit:C48705 ncit:C48706 ncit:C48706 ncit:C48706 ncit:C48706 ncit:C48786 ncit:C48786 ncit:C48786 ncit:C48786 ncit:C48714 ncit:C48714 ncit:C48714 ncit:C48714 ncit:C48718]{1}
+}
+
+<ClinTnmMShape> {
+    rdf:type [ncit:C48699 ncit:C48700 ncit:C48701]{1}
+}
+
+<PathologicTNMShape> {
+    rdf:type [ncit:C48739],
+    roo:100288 @<PathTnmTShape>,
+    roo:100286 @<PathTnmNShape>,
+    roo:100285 @<PathTnmMShape>?
+}
+
+<PathTnmTShape> {
+    rdf:type [ncit:C48719 ncit:C48720 ncit:C48721 ncit:C48722 ncit:C48723 ncit:C48724 ncit:C48725 ncit:C48726 ncit:C48727 ncit:C48728 ncit:C48732 ncit:C48737 ncit:C48738]{1}
+}
+
+<PathTnmNShape> {
+    rdf:type [ncit:C48705 ncit:C48706 ncit:C48706 ncit:C48706 ncit:C48706 ncit:C48786 ncit:C48786 ncit:C48786 ncit:C48786 ncit:C48714 ncit:C48714 ncit:C48714 ncit:C48714 ncit:C48718]{1}
+}
+
+<PathTnmMShape> {
+    rdf:type [ncit:C48699 ncit:C48700 ncit:C48701]{1}
+}

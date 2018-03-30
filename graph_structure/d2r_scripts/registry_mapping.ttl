@@ -1,0 +1,1634 @@
+@prefix map: <> .
+@prefix roo:<http://www.cancerdata.org/roo/>.
+@prefix ncit:<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix uo: <http://purl.obolibrary.org/obo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix icdcm: <http://purl.bioontology.org/ontology/ICD10CM/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix ctcae: <http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#>.
+@prefix fma: <http://purl.org/sig/ont/fma/>.
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "org.postgresql.Driver";
+	d2rq:jdbcDSN "jdbc:postgresql://10.0.75.2:5432/cat_db";
+	d2rq:username "postgres";
+	d2rq:password "postgres";
+	.
+
+# Table patient
+map:patient a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "patient_C0045I@@patients.cat_id@@";
+	d2rq:class ncit:C16960;
+	.
+	
+map:patient__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property rdfs:label;
+	d2rq:pattern "patient #C0045I@@patients.cat_id@@";
+	d2rq:datatype xsd:String;
+	.
+	
+map:patient_gender_obj a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "gender_C0045I@@patients.cat_id@@";
+#	d2rq:class ncit:C28421;	
+	d2rq:condition "patients.gender IS NOT NULL";
+	.
+	
+# Link to the gender object of the NCI thesaurus
+map:patient_gender_uri_obj a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100018;
+	d2rq:refersToClassMap map:patient_gender_obj;
+	.
+	
+# Link to the gender object of the NCI thesaurus
+map:patient_gender_uri a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_gender_obj;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "patients.gender";
+	d2rq:translateWith map:genderMapping.
+
+#create mapping between gender and NCI code
+map:genderMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "1"; d2rq:rdfValue ncit:C16576; ];
+	d2rq:translation [ d2rq:databaseValue "2"; d2rq:rdfValue ncit:C20197; ];
+    .
+
+map:patient_disease_obj a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "disease_@@diagnosis.id@@";
+	d2rq:class ncit:7377;
+	d2rq:join "diagnosis.cat_id => patients.cat_id";	
+	.
+	
+# Map the disease to the patient instance
+map:patient_disease_link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100008;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	.
+
+##########
+#create histology object
+map:diseaseHist a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "diseaseHist_@@diagnosis.id@@";
+	d2rq:join "diagnosis.cat_id => patients.cat_id";	
+	.
+
+# Map the histology to the disease instance
+map:disease_histology_link a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100021;
+	d2rq:refersToClassMap map:diseaseHist;
+	.
+	
+# Link to the histology object to a type
+map:diseaseHistType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:diseaseHist;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "diagnosis.histology";
+	d2rq:translateWith map:histologyMapping;
+	.
+
+#create mapping between histology and NCI code
+map:histologyMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "1"; d2rq:rdfValue ncit:C2926; ]; #non-small cell lung cancer
+    d2rq:translation [ d2rq:databaseValue "2"; d2rq:rdfValue ncit:C2852; ]; #adenocarcinoma
+	d2rq:translation [ d2rq:databaseValue "3"; d2rq:rdfValue ncit:C3780; ]; #large cell carcinoma
+	d2rq:translation [ d2rq:databaseValue "4"; d2rq:rdfValue ncit:C2929; ]; #squamous cell carcinoma
+	#d2rq:translation [ d2rq:databaseValue "5"; d2rq:rdfValue ncit:C7377; ]; #carcinoma, NOS
+	d2rq:translation [ d2rq:databaseValue "6"; d2rq:rdfValue ncit:C2852; ]; #adenosquamous
+	d2rq:translation [ d2rq:databaseValue "7"; d2rq:rdfValue ncit:C3915; ]; #small cell
+	#d2rq:translation [ d2rq:databaseValue "8"; d2rq:rdfValue ncit:C28554; ]; #non-diagnostic specimen
+	#d2rq:translation [ d2rq:databaseValue "9"; d2rq:rdfValue ncit:C28554; ]; #suspicous for malignancy
+	#d2rq:translation [ d2rq:databaseValue "10"; d2rq:rdfValue ncit:C28554; ]; #carcinoid
+	#d2rq:translation [ d2rq:databaseValue "11"; d2rq:rdfValue ncit:C28554; ]; #hepatocellular carcinoma
+	#d2rq:translation [ d2rq:databaseValue "12"; d2rq:rdfValue ncit:C28554; ]; #never sampled, no histologic confirmation
+	#d2rq:translation [ d2rq:databaseValue "13"; d2rq:rdfValue ncit:C28554; ]; #HCC*** change hepatocellular carcinoma to metastasis
+    .
+
+##########
+#create date object for disease
+map:diseaseDateTime a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "diseaseDateTime_@@diagnosis.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:diseaseDateTimeLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:diseaseDateTime;
+	.
+
+#add the year
+map:diseaseDateTimeYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:diseaseDateTime;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', diagnosis.dateofdiagnosis)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:diseaseDateTimeMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:diseaseDateTime;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', diagnosis.dateofdiagnosis)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the year
+map:diseaseDateTimeDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:diseaseDateTime;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', diagnosis.dateofdiagnosis)";
+	d2rq:datatype xsd:int;
+	.
+	
+############################################
+# Age at start RT
+############################################
+#create an age resource
+map:ageAtStartRTObject a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ageStartRT_@@rt.id@@";
+	d2rq:class roo:100003;				#means age object at start RT
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+	
+# add the unit property to the age resource
+map:ageStartRTUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtStartRTObject;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:ageAtStartRTObjectUnit;
+	.
+	
+#create an age unit years resource
+map:ageAtStartRTObjectUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ageStartRtUnit_rt.id@@";
+	d2rq:class uo:UO_0000036;				#means years
+	.
+	
+#add the value property to the age resource
+map:ageStartRTValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtStartRTObject;
+	d2rq:property roo:100042;
+	d2rq:sqlExpression "CAST((DATE_PART('year', rt.startofrt) - DATE_PART('year', patients.dateofbirth)) AS integer)";
+	d2rq:datatype xsd:int;
+	.
+	
+#Link the patient resource to the age resource
+map:ageStartRT_patient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100017;
+	d2rq:refersToClassMap map:ageAtStartRTObject;
+	.
+	
+#Link the age resource to the first fraction resource
+map:ageStartRT_FirstFraction a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtStartRTObject;
+	d2rq:property roo:100038;
+	d2rq:refersToClassMap map:firstFractionResource;
+	.
+	
+
+############################################
+# Age at diagnosis
+############################################	
+#create an age resource
+map:ageAtDiagnosisObject a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ageDiagnosis_@@diagnosis.id@@";
+	d2rq:class roo:100002;				#means age object at diagnosis
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+	
+# add the unit property to the age resource
+map:ageAtDiagnosisUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtDiagnosisObject;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:ageAtDiagnosisObjectUnit;
+	.
+	
+#create an age unit years resource
+map:ageAtDiagnosisObjectUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ageDiagnosisUnit_@@diagnosis.id@@";
+	d2rq:class uo:UO_0000036;				#means years
+	.
+	
+#add the value property to the age resource
+map:ageDiagnosisValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtDiagnosisObject;
+	d2rq:property roo:100042;
+	d2rq:sqlExpression "CAST((DATE_PART('year', diagnosis.dateofdiagnosis) - DATE_PART('year', patients.dateofbirth)) AS integer)";
+	d2rq:datatype xsd:int;
+	.
+	
+#Link the patient resource to the age resource
+map:ageDiagnosis_patient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100016;
+	d2rq:refersToClassMap map:ageAtDiagnosisObject;
+	.
+	
+#Link the diagnosis resource to the disease
+map:ageDiagnosis_disease a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ageAtDiagnosisObject;
+	d2rq:property roo:100038;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	.
+
+############################################
+# Treating hospital
+############################################
+#Create an instance for PMH as treatment location, and link it to the patient
+map:pmhObject a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class ncit:C19326;
+	d2rq:uriPattern "http://www.uhn.ca/PrincessMargaret";
+	.	
+
+#add the value property to the age resource
+map:treatedIn a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100039;
+	d2rq:refersToClassMap map:pmhObject;
+	.
+
+##################
+# add vital status
+##################
+#create an vitalStatus resource
+map:vitalStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "vitalStatus_C0045I@@patients.cat_id@@";
+	.
+
+# Link to the vitalStatus object of the NCI thesaurus
+map:patientVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:vitalStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "patients.vitalstatus";
+	d2rq:translateWith map:diedStatusMapping;
+	.
+	
+#create mapping between vital status and NCI code
+map:diedStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "Alive"; d2rq:rdfValue ncit:C37987; ];
+    d2rq:translation [ d2rq:databaseValue "Dead"; d2rq:rdfValue ncit:C28554; ];
+    .
+
+#link the vitalStatus resource to the patient resource
+map:vitalStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100028;
+	d2rq:refersToClassMap map:vitalStatusResource;
+	d2rq:condition "patients.vitalstatus IS NOT NULL OR patients.vitalstatus != ''";
+	.
+
+##################
+# add survival time since treatment
+##################
+#create object when vital status was determined (survival)
+map:survivalInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lastFU_@@rt.id@@";
+	d2rq:class roo:100063;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+
+#add the value property to the survival resource
+map:survivalInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property roo:100042;
+	d2rq:sqlExpression "(((DATE_PART('year', patients.lastfollowupdate) - DATE_PART('year', rt.startofrt))*12) + (DATE_PART('month', patients.lastfollowupdate) - DATE_PART('month', rt.startofrt)))";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the survival resource
+map:survivalInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:survivalInfoResourceUnit;
+	.
+	
+#create for survival status units
+map:survivalInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitLastFU_C0045I@@rt.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the survival info to patient and vitalStatus
+map:patientVitalStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:survivalInfoResource;
+	.
+	
+#link the survival info to patient and vitalStatus
+map:survivalVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:vitalStatusResource;
+	d2rq:property roo:100026;
+	d2rq:refersToClassMap map:survivalInfoResource;
+	.
+	
+#link the survival info to the treatment
+map:sbrtSurvivalLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:survivalInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:sbrtResource;
+	.
+
+##################
+# add LR status
+##################
+#create an vitalStatus resource
+map:localRecurrenceStatusResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrStatus_C0045I@@patients.cat_id@@";
+	.
+
+# Link to the vitalStatus object of the NCI thesaurus
+map:patientLRStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "patients.lrstatus";
+	d2rq:translateWith map:lrStatusMapping;
+	.
+	
+#create mapping between vital status and NCI code
+map:lrStatusMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "no local recurrence"; d2rq:rdfValue ncit:C40413; ];
+    d2rq:translation [ d2rq:databaseValue "local recurrence"; d2rq:rdfValue ncit:C55072; ];
+    .
+
+#link the vitalStatus resource to the patient resource
+map:lrStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100331;
+	d2rq:refersToClassMap map:localRecurrenceStatusResource;
+	d2rq:condition "patients.lrstatus IS NOT NULL OR patients.lrstatus != ''";
+	.
+
+##################
+# add local recurrence (and time) since treatment
+##################
+#create object when local control/recurrence was determined
+map:localRecurrenceInfoResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "lrFU_@@rt.id@@";
+	d2rq:class roo:100328;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+
+#add the value property to the local recurrence resource
+map:localRecurrenceInfoValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100042;
+	d2rq:sqlExpression "(((DATE_PART('year', patients.lrMeasurementDate) - DATE_PART('year', rt.endofrt))*12) + (DATE_PART('month', patients.lrMeasurementDate) - DATE_PART('month', rt.endofrt)))";
+	d2rq:datatype xsd:int;
+	.
+	
+# add the unit property to the local recurrence resource
+map:localRecurrenceInfoUnit a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:localRecurrenceInfoResourceUnit;
+	.
+	
+#create for local recurrence status units
+map:localRecurrenceInfoResourceUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "unitLRFU_C0045I@@rt.id@@";
+	d2rq:class uo:UO_0000035;
+	.
+	
+#link the LR info to patient
+map:patientLRStatusPatient a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the LR time info to LR Status
+map:LRVitalStatus a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceStatusResource;
+	d2rq:property roo:100332;
+	d2rq:refersToClassMap map:localRecurrenceInfoResource;
+	.
+	
+#link the LR info to the treatment
+map:treatmentLRLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:localRecurrenceInfoResource;
+	d2rq:property time:after;
+	d2rq:refersToClassMap map:sbrtResource;
+	.
+
+
+############################################
+# FEV1 as volumetric measure
+############################################
+#create object for volumetric FEV1
+map:fev1VolumeResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1Vol_@@pft.id@@";
+	d2rq:class ncit:C38084;
+	d2rq:join "pft.cat_id => patients.cat_id";
+	.
+	
+#add the value property to the FEV1 volume resource
+map:fev1VolumeLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeResource;
+	d2rq:property roo:100042;
+	d2rq:column "pft.fevone";
+	d2rq:datatype xsd:double;
+	.
+	
+#create for volume unit resource
+map:fev1VolumeUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1VolUnit_@@pft.id@@";
+	d2rq:class uo:UO_0000099;
+	.
+	
+# add the unit property to the survival resource
+map:fev1VolumeUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:fev1VolumeUnit;
+	.
+	
+#link the FEV1 volume resource to patient
+map:patientFev1Volume a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100315;
+	d2rq:refersToClassMap map:fev1VolumeResource;
+	.
+	
+##########
+#create date object for disease
+map:fev1VolumeDateTime a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1VolDate_@@pft.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:fev1VolumeDateTimeLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:fev1VolumeDateTime;
+	.
+
+#add the year
+map:fev1VolumeDateTimeYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeDateTime;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:fev1VolumeDateTimeMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeDateTime;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:fev1VolumeDateTimeDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1VolumeDateTime;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+############################################
+# FEV1 as percentage measure
+############################################
+#create object for pct FEV1
+map:fev1PercentageResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1Pct_@@pft.id@@";
+	d2rq:class ncit:C112376;
+	d2rq:join "pft.cat_id => patients.cat_id";
+	.
+	
+#add the value property to the FEV1 pct resource
+map:fev1PercentageLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageResource;
+	d2rq:property roo:100042;
+	d2rq:column "pft.fevone_pct";
+	d2rq:datatype xsd:int;
+	.
+	
+#create for percentage unit resource
+map:fev1PercentageUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1PctUnit_@@pft.id@@";
+	d2rq:class uo:UO_0000187;
+	.
+	
+# add the unit property to the survival resource
+map:fev1PercentageUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:fev1PercentageUnit;
+	.
+	
+#link the FEV1 percentage resource to patient
+map:patientFev1Percentage a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100264;
+	d2rq:refersToClassMap map:fev1PercentageResource;
+	.
+
+##########
+#create date object for disease
+map:fev1PercentageDateTime a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "fev1PctDate_@@pft.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:fev1PercentageDateTimeLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:fev1PercentageDateTime;
+	.
+
+#add the year
+map:fev1PercentageDateTimeYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageDateTime;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:fev1PercentageDateTimeMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageDateTime;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:fev1PercentageDateTimeDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:fev1PercentageDateTime;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+
+############################################
+# DLCO as volumetric measure
+############################################
+#create object for volumetric FEV1
+map:dlcoVolumeResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoVol_@@pft.id@@";
+	d2rq:class ncit:C38083;
+	d2rq:join "pft.cat_id => patients.cat_id";
+	.
+	
+#add the value property to the dlco volume resource
+map:dlcoVolumeLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeResource;
+	d2rq:property roo:100042;
+	d2rq:column "pft.dlco";
+	d2rq:datatype xsd:double;
+	.
+	
+#create for volume unit resource
+map:dlcoVolumeUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoVolUnit_@@pft.id@@";
+	d2rq:class uo:0000040;
+	#it's actually mmol/min/kPa
+	.
+	
+# add the unit property to the survival resource
+map:dlcoVolumeUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:dlcoVolumeUnit;
+	.
+	
+#link the dlco volume resource to patient
+map:patientdlcoVolume a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100315;
+	d2rq:refersToClassMap map:dlcoVolumeResource;
+	.
+	
+##########
+#create date object for disease
+map:dlcoVolumeDateTime a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoVolDate_@@pft.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:dlcoVolumeDateTimeLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:dlcoVolumeDateTime;
+	.
+
+#add the year
+map:dlcoVolumeDateTimeYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeDateTime;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:dlcoVolumeDateTimeMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeDateTime;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:dlcoVolumeDateTimeDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoVolumeDateTime;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.	
+
+############################################
+# DLCO as percentage measure
+############################################
+#create object for pct dlco
+map:dlcoPercentageResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoPct_@@pft.id@@";
+	d2rq:class roo:100368;
+	d2rq:join "pft.cat_id => patients.cat_id";
+	.
+	
+#add the value property to the dlco pct resource
+map:dlcoPercentageLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageResource;
+	d2rq:property roo:100042;
+	d2rq:column "pft.dlco_pct";
+	d2rq:datatype xsd:int;
+	.
+	
+#create for percentage unit resource
+map:dlcoPercentageUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoPctUnit_@@pft.id@@";
+	d2rq:class uo:UO_0000187;
+	.
+	
+# add the unit property to the survival resource
+map:dlcoPercentageUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:dlcoPercentageUnit;
+	.
+	
+#link the dlco percentage resource to patient
+map:patientdlcoPercentage a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100214;
+	d2rq:refersToClassMap map:dlcoPercentageResource;
+	.
+
+##########
+#create date object for disease
+map:dlcoPercentageDateTime a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dlcoPctDate_@@pft.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:dlcoPercentageDateTimeLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:dlcoPercentageDateTime;
+	.
+
+#add the year
+map:dlcoPercentageDateTimeYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageDateTime;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:dlcoPercentageDateTimeMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageDateTime;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:dlcoPercentageDateTimeDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:dlcoPercentageDateTime;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', pft.pftdate)";
+	d2rq:datatype xsd:int;
+	.	
+	
+############################################
+# ECOG performance status
+############################################
+map:patientEcogResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ecog_@@diagnosis.id@@";
+	#d2rq:class ncit:C28421;	
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+	
+# link patient to ecog status
+map:patientEcogResourceBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100218;
+	d2rq:refersToClassMap map:patientEcogResource;
+	.
+	
+# link ecog status to disease
+map:diseaseEcogResourceBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patientEcogResource;
+	d2rq:property roo:100038;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	.
+	
+# Set the ecog status (rdf type) for the resource
+map:ecogTypeStage a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patientEcogResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "diagnosis.ecog_attreatment";
+	d2rq:translateWith map:ecogMapping.
+
+#create mapping between gender and NCI code
+map:ecogMapping a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "0"; d2rq:rdfValue ncit:C105722; ];
+	d2rq:translation [ d2rq:databaseValue "1"; d2rq:rdfValue ncit:C105723; ];
+	d2rq:translation [ d2rq:databaseValue "2"; d2rq:rdfValue ncit:C105725; ];
+	d2rq:translation [ d2rq:databaseValue "3"; d2rq:rdfValue ncit:C105726; ];
+	d2rq:translation [ d2rq:databaseValue "4"; d2rq:rdfValue ncit:C105727; ];
+	d2rq:translation [ d2rq:databaseValue "5"; d2rq:rdfValue ncit:C105728; ];
+    .
+	
+############################################
+# Positive lymph nodes
+############################################
+#create object for posLymphNodes
+map:posLymphNodesResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "posLymphNodes_@@patients.cat_id@@";
+	d2rq:class roo:100049;
+	#d2rq:condition "patients.lab_baselinelymph >= 0";
+	.
+
+#link the pos lymph node resource to patient
+map:patientPosLymphNodesResource a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100022;
+	d2rq:refersToClassMap map:posLymphNodesResource;
+	#d2rq:condition "patients.lab_baselinelymph >= 0";
+	.
+	
+#add the value property to the FEV1 pct resource
+map:posLymphNodesLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:posLymphNodesResource;
+	d2rq:property roo:100042;
+	#d2rq:column "patients.lab_baselinelymph";
+	d2rq:pattern "0";
+	d2rq:datatype xsd:int;
+	.
+	
+#create for percentage unit resource
+map:posLymphNodesUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "posLymphNodesUnit_@@patients.cat_id@@";
+	d2rq:class uo:UO_00000189;
+	.
+	
+# add the unit property to the survival resource
+map:posLymphNodesUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:posLymphNodesResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:posLymphNodesUnit;
+	.
+	
+############################################
+# Clinical TNM stage
+############################################
+#create object for TNM stage
+map:clinTnmResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "clinTNM_@@diagnosis.id@@";
+	d2rq:class ncit:C48881;
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+
+# link TNM object to disease
+map:clinTnmPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100243;
+	d2rq:refersToClassMap map:clinTnmResource;
+	.
+
+#create a T-stage resource
+map:diseaseClinTResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "clinTStage_@@diagnosis.id@@";
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+	
+# link T-stage to TNM finding object
+map:diseaseTNMTBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:clinTnmResource;
+	d2rq:property roo:100244;
+	d2rq:refersToClassMap map:diseaseClinTResource;
+	.
+	
+# Set the T-stage (rdf type) for the resource
+map:clinTnmTTypeStage a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:diseaseClinTResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "diagnosis.t_stage";
+	d2rq:translateWith map:tStageMapping;
+	.
+
+#create mapping between gender and NCI code
+map:tStageMapping a d2rq:TranslationTable;
+	d2rq:translation [ d2rq:databaseValue "1"; d2rq:rdfValue ncit:C48720; ];
+	d2rq:translation [ d2rq:databaseValue "2"; d2rq:rdfValue ncit:C48724; ];
+	d2rq:translation [ d2rq:databaseValue "3"; d2rq:rdfValue ncit:C48728; ];
+	d2rq:translation [ d2rq:databaseValue "5"; d2rq:rdfValue ncit:C48732; ];
+    .
+
+#create AJCC instance resource
+map:ajccResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "clinTNMAjccVersion_@@diagnosis.id@@";
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+	
+# link AJCC object to TNM resource
+map:tnmAjccBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:clinTnmResource;
+	d2rq:property roo:100219;
+	d2rq:refersToClassMap map:ajccResource;
+	.
+	
+# Set the rdf typ) for the ajcc resource
+map:tnmAjccType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ajccResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "diagnosis.ajccedition";
+	d2rq:translateWith map:ajccMapping;
+	.
+
+#create mapping between gender and NCI code
+map:ajccMapping a d2rq:TranslationTable;
+	d2rq:translation [ d2rq:databaseValue "6"; d2rq:rdfValue roo:100053; ];
+	d2rq:translation [ d2rq:databaseValue "7"; d2rq:rdfValue roo:100052; ];
+    .
+	
+############################################
+# GTV Volume
+############################################
+#create object for TNM stage
+map:gtvResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "gtv_@@rt.id@@";
+	d2rq:class roo:100054;
+	d2rq:join "rt.tumorid => diagnosis.tumorid";
+	d2rq:join "diagnosis.cat_id => patients.cat_id";
+	.
+	
+# link gtv resource to patient
+map:patientGtvBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient_disease_obj;
+	d2rq:property roo:100315;
+	d2rq:refersToClassMap map:gtvResource;
+	.
+
+#create colume unit resource
+map:gtvUnit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "gtvUnit_@@rt.id@@";
+	d2rq:class uo:UO_00000097;
+	.
+	
+# add the unit property to the GTV resource
+map:gtvUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:gtvResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:gtvUnit;
+	.
+
+#add the actual volume value
+map:gtvLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:gtvResource;
+	d2rq:property roo:100042;
+	d2rq:column "rt.gtvvolume";
+	d2rq:datatype xsd:double;
+	.
+	
+############################################
+# Add radiation treatment
+############################################
+
+#create Radiation therapy object (SBRT in this case)
+map:sbrtResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrt_@@rt.id@@";
+	d2rq:class ncit:C118286;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+	
+# link radiotherapy resource to patient
+map:patientSbrtBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100301;
+	d2rq:refersToClassMap map:sbrtResource;
+	.
+	
+# link radiotherapy resource to disease
+map:diagnosisSbrtBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:sbrtResource;
+	d2rq:property roo:100402;
+	d2rq:refersToClassMap map:patient_disease_obj;
+	d2rq:join "rt.tumorid => diagnosis.tumorid";
+	.
+	
+#create prescribed dose resource therapy object
+map:prescribedSbrtDoseResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtPrescribedDose_@@rt.id@@";
+	d2rq:class roo:100013;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+	
+# link prescribed dose resource to radiotherapy resource
+map:sbrtPrescribedDoseBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:sbrtResource;
+	d2rq:property roo:100023;
+	d2rq:refersToClassMap map:prescribedSbrtDoseResource;
+	.
+	
+#add the actual volume value
+map:prescribedDoseLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseResource;
+	d2rq:property roo:100042;
+	d2rq:join "rt.sbrt_dose => sbrt_regimens.id";
+	d2rq:sqlExpression "sbrt_regimens.dose_only";
+	d2rq:datatype xsd:double;
+	.
+	
+#create gray resource therapy object
+map:prescribedSbrtDoseUnitResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtPrescribedDoseUnit_@@rt.id@@";
+	d2rq:class uo:UO_000134;
+	.
+	
+# link prescribed dose unit resource to prescribed RT resource
+map:sbrtPrescribedDoseUnitBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseResource;
+	d2rq:property roo:100027;
+	d2rq:refersToClassMap map:prescribedSbrtDoseUnitResource;
+	.
+	
+# create resource for number of fractions
+map:prescribedSbrtDoseFractionsResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtPrescribedDoseFractions_@@rt.id@@";
+	d2rq:class roo:100356;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+	
+# link number of fractions to prescribed RT resource
+map:sbrtPrescribedDoseFractionsBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseResource;
+	d2rq:property roo:100224;
+	d2rq:refersToClassMap map:prescribedSbrtDoseFractionsResource;
+	.
+	
+#add the actual number of fractions
+map:sbrtPrescribedDoseFractionsLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseFractionsResource;
+	d2rq:property roo:100223;
+	d2rq:join "rt.sbrt_dose => sbrt_regimens.id";
+	d2rq:sqlExpression "sbrt_regimens.fractions";
+	d2rq:datatype xsd:integer;
+	.
+	
+# create resource for number of fractions per day
+map:prescribedSbrtDoseFractionsDayResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtPrescribedDoseFractionsDay_@@rt.id@@";
+	d2rq:class roo:100355;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	.
+	
+# link number of fractions to prescribed RT resource
+map:sbrtPrescribedDoseFractionsDayBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseResource;
+	d2rq:property roo:100223;
+	d2rq:refersToClassMap map:prescribedSbrtDoseFractionsDayResource;
+	.
+	
+#add the actual number of fractions
+map:sbrtPrescribedDoseFractionsDayLiteral a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:prescribedSbrtDoseFractionsDayResource;
+	d2rq:property roo:100223;
+	d2rq:join "rt.sbrt_dose => sbrt_regimens.id";
+	d2rq:sqlExpression "1";
+	d2rq:datatype xsd:integer;
+	.
+	
+##################################################
+# Add first and last day for radiation treatment
+##################################################
+
+#create RT first fraction object
+map:firstFractionResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtFirstFrac_@@rt.id@@";
+	d2rq:class roo:100058;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	d2rq:condition "rt.startofrt IS NOT NULL";
+	.
+
+# link number of fractions to prescribed RT resource
+map:firstFractionBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:sbrtResource;
+	d2rq:property roo:100269;
+	d2rq:refersToClassMap map:firstFractionResource;
+	.
+	
+##########
+#create date object for first fraction
+map:firstFractionDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtFirstFracDate_@@rt.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:firstFractionDateLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:firstFractionResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:firstFractionDate;
+	.
+
+#add the year
+map:firstFractionDateYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:firstFractionDate;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', rt.startofrt)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:firstFractionDateMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:firstFractionDate;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', rt.startofrt)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:firstFractionDateDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:firstFractionDate;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', rt.startofrt)";
+	d2rq:datatype xsd:int;
+	.
+
+#create RT last fraction object
+map:lastFractionResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtLastFrac_@@rt.id@@";
+	d2rq:class roo:100059;
+	d2rq:join "rt.cat_id => patients.cat_id";
+	d2rq:condition "rt.endofrt IS NOT NULL";
+	.
+
+# link number of fractions to prescribed RT resource
+map:lastFractionBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:sbrtResource;
+	d2rq:property roo:100269;
+	d2rq:refersToClassMap map:lastFractionResource;
+	.
+	
+##########
+#create date object for last fraction
+map:lastFractionDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "sbrtLastFracDate_@@rt.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:lastFractionDateLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:lastFractionResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:lastFractionDate;
+	.
+
+#add the year
+map:lastFractionDateYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:lastFractionDate;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', rt.endofrt)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:lastFractionDateMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:lastFractionDate;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', rt.endofrt)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:lastFractionDateDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:lastFractionDate;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', rt.endofrt)";
+	d2rq:datatype xsd:int;
+	.
+	
+##################################################
+# Add toxicities
+##################################################
+
+map:toxicityResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "tox@@toxi.id@@";
+	d2rq:join "toxi.cat_id => patients.cat_id";
+	.
+
+# Set the T-stage (rdf type) for the resource
+map:toxicityResourceType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxicityResource;
+	d2rq:property rdf:type;
+	d2rq:uriColumn "toxi.typegrade";
+	d2rq:translateWith map:toxTypeGradeMapping;
+	.
+	
+# Map the toxicity to the patient instance
+map:toxPatientLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100291;
+	d2rq:refersToClassMap map:toxicityResource;
+	.
+
+# mapping table for toxicities
+map:toxTypeGradeMapping a d2rq:TranslationTable;
+	d2rq:translation [ d2rq:databaseValue "1-0"; d2rq:rdfValue ctcae:Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "1-1"; d2rq:rdfValue ctcae:Grade_1_Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "1-2"; d2rq:rdfValue ctcae:Grade_2_Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "1-3"; d2rq:rdfValue ctcae:Grade_3_Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "1-4"; d2rq:rdfValue ctcae:Grade_4_Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "1-5"; d2rq:rdfValue ctcae:Grade_5_Pneumonitis; ];
+	d2rq:translation [ d2rq:databaseValue "2-0"; d2rq:rdfValue ctcae:Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "2-1"; d2rq:rdfValue ctcae:Grade_1_Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "2-2"; d2rq:rdfValue ctcae:Grade_2_Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "2-3"; d2rq:rdfValue ctcae:Grade_3_Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "2-4"; d2rq:rdfValue ctcae:Grade_4_Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "2-5"; d2rq:rdfValue ctcae:Grade_5_Fracture; ];
+	d2rq:translation [ d2rq:databaseValue "3-0"; d2rq:rdfValue ctcae:Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "3-1"; d2rq:rdfValue ctcae:Grade_1_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "3-2"; d2rq:rdfValue ctcae:Grade_2_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "3-3"; d2rq:rdfValue ctcae:Grade_3_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "4-0"; d2rq:rdfValue ctcae:Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "4-1"; d2rq:rdfValue ctcae:Grade_1_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "4-2"; d2rq:rdfValue ctcae:Grade_2_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "4-3"; d2rq:rdfValue ctcae:Grade_3_Chest_wall_pain; ];
+	d2rq:translation [ d2rq:databaseValue "5-0"; d2rq:rdfValue ctcae:Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "5-1"; d2rq:rdfValue ctcae:Grade_1_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "5-2"; d2rq:rdfValue ctcae:Grade_2_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "5-3"; d2rq:rdfValue ctcae:Grade_3_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "5-4"; d2rq:rdfValue ctcae:Grade_4_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "5-5"; d2rq:rdfValue ctcae:Grade_5_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "6-0"; d2rq:rdfValue ctcae:Fatigue; ];
+	d2rq:translation [ d2rq:databaseValue "6-1"; d2rq:rdfValue ctcae:Grade_1_Fatigue; ];
+	d2rq:translation [ d2rq:databaseValue "6-2"; d2rq:rdfValue ctcae:Grade_2_Fatigue; ];
+	d2rq:translation [ d2rq:databaseValue "6-3"; d2rq:rdfValue ctcae:Grade_3_Fatigue; ];
+	d2rq:translation [ d2rq:databaseValue "7-0"; d2rq:rdfValue ctcae:Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "7-1"; d2rq:rdfValue ctcae:Grade_1_Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "7-2"; d2rq:rdfValue ctcae:Grade_2_Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "7-3"; d2rq:rdfValue ctcae:Grade_3_Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "7-4"; d2rq:rdfValue ctcae:Grade_4_Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "7-5"; d2rq:rdfValue ctcae:Grade_5_Dyspnea; ];
+	d2rq:translation [ d2rq:databaseValue "8-0"; d2rq:rdfValue ctcae:Cough; ];
+	d2rq:translation [ d2rq:databaseValue "8-1"; d2rq:rdfValue ctcae:Grade_1_Cough; ];
+	d2rq:translation [ d2rq:databaseValue "8-2"; d2rq:rdfValue ctcae:Grade_2_Cough; ];
+	d2rq:translation [ d2rq:databaseValue "8-3"; d2rq:rdfValue ctcae:Grade_3_Cough; ];
+	d2rq:translation [ d2rq:databaseValue "9-0"; d2rq:rdfValue ctcae:Anorexia; ];
+	d2rq:translation [ d2rq:databaseValue "9-1"; d2rq:rdfValue ctcae:Grade_1_Anorexia; ];
+	d2rq:translation [ d2rq:databaseValue "9-2"; d2rq:rdfValue ctcae:Grade_2_Anorexia; ];
+	d2rq:translation [ d2rq:databaseValue "9-3"; d2rq:rdfValue ctcae:Grade_3_Anorexia; ];
+	d2rq:translation [ d2rq:databaseValue "9-4"; d2rq:rdfValue ctcae:Grade_4_Anorexia; ];
+	d2rq:translation [ d2rq:databaseValue "9-5"; d2rq:rdfValue ctcae:Grade_5_Anorexia; ];
+ 	#d2rq:translation [ d2rq:databaseValue "10-0"; d2rq:rdfValue ctcae:Pneumonitis; ]; Not sure what MSK means
+	d2rq:translation [ d2rq:databaseValue "12-0"; d2rq:rdfValue ctcae:Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "12-1"; d2rq:rdfValue ctcae:Grade_1_Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "12-2"; d2rq:rdfValue ctcae:Grade_2_Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "12-3"; d2rq:rdfValue ctcae:Grade_3_Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "12-4"; d2rq:rdfValue ctcae:Grade_4_Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "12-5"; d2rq:rdfValue ctcae:Grade_5_Dysphagia; ];
+	d2rq:translation [ d2rq:databaseValue "13-0"; d2rq:rdfValue ncit:C3094; ];
+	d2rq:translation [ d2rq:databaseValue "14-0"; d2rq:rdfValue ctcae:Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "14-1"; d2rq:rdfValue ctcae:Grade_1_Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "14-2"; d2rq:rdfValue ctcae:Grade_2_Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "14-3"; d2rq:rdfValue ctcae:Grade_3_Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "14-4"; d2rq:rdfValue ctcae:Grade_4_Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "14-5"; d2rq:rdfValue ctcae:Grade_5_Esophagitis; ];
+	d2rq:translation [ d2rq:databaseValue "15-0"; d2rq:rdfValue ctcae:Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "15-1"; d2rq:rdfValue ctcae:Grade_1_Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "15-2"; d2rq:rdfValue ctcae:Grade_2_Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "15-3"; d2rq:rdfValue ctcae:Grade_3_Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "15-4"; d2rq:rdfValue ctcae:Grade_4_Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "15-5"; d2rq:rdfValue ctcae:Grade_5_Pulmonary_fibrosis; ];
+	d2rq:translation [ d2rq:databaseValue "16-0"; d2rq:rdfValue ctcae:Brachial_plexopathy; ];
+	d2rq:translation [ d2rq:databaseValue "16-1"; d2rq:rdfValue ctcae:Grade_1_Brachial_plexopathy; ];
+	d2rq:translation [ d2rq:databaseValue "16-2"; d2rq:rdfValue ctcae:Grade_2_Brachial_plexopathy; ];
+	d2rq:translation [ d2rq:databaseValue "16-3"; d2rq:rdfValue ctcae:Grade_3_Brachial_plexopathy; ];
+	d2rq:translation [ d2rq:databaseValue "17-0"; d2rq:rdfValue ctcae:Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "17-1"; d2rq:rdfValue ctcae:Grade_1_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "17-2"; d2rq:rdfValue ctcae:Grade_2_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "17-3"; d2rq:rdfValue ctcae:Grade_3_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "17-4"; d2rq:rdfValue ctcae:Grade_4_Radiation_recall_reaction_dermatologic; ];
+	d2rq:translation [ d2rq:databaseValue "17-5"; d2rq:rdfValue ctcae:Grade_5_Radiation_recall_reaction_dermatologic; ];
+    .
+	
+#create date object for first fraction
+map:toxRibResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "toxRib@@toxi.id@@";
+	d2rq:class fma:fma7574;
+	.
+	
+# Map the date to the disease instance
+map:toxRibLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxicityResource;
+	d2rq:property roo:100221;
+	d2rq:refersToClassMap map:toxRibResource;
+	d2rq:condition "toxi.toxicitytype = 2";
+	d2rq:join "toxi.cat_id <= patients.cat_id";
+	.
+	
+####if toxicity type = 2, add rib fracture anatomical site
+### type=3 acute, type4=chronic
+### type=5 acute, type17=late
+	
+##########
+#create date object for toxicity
+map:toxDateResource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "toxDate@@toxi.id@@";
+	d2rq:class time:GeneralDateTimeDescription;
+	.
+	
+# Map the date to the disease instance
+map:toxDateLink a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxicityResource;
+	d2rq:property roo:100041;
+	d2rq:refersToClassMap map:toxDateResource;
+	.
+
+#add the year
+map:toxDateYear a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxDateResource;
+	d2rq:property time:year;
+	d2rq:sqlExpression "DATE_PART('year', toxi.toxicitydate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the month
+map:toxDateMonth a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxDateResource;
+	d2rq:property time:month;
+	d2rq:sqlExpression "DATE_PART('month', toxi.toxicitydate)";
+	d2rq:datatype xsd:int;
+	.
+	
+#add the day
+map:toxDateDay a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:toxDateResource;
+	d2rq:property time:day;
+	d2rq:sqlExpression "DATE_PART('day', toxi.toxicitydate)";
+	d2rq:datatype xsd:int;
+	.
+	
+##################################################
+# Add comorbidities
+##################################################
+#create MI comorbidity object
+map:comorbidityMI a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "miCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C27996;
+	d2rq:condition "patients.comorbid_mi_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityMIPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityMI;
+	.
+	
+#create CHF comorbidity object
+map:comorbidityCHF a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "chfCharlson_@@patients.cat_id@@";
+	d2rq:class icd:I50.0;
+	d2rq:condition "patients.comorbid_chf_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityCHFPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityCHF;
+	.
+
+#create PVD comorbidity object
+map:comorbidityPVD a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "pvdCharlson_@@patients.cat_id@@";
+	d2rq:class icd:I73.9;
+	d2rq:condition "patients.comorbid_pvd_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityPVDPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityPVD;
+	.	
+	
+#create CVA comorbidity object
+map:comorbidityCVA a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "cvaCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C2938;
+	d2rq:condition "patients.comorbid_cva_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityCVAPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityCVA;
+	.	
+	
+#create Dementia comorbidity object
+map:comorbidityDementia a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dementiaCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C4786;
+	d2rq:condition "patients.comorbid_dementia_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityDementiaPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityDementia;
+	.	
+	
+#create Chronic Lung Disorder comorbidity object
+map:comorbidityCOPD a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "copdCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C98541;
+	d2rq:condition "patients.comorbid_copd_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityCopdPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityCOPD;
+	.	
+	
+#create connective tissue disease comorbidity object
+map:comorbidityCTD a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ctdCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C27204;
+	d2rq:condition "patients.comorbid_rheumatic_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityCTDPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityCTD;
+	.
+	
+#create ulcer disease object
+map:comorbidityUlcer a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ulcerCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C3426;
+	d2rq:condition "patients.comorbid_ulcer_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityUlcerPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityUlcer;
+	.
+	
+#create MildLiver disease object
+map:comorbidityMildLiver a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "mildLiverCharlson_@@patients.cat_id@@";
+	d2rq:class icd:K76.9;
+	d2rq:condition "patients.comorbid_liver_charlson = 2";
+	.
+
+# Link comorbidity to patient
+map:comorbidityMildLiverPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityMildLiver;
+	.
+	
+#create Diabetes disease object
+map:comorbidityDiabetes a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dmCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C2985;
+	d2rq:condition "patients.comorbid_dm_charlson is true";
+	.
+
+# Link comorbidity to patient
+map:comorbidityDMPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityDiabetes;
+	.
+	
+#create Hemiplegia disease object
+map:comorbidityHemiplegia a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "plegiaCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C64329;
+	d2rq:condition "patients.comorbid_plegia_charlson > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityHemiplegiaPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityHemiplegia;
+	.
+	
+#create Renal disease object
+map:comorbidityRenal a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "renalCharlson_@@patients.cat_id@@";
+	d2rq:class icdcm:N18.3;
+	d2rq:condition "patients.comorbid_renal_charlson > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityRenalPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityRenal;
+	.
+	
+#create DM end organ disease object
+map:comorbidityDMEndOrgan a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "dmEndOrganCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C113717;
+	d2rq:condition "patients.comorbid_dmendorgan_charlson is true";
+	.
+
+# Link endOrganDisease to DM
+map:comorbidityDMEndOrganDMBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:comorbidityDiabetes;
+	d2rq:property roo:100197;
+	d2rq:refersToClassMap map:comorbidityDMEndOrgan;
+	.
+	
+#create Cancer disease object
+map:comorbidityCancer a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "cancerCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C3262;
+	d2rq:condition "patients.comorbid_cancer_charlson > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityCancerPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityCancer;
+	.
+	
+#create Leukemia disease object
+map:comorbidityLeukemia a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "cancerCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C3161;
+	d2rq:condition "patients.comorbid_leukemia > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityLeukemiaPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityLeukemia;
+	.
+	
+#create Lymphoma disease object
+map:comorbidityLymphoma a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "cancerCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C3208;
+	d2rq:condition "patients.comorbid_lymphoma > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityLymphomaPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityLymphoma;
+	.
+	
+#create SevereLiver disease object
+map:comorbiditySevereLiver a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "severeLiverCharlson_@@patients.cat_id@@";
+	d2rq:class icd:K74.6;
+	d2rq:condition "patients.comorbid_liver_charlson = 3";
+	.
+
+# Link comorbidity to patient
+map:comorbiditySevereLiverPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbiditySevereLiver;
+	.
+	
+#create MetsSolidTumor disease object
+map:comorbidityMetsSolidTumor a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "metsCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C3261;
+	d2rq:condition "patients.comorbid_metastases_charlson > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityMetsSolidLiverPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityMetsSolidTumor;
+	.
+	
+#create AIDS disease object
+map:comorbidityAids a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "aidsCharlson_@@patients.cat_id@@";
+	d2rq:class ncit:C2851;
+	d2rq:condition "patients.comorbid_hivoraids > 0";
+	.
+
+# Link comorbidity to patient
+map:comorbidityAidsPatientBridge a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:patient;
+	d2rq:property roo:100020;
+	d2rq:refersToClassMap map:comorbidityAids;
+	.
