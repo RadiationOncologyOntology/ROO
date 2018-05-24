@@ -12404,7 +12404,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/C000000 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/C000000">
-        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100014"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/C100014"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Two or More Years Survival</rdfs:label>
         <skos:definition xml:lang="en">Elapsed time two or more years that a person has been alive since a related observation, procedure, event or finding.</skos:definition>
@@ -12415,10 +12415,22 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/C000001 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/C000001">
-        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100014"/>
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/C100014"/>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Less Than Two Years Survival</rdfs:label>
         <skos:definition xml:lang="en">Elapsed time is less than two years that a person has been alive since a related observation, procedure, event or finding. The person has died.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/C100014 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/C100014">
+        <owl:equivalentClass rdf:resource="http://www.cancerdata.org/roo/100014"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82572"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">Survival</rdfs:label>
+        <skos:definition xml:lang="en">Elapsed time that a person has been alive since a related observation, procedure, event or finding.</skos:definition>
     </owl:Class>
     
 
