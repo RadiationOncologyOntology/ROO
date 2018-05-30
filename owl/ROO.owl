@@ -12472,6 +12472,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/100006 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100006">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100068"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -12493,6 +12494,7 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     <!-- http://www.cancerdata.org/roo/100007 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100007">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100068"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -15881,6 +15883,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <!-- http://www.cancerdata.org/roo/100346 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100346">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100006"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -15902,6 +15905,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <!-- http://www.cancerdata.org/roo/100347 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100347">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100006"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19421,6 +19425,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <!-- http://www.cancerdata.org/roo/100590 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100590">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100068"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19465,6 +19470,7 @@ Examples are target and other Information Object Defintion and Entities.</skos:d
     <!-- http://www.cancerdata.org/roo/100595 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100595">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100068"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19561,6 +19567,7 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     <!-- http://www.cancerdata.org/roo/100602 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100602">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100590"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19593,6 +19600,7 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     <!-- http://www.cancerdata.org/roo/100604 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/100604">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/100590"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
