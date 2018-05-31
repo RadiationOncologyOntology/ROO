@@ -12423,6 +12423,18 @@ pulmonary arterial and venous trees. Examples: There is only one heart.</skos:de
     
 
 
+    <!-- http://www.cancerdata.org/roo/C100002 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/C100002">
+        <owl:equivalentClass rdf:resource="http://www.cancerdata.org/roo/100002"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150"/>
+        <dc:creator>Andre Dekker</dc:creator>
+        <rdfs:label xml:lang="en">&apos;Age at Diagnosis&apos;</rdfs:label>
+        <skos:definition xml:lang="en">Age at the time of diagnosis of the disease.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.cancerdata.org/roo/C100014 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/C100014">
