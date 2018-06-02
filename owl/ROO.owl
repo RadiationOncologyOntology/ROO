@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.cancerdata.org/roo/"
      xml:base="http://www.cancerdata.org/roo/"
      xmlns:metadata="http://data.bioontology.org/metadata/"
@@ -38,102 +39,6 @@
     <!-- http://data.bioontology.org/metadata/prefixIRI -->
 
     <owl:AnnotationProperty rdf:about="http://data.bioontology.org/metadata/prefixIRI"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A8 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#A8"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P106 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P106"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P107 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P107"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P207 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P207"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P322 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P322"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P366 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P366"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P378 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P378"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P383 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P383"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P384 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P384"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P385 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P385"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P386 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P386"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
     
 
 
@@ -1769,7 +1674,7 @@
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100331">
         <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100022"/>
         <dc:creator>Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">has_recurrence_status</rdfs:label>
+        <rdfs:label xml:lang="en">has_recurrence_status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1779,7 +1684,7 @@
     <owl:ObjectProperty rdf:about="http://www.cancerdata.org/roo/100332">
         <rdfs:subPropertyOf rdf:resource="http://www.cancerdata.org/roo/100022"/>
         <dc:creator>Johan van Soest</dc:creator>
-        <rdfs:label xml:lang="nl">has_recurrence_time</rdfs:label>
+        <rdfs:label xml:lang="en">has_recurrence_time</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -4650,74 +4555,10 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20200"/>
-        <metadata:prefixIRI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesaurus:C40413</metadata:prefixIRI>
-        <ncit:A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C116977"/>
-        <ncit:A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
-        <ncit:A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66830"/>
-        <ncit:A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C96785"/>
-        <ncit:NHC0>C40413</ncit:NHC0>
-        <ncit:P106>Finding</ncit:P106>
-        <ncit:P107>No Evidence of Disease</ncit:P107>
-        <ncit:P108>No Evidence of Disease</ncit:P108>
-        <ncit:P207>C1518340</ncit:P207>
-        <ncit:P322>CDISC</ncit:P322>
-        <ncit:P322>CTRP</ncit:P322>
-        <ncit:P325>An absence of detectable disease.</ncit:P325>
-        <ncit:P366>No_Evidence_of_Disease</ncit:P366>
-        <ncit:P90>NED</ncit:P90>
-        <ncit:P90>No Evidence of Disease</ncit:P90>
-        <ncit:P97>Diagnostic tests fail to detect presence of disease.</ncit:P97>
-        <rdfs:label>No Evidence of Disease</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">No Evidence of Disease</rdfs:label>
+        <skos:definition xml:lang="en">Diagnostic tests fail to detect presence of disease.</skos:definition>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
-        <owl:annotatedTarget>An absence of detectable disease.</owl:annotatedTarget>
-        <ncit:P378>CDISC</ncit:P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>NED</owl:annotatedTarget>
-        <ncit:P383>AB</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>NED</owl:annotatedTarget>
-        <ncit:P383>PT</ncit:P383>
-        <ncit:P384>CDISC</ncit:P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Evidence of Disease</owl:annotatedTarget>
-        <ncit:P383>PT</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Evidence of Disease</owl:annotatedTarget>
-        <ncit:P383>SY</ncit:P383>
-        <ncit:P384>CDISC</ncit:P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Evidence of Disease</owl:annotatedTarget>
-        <ncit:P383>SY</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-        <ncit:P385>TCGA</ncit:P385>
-        <ncit:P386>caDSR</ncit:P386>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C40413"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
-        <owl:annotatedTarget>Diagnostic tests fail to detect presence of disease.</owl:annotatedTarget>
-        <ncit:P378>NCI</ncit:P378>
-    </owl:Axiom>
     
 
 
@@ -4895,37 +4736,10 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48558">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20200"/>
-        <metadata:prefixIRI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesaurus:C48558</metadata:prefixIRI>
-        <ncit:NHC0>C48558</ncit:NHC0>
-        <ncit:P106>Finding</ncit:P106>
-        <ncit:P108>No Evidence of Metastatic Disease</ncit:P108>
-        <ncit:P207>C1709236</ncit:P207>
-        <ncit:P366>No_Evidence_of_Metastatic_Disease</ncit:P366>
-        <ncit:P90>No Evidence of Metastatic Disease</ncit:P90>
-        <ncit:P97>Diagnostic tests fail to detect presence of metastatic lesions.</ncit:P97>
-        <rdfs:label>No Evidence of Metastatic Disease</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">No Evidence of Metastatic Disease</rdfs:label>
+        <skos:definition xml:lang="en">Diagnostic tests fail to detect presence of metastatic lesions.</skos:definition>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48558"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Evidence of Metastatic Disease</owl:annotatedTarget>
-        <ncit:P383>PT</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48558"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Evidence of Metastatic Disease</owl:annotatedTarget>
-        <ncit:P383>SY</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-        <ncit:P386>caDSR</ncit:P386>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48558"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
-        <owl:annotatedTarget>Diagnostic tests fail to detect presence of metastatic lesions.</owl:annotatedTarget>
-        <ncit:P378>NCI</ncit:P378>
-    </owl:Axiom>
     
 
 
@@ -6359,22 +6173,9 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7919">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20200"/>
-        <metadata:prefixIRI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesaurus:C7919</metadata:prefixIRI>
-        <ncit:NHC0>C7919</ncit:NHC0>
-        <ncit:P106>Finding</ncit:P106>
-        <ncit:P108>No Measurable or Evaluable Disease</ncit:P108>
-        <ncit:P207>C0278936</ncit:P207>
-        <ncit:P366>No_Measurable_or_Evaluable_Disease</ncit:P366>
-        <ncit:P90>No Measurable or Evaluable Disease</ncit:P90>
-        <rdfs:label>No Measurable or Evaluable Disease</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">No Measurable or Evaluable Disease</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7919"/>
-        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <owl:annotatedTarget>No Measurable or Evaluable Disease</owl:annotatedTarget>
-        <ncit:P383>PT</ncit:P383>
-        <ncit:P384>NCI</ncit:P384>
-    </owl:Axiom>
     
 
 
