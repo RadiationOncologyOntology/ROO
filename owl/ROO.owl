@@ -2941,6 +2941,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141461 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C141461">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28108"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Occult Stage</rdfs:label>
+        <skos:definition xml:lang="en">A stage term that refers to a cancer in which the primary site is unknown (not detectable by clinical or radiologic examination). The definition of occult stage depends on the particular type of cancer that it refers to; for example, for breast cancer, occult stage is defined as cancer presenting with axillary lymph node metastasis without a primary in the breast being found; for non-small cell lung carcinoma, occult stage is defined as cancer detectable by sputum cytology only and the primary tumor is undetectable radiographically or during bronchoscopy.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14151 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14151">
@@ -4035,6 +4046,28 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27975 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27975">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27966"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IA</rdfs:label>
+        <skos:definition xml:lang="en">Invasive cancer confined to the original anatomic site of growth without lymph node involvement. The definition of stage IA depends on the particular type of cancer that it refers to; for example, for breast cancer, stage IA is defined as follows: T1, N0, M0. T1: Tumor 20 mm or less in greatest dimension. T1 includes T1mi. T1mi: Tumor 1 mm or less in greatest dimension. N0: No regional lymph node metastasis. M0: No clinical or radiographic evidence of distant metastasis. M0 includes M0(i+); for bone cancer, stage IA is defined as follows: T1, N0, M0, G1, GX. T1: Tumor 8 cm or less in greatest dimension. N0: No regional lymph node metastasis. M0: No distant metastasis. G1: Well differentiated-low grade. GX: Grade cannot be assessed. (partially adapted from AJCC 8th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27976 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27976">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27966"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IB</rdfs:label>
+        <skos:definition xml:lang="en">Invasive cancer confined to the original anatomic site of growth without lymph node involvement. The definition of stage IB depends on the particular type of cancer that it refers to; for example, for breast cancer, stage IB is defined as follows: (T0, N1mi, M0); (T1, N1mi, M0). T0: No evidence of primary tumor. T1: Tumor 20 mm or less in greatest dimension. T1 includes T1mi. T1mi: Tumor 1 mm or less in greatest dimension. N1mi: Nodal micrometastases. M0: No clinical or radiographic evidence of distant metastasis. M0 includes M0(i+); for bone cancer, stage IB is defined as follows: (T2, N0, M0, G1, G2, GX); (T3, N0, M0, G1, G2, GX). T2: Tumor more than 8 cm in greatest dimension. T3: Discontinuous tumors in the primary bone site. N0: No regional lymph node metastasis. M0: No distant metastasis. G1: Well differentiated-low grade. G2: Moderately differentiated-low grade. GX: Grade cannot be assessed. (partially adapted from AJCC 7th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27977 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27977">
@@ -4055,6 +4088,72 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Stage IIIB</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites. The definition of stage IIIB depends on the particular type of cancer that it refers to; for example, for breast cancer, stage IIIB is defined as follows: (T4, N0, M0); (T4, N1, M0); (T4, N2, M0). T4: Tumor of any size with direct extension to the chest wall and/or to the skin (ulceration or skin nodules). N0: No regional lymph node metastasis. N1: Metastasis to movable ipsilateral level I, II axillary lymph node(s). N2: Metastases in ipsilateral level I, II axillary lymph nodes that are clinically fixed or matted; or in clinically detected ipsilateral internal mammary nodes in the absence of clinically evident axillary lymph node metastases. M0: No clinical or radiographic evidence of distant metastasis. M0 includes M0(i+); for cervical cancer, stage IIIB is defined as follows: (T3b, Any N, M0); (T1-3, N1, M0). T3: Tumor extends to pelvic wall and/or involves lower third of vagina, and/or causes hydronephrosis or non-functioning kidney. T3b: Tumor extends to pelvic wall and/or causes hydronephrosis or non-functioning kidney. N1: Regional lymph node metastasis. M0: No distant metastasis. (partially adapted from AJCC 7th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27979 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27979">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27971"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IVA</rdfs:label>
+        <skos:definition xml:lang="en">Cancer that has spread to distant anatomic sites beyond its original site of growth. The definition of stage IVA depends on the particular type of cancer that it refers to; for example, for bone cancer, stage IVA is defined as follows: Any T, N0, M1a, Any G. N0: No regional lymph node metastasis. M1a: Distant metastasis to lung; for vaginal cancer, stage IVA is defined as follows: T4, Any N, M0. T4: Tumor invades mucosa of the bladder or rectum and/or extends beyond the true pelvis (bullous edema is not sufficient evidence to classify a tumor as T4). M0: No distant metastasis. (partially adapted from AJCC 7th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27980 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27980">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27971"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IVB</rdfs:label>
+        <skos:definition xml:lang="en">Cancer that has spread to distant anatomic sites beyond its original site of growth. The definition of stage IVB depends on the particular type of cancer that it refers to; for example, for bone cancer, stage IVB is defined as follows: (Any T, N1, Any M, Any G); (Any T, Any N, M1b, Any G). N1: Regional lymph node metastasis. M1b: Metastasis to other distant sites; for vaginal cancer, stage IVB is defined as follows: Any T, Any N, M1. M1: Distant metastasis. (partially adapted from AJCC 7th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27982 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27982">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27970"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IIIC</rdfs:label>
+        <skos:definition xml:lang="en">Locally advanced cancer that has spread to nearby organs but not to distant anatomic sites. The definition of stage IIIC depends on the particular type of cancer that it refers to; for example, for breast cancer, stage IIIC is defined as follows: Any T, N3, M0. N3: Metastases in ipsilateral infraclavicular (level III) axillary lymph nodes(s) with or without level I, II axillary lymph node involvement; or in clinically detected ipsilateral internal mammary lymph node(s) with clinically evident level I, II axillary lymph node metastases; or metastases in ipsilateral supraclavicular lymph node(s) with or without axillary or internal mammary lymph node involvement. M0: No clinical or radiographic evidence of distant metastasis. M0 includes M0(i+); for appendix carcinoma, stage IIIC is defined as follows: Any T, N2, M0. N2: Metastasis in four or more regional lymph nodes. M0: No distant metastasis. (partially adapted from AJCC 7th ed.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27983 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27983">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27975"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IA1</rdfs:label>
+        <skos:definition xml:lang="en">A stage term referring to invasive cervical and lung cancer. For cervical cancer, it includes: T1a1, N0, M0. T1a1: Tumor with stromal invasion 3.0 mm or less in depth and 7.0 mm or less in horizontal spread. N0: No regional lymph node metastasis. M0: No distant metastasis. For lung cancer, it includes: (T1mi, N0, M0); (T1a, N0, M0). T1mi: Minimally invasive adenocarcinoma: adenocarcinoma (3 cm or less in greatest dimension) with a predominantly lepidic pattern and 5 mm or less invasion in greatest dimension. T1a: Tumor measuring 1 cm or less in greatest dimension. A superficial, spreading tumor of any size whose invasive component is limited to the bronchial wall and may extend proximal to the main bronchus also is classified as T1a, but these tumors are uncommon. N0: No regional lymph node metastasis. M0: No distant metastasis. (adapted from AJCC)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27984 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27984">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27975"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage IA2</rdfs:label>
+        <skos:definition xml:lang="en">A stage term referring to invasive cervical cancer and invasive lung cancer. For cervical cancer, it includes: T1a2, N0, M0. T1a2: Tumor with stromal invasion more than 3.0 mm and not more than 5.0 mm with a horizontal spread 7.0 mm or less. N0: No regional lymph node metastasis. M0: No distant metastasis. For lung cancer, it includes: T1b, N0, M0. T1b: Tumor measuring more than 1 cm but 2 cm or less in greatest dimension. N0: No regional lymph node metastasis. M0: No distant metastasis. (adapted from AJCC)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28051 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28051">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28108"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage 0</rdfs:label>
+        <skos:definition xml:lang="en">Cancer confined to the epithelium without invasion of the basement membrane.</skos:definition>
     </owl:Class>
     
 
@@ -4808,6 +4907,28 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">M1b Stage Finding</rdfs:label>
         <skos:definition xml:lang="en">A TNM finding indicating the spread of cancer to distant anatomic sites.  The definition of M1b TNM finding depends on the specific type of cancer that it refers to; for example, for colorectal cancer it refers to metastases in more than one organ/site or the peritoneum; for prostate cancer it refers to metastasis to bone(s); for bone cancer it refers to metastasis to distant sites other than lung.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48703 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48703">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48700"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">M1c Stage Finding</rdfs:label>
+        <skos:definition xml:lang="en">A TNM finding indicating the spread of cancer to distant anatomic sites. The definition of M1c TNM finding depends on the specific type of cancer that it refers to; for example, for prostate cancer it refers to metastasis to anatomic site(s) other than bone, with or without bone disease; for retinoblastoma it refers to central nervous system metastasis; for melanoma of the uvea it refers to distant metastasis, with the largest diameter of the largest metastasis measuring 8.0 cm or more.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48704 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48704">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48883"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">MX Stage Finding</rdfs:label>
+        <skos:definition xml:lang="en">A distant metastasis TNM finding indicating that the status of distant metastasis cannot be assessed.</skos:definition>
     </owl:Class>
     
 
