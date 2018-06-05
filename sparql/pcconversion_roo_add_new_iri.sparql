@@ -4,23 +4,22 @@
 # Use:
 # 1. Upload the roo to graphdb
 # 2. Run this query
-# 3. Export as turtle e.g. as additions.ttl
-# 4. Export the old roo als ttl from Protege 5.0.0 e.g. as roo.ttl
-# 5. Open roo.ttl and additions.ttl in a Visual Studio Code
-# 6. Copy triples without prefixes from additions.ttl to the end of the roo.ttl
-# 7. Save roo.ttl, open it in Protege and save it as RDF/XML as ROO.owl
-  
+# 3. Export as turtle 
+# 4. Open in Protege 5.0.0 and save it as RDF/XML as ROO.owl
 
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-CONSTRUCT { ?newsubject ?newpredicate ?newobject}
+INSERT { ?newsubject ?newpredicate ?newobject}
 
 WHERE{
     {
+    # Add new class IRIs statement for statements which do not contain any old IRIs
     # Find all Classes with a roo prefix
     ?oldsubject a owl:Class .
     ?oldsubject ?oldpredicate ?oldobject.
     FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
     # Filter for all predicates without a roo prefix 
     FILTER (!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) .
     # Filter for all objects without a roo prefix 
@@ -32,10 +31,13 @@ WHERE{
     }
     UNION 
     {
+    # Add new class IRIs statement for statements in which the object has an old IRI and is a property
     # Find all Classes with a roo prefix
     ?oldsubject a owl:Class .
     ?oldsubject ?oldpredicate ?oldobject.
     FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
     # Filter for all predicates without a roo prefix 
     FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
     # Filter for all objects which are ObjectProperties with a roo prefix 
@@ -48,10 +50,13 @@ WHERE{
     }
     UNION
     {
+    # Add new class IRIs statement for statements in which the object has an old IRI and is a class
     # Find all Classes with a roo prefix
     ?oldsubject a owl:Class .
     ?oldsubject ?oldpredicate ?oldobject.
     FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
     # Filter for all predicates without a roo prefix 
     FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
     # Filter for all objects which are Classes with a roo prefix 
@@ -64,6 +69,7 @@ WHERE{
     }
     UNION
     {
+    # Add new property IRIs statement for DatatypeProperties
     # Find all DataProperties with a roo prefix
     ?oldsubject a owl:DatatypeProperty .
     ?oldsubject ?oldpredicate ?oldobject.
@@ -75,6 +81,7 @@ WHERE{
     }
     UNION
     {
+    # Add new property IRIs statement for ObjectProperties in which the old statments do not contain any old IRIs
     # Find all ObjectProperties with a roo prefix
     ?oldsubject a owl:ObjectProperty .
     ?oldsubject ?oldpredicate ?oldobject.
@@ -90,6 +97,7 @@ WHERE{
     }
     UNION 
     {
+    # Add new property IRIs statement for ObjectProperties in which the old statments do not contain any old IRIs
     # Find all ObjectProperties with a roo prefix
     ?oldsubject a owl:ObjectProperty .
     ?oldsubject ?oldpredicate ?oldobject.
@@ -106,6 +114,7 @@ WHERE{
     }
     UNION
     {
+    # Add new property IRIs statement for ObjectProperties in  which the object has an old IRI and is a class
     # Find all ObjectProperties with a roo prefix
     ?oldsubject a owl:ObjectProperty .
     ?oldsubject ?oldpredicate ?oldobject.
@@ -121,7 +130,28 @@ WHERE{
     BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
     }
     UNION
+        {
+        # Add new statements for non roo-classes which have as its object an old roo:iri
+        # Find all Classes with a roo prefix
+        ?oldsubject ?oldpredicate ?oldobject.
+        # Filter for all subjects without a roo prefix 
+        FILTER (!STRSTARTS(STR(?oldsubject),"http://www.cancerdata.org/roo/")) . 
+        # Filter for all objects with a roo prefix which are a class
+        ?oldobject a owl:Class .
+        FILTER (STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) . 
+        # Build new triples 
+        BIND(?oldsubject as ?newsubject).
+        BIND(?oldpredicate as ?newpredicate).
+        BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+        }
+
+    ##############################
+    ##### BLANK NODE SECTION #####
+    ##############################
+
+    UNION
     { 
+    # Add blank nodes    
     # Find all ObjectProperties with a roo prefix
     #?oldsubject1 a owl:ObjectProperty .
     ?oldsubject1 ?oldpredicate1 ?blanknode1 .
@@ -136,7 +166,7 @@ WHERE{
     BIND(?blanknode1 as ?newsubject).
     BIND(?oldpredicate as ?newpredicate).
     BIND(?oldobject as ?newobject).
-    }  
+    }
     UNION
     { 
     # Find all ObjectProperties with a roo prefix
@@ -275,6 +305,8 @@ WHERE{
     # Find all Classes with a roo prefix
     ?oldsubject a owl:Class .
     FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
     # Build equivalent class triples 
     BIND(?oldsubject as ?newsubject).
     BIND(owl:equivalentClass as ?newpredicate).
