@@ -1,0 +1,26 @@
+# This query was used to add triples for deprecation of old IRIs
+# Use:
+# 1. Upload the roo to graphdb
+# 2. Run this query
+# 3. Export the repository as turtle e.g. as roonew.ttl
+# 4. Open roonew.ttl in Protege 5.0.0 and export is with RDF/XML syntax to roo.owl
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+INSERT {?oldsubject owl:deprecated "true"^^xsd:boolean}
+WHERE
+{
+    {	?oldsubject a owl:Class
+        FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+     }
+    UNION
+    {	?oldsubject a owl:ObjectProperty
+        FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/P")) .
+	}
+    UNION
+    {	?oldsubject a owl:DatatypeProperty
+        FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/P")) .
+	}
+}

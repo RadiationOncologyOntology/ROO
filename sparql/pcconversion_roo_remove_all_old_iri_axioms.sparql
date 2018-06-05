@@ -1,0 +1,134 @@
+# This query was used to remove axioms including annotations and type declaration from old IRIs of the roo version
+# Use:
+# 1. Upload the roo to graphdb
+# 2. Run this query
+# 3. Export the repository as turtle e.g. as roonew.ttl
+# 4. Open roonew.ttl in Protege 5.0.0 and export is with RDF/XML syntax to roo.owl
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+DELETE {?oldsubject ?oldpredicate ?oldobject}
+WHERE
+{
+    {
+        # all starting axioms
+        ?oldsubject ?oldpredicate ?oldobject .
+        FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(?oldobject!=owl:Ontology) .
+     }
+    UNION 
+    {
+        # all ending axioms (equivalent classes may have object)
+        ?oldsubject ?oldpredicate ?oldobject .
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(?oldobject!=owl:Ontology) .
+     }
+    UNION 
+    # go through the blank nodes        
+    {
+        ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+        FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?blanknode1)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode1 ?oldpredicate2 ?blanknode2
+        FILTER (ISBLANK(?blanknode2)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode2 ?oldpredicate3 ?blanknode3
+        FILTER (ISBLANK(?blanknode3)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode3 ?oldpredicate4 ?blanknode4
+        FILTER (ISBLANK(?blanknode4)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode4 ?oldpredicate5 ?oldsubject
+        FILTER (ISBLANK(?oldsubject)) . 
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        ?oldsubject ?oldpredicate ?oldobject .
+    }
+    UNION 
+    {
+        ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+        FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?blanknode1)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode1 ?oldpredicate2 ?blanknode2
+        FILTER (ISBLANK(?blanknode2)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode2 ?oldpredicate3 ?blanknode3
+        FILTER (ISBLANK(?blanknode3)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode3 ?oldpredicate4 ?oldsubject
+        FILTER (ISBLANK(?oldsubject)) . 
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        ?oldsubject ?oldpredicate ?oldobject .
+    }
+    UNION 
+    {
+        ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+        FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?blanknode1)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode1 ?oldpredicate2 ?blanknode2
+        FILTER (ISBLANK(?blanknode2)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode2 ?oldpredicate3 ?oldsubject
+        FILTER (ISBLANK(?oldsubject)) . 
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        ?oldsubject ?oldpredicate ?oldobject .
+    }
+    UNION 
+    {
+        ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+        FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?blanknode1)) . 
+        # For these blank nodes see if they point to other blank nodes 
+        ?blanknode1 ?oldpredicate2 ?oldsubject
+        FILTER (ISBLANK(?oldsubject)) . 
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        ?oldsubject ?oldpredicate ?oldobject .
+    }
+    UNION 
+    {
+        ?oldsubject1 ?oldpredicate1 ?oldsubject .
+        FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?oldsubject)) . 
+        FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/P")) .
+        FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/C")) .
+        ?oldsubject ?oldpredicate ?oldobject .
+    }
+    UNION 
+    {
+        ?oldsubject ?oldpredicate ?oldobject .
+        FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+		FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+        FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/P")) .
+        # Find blank nodes
+        FILTER (ISBLANK(?oldobject)) . 
+    }
+}
