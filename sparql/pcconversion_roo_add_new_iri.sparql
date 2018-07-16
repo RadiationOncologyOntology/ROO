@@ -1,0 +1,336 @@
+# This query was used to add triples to the roo version of June 2,2018 to add P(ropertu) and C(lass) triples with uri ending with P and C codes
+# This was necessary because e.g. roo:123455 does not conform to the highest standards and gives issues in R2RML
+# All old roo properties and classes are made equivalant to new ones in this SPARQL query
+# Use:
+# 1. Upload the roo to graphdb
+# 2. Run this query
+# 3. Export as turtle 
+# 4. Open in Protege 5.0.0 and save it as RDF/XML as ROO.owl
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+INSERT { ?newsubject ?newpredicate ?newobject}
+
+WHERE{
+    {
+    # Add new class IRIs statement for statements which do not contain any old IRIs
+    # Find all Classes with a roo prefix
+    ?oldsubject a owl:Class .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER (!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) .
+    # Filter for all objects without a roo prefix 
+    FILTER (!STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) . 
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }
+    UNION 
+    {
+    # Add new class IRIs statement for statements in which the object has an old IRI and is a property
+    # Find all Classes with a roo prefix
+    ?oldsubject a owl:Class .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
+    # Filter for all objects which are ObjectProperties with a roo prefix 
+    ?oldobject a owl:ObjectProperty .
+    FILTER(STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) .
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Add new class IRIs statement for statements in which the object has an old IRI and is a class
+    # Find all Classes with a roo prefix
+    ?oldsubject a owl:Class .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
+    # Filter for all objects which are Classes with a roo prefix 
+    FILTER(STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) . 
+    ?oldobject a owl:Class .
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Add new property IRIs statement for DatatypeProperties
+    # Find all DataProperties with a roo prefix
+    ?oldsubject a owl:DatatypeProperty .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }
+    UNION
+    {
+    # Add new property IRIs statement for ObjectProperties in which the old statments do not contain any old IRIs
+    # Find all ObjectProperties with a roo prefix
+    ?oldsubject a owl:ObjectProperty .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER (!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) .
+    # Filter for all objects without a roo prefix 
+    FILTER (!STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) . 
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }
+    UNION 
+    {
+    # Add new property IRIs statement for ObjectProperties in which the old statments do not contain any old IRIs
+    # Find all ObjectProperties with a roo prefix
+    ?oldsubject a owl:ObjectProperty .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
+    # Filter for all objects which are ObjectProperties with a roo prefix 
+    ?oldobject a owl:ObjectProperty .
+    FILTER(STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) .
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Add new property IRIs statement for ObjectProperties in  which the object has an old IRI and is a class
+    # Find all ObjectProperties with a roo prefix
+    ?oldsubject a owl:ObjectProperty .
+    ?oldsubject ?oldpredicate ?oldobject.
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for all predicates without a roo prefix 
+    FILTER(!STRSTARTS(STR(?oldpredicate),"http://www.cancerdata.org/roo/")) . 
+    # Filter for all objects which are Classes with a roo prefix 
+    FILTER(STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) . 
+    ?oldobject a owl:Class .
+    # Build new triples 
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newsubject) .
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+        {
+        # Add new statements for non roo-classes which have as its object an old roo:iri
+        # Find all Classes with a roo prefix
+        ?oldsubject ?oldpredicate ?oldobject.
+        # Filter for all subjects without a roo prefix 
+        FILTER (!STRSTARTS(STR(?oldsubject),"http://www.cancerdata.org/roo/")) . 
+        # Filter for all objects with a roo prefix which are a class
+        ?oldobject a owl:Class .
+        FILTER (STRSTARTS(STR(?oldobject),"http://www.cancerdata.org/roo/")) . 
+        # Build new triples 
+        BIND(?oldsubject as ?newsubject).
+        BIND(?oldpredicate as ?newpredicate).
+        BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+        }
+
+    ##############################
+    ##### BLANK NODE SECTION #####
+    ##############################
+
+    UNION
+    { 
+    # Add blank nodes    
+    # Find all ObjectProperties with a roo prefix
+    #?oldsubject1 a owl:ObjectProperty .
+    ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+    FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+    # Find blank nodes
+    FILTER (ISBLANK(?blanknode1)) . 
+    # For these blank nodes assert all triples
+    ?blanknode1 ?oldpredicate ?oldobject
+    #Filter out roo terms as they are dealt with later in the blank node section
+    FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) .
+    # Build new triples 
+    BIND(?blanknode1 as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }
+    UNION
+    { 
+    # Find all ObjectProperties with a roo prefix
+    #?oldsubject1 a owl:ObjectProperty .
+    ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+    FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+    # Find blank nodes
+    FILTER (ISBLANK(?blanknode1)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode1 ?oldpredicate2 ?blanknode2
+    FILTER (ISBLANK(?blanknode2)) . 
+    ?blanknode2 ?oldpredicate ?oldobject
+    #Filter out roo terms as they are dealt with later in the blank node section
+    FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) .
+    # Build new triples 
+    BIND(?blanknode2 as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }  
+    UNION
+    { 
+    # Find all ObjectProperties with a roo prefix
+    #?oldsubject1 a owl:ObjectProperty .
+    ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+    FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+    # Find blank nodes
+    FILTER (ISBLANK(?blanknode1)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode1 ?oldpredicate2 ?blanknode2
+    FILTER (ISBLANK(?blanknode2)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode2 ?oldpredicate3 ?blanknode3
+    FILTER (ISBLANK(?blanknode3)) . 
+    ?blanknode3 ?oldpredicate ?oldobject
+    #Filter out roo terms as they are dealt with later in the blank node section
+    FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) .
+    # Build new triples 
+    BIND(?blanknode3 as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }  
+    UNION
+    { 
+    # Find all ObjectProperties with a roo prefix
+    #?oldsubject1 a owl:ObjectProperty .
+    ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+    FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+    # Find blank nodes
+    FILTER (ISBLANK(?blanknode1)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode1 ?oldpredicate2 ?blanknode2
+    FILTER (ISBLANK(?blanknode2)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode2 ?oldpredicate3 ?blanknode3
+    FILTER (ISBLANK(?blanknode3)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode3 ?oldpredicate4 ?blanknode4
+    FILTER (ISBLANK(?blanknode4)) . 
+    ?blanknode4 ?oldpredicate ?oldobject
+    #Filter out roo terms as they are dealt with later in the blank node section
+    FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) .
+    # Build new triples 
+    BIND(?blanknode4 as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }  
+    UNION
+    { 
+    # Find all ObjectProperties with a roo prefix
+    #?oldsubject1 a owl:ObjectProperty .
+    ?oldsubject1 ?oldpredicate1 ?blanknode1 .
+    FILTER(STRSTARTS(STR(?oldsubject1), "http://www.cancerdata.org/roo/")) .
+    # Find blank nodes
+    FILTER (ISBLANK(?blanknode1)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode1 ?oldpredicate2 ?blanknode2
+    FILTER (ISBLANK(?blanknode2)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode2 ?oldpredicate3 ?blanknode3
+    FILTER (ISBLANK(?blanknode3)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode3 ?oldpredicate4 ?blanknode4
+    FILTER (ISBLANK(?blanknode4)) . 
+    # For these blank nodes see if the point to other blank nodes 
+    ?blanknode4 ?oldpredicate5 ?blanknode5
+    FILTER (ISBLANK(?blanknode5)) . 
+    ?blanknode5 ?oldpredicate ?oldobject
+    #Filter out roo terms as they are dealt with later in the blank node section
+    FILTER(!STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/") || ISBLANK(?oldobject)) .
+    # Build new triples 
+    BIND(?blanknode5 as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+    BIND(?oldobject as ?newobject).
+    }  
+    UNION
+    {
+    # Find blank subjects with roo objects
+    ?oldsubject ?oldpredicate ?oldobject .
+    FILTER (ISBLANK(?oldsubject) ).
+    FILTER (!ISBLANK(?oldobject) ).
+    FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+    ?oldobject a owl:ObjectProperty .
+    # Build new triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+	BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Find blank subjects with roo objects
+    ?oldsubject ?oldpredicate ?oldobject .
+    FILTER (ISBLANK(?oldsubject) ).
+    FILTER (!ISBLANK(?oldobject) ).
+    FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+    ?oldobject a owl:DatatypeProperty .
+    # Build new triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+	BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    { 
+    # Find blank subjects with roo objects
+    ?oldsubject ?oldpredicate ?oldobject .
+    FILTER (ISBLANK(?oldsubject) ).
+    FILTER (!ISBLANK(?oldobject) ).
+    FILTER(STRSTARTS(STR(?oldobject), "http://www.cancerdata.org/roo/")) .
+    ?oldobject a owl:Class .
+    # Build new triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(?oldpredicate as ?newpredicate).
+	BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldobject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Find all Classes with a roo prefix
+    ?oldsubject a owl:Class .
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Filter for already defined new IRIs 
+    FILTER(!STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/C")) .
+    # Build equivalent class triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(owl:equivalentClass as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/C",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Find all Dataproperties with a roo prefix
+    ?oldsubject a owl:DatatypeProperty .
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Build equivalent class triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(owl:equivalentProperty as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+    UNION
+    {
+    # Find all Objectproperties with a roo prefix
+    ?oldsubject a owl:ObjectProperty .
+    FILTER(STRSTARTS(STR(?oldsubject), "http://www.cancerdata.org/roo/")) .
+    # Build equivalent class triples 
+    BIND(?oldsubject as ?newsubject).
+    BIND(owl:equivalentProperty as ?newpredicate).
+    BIND(IRI(CONCAT("http://www.cancerdata.org/roo/P",STRAFTER(STR(?oldsubject),"http://www.cancerdata.org/roo/"))) AS ?newobject) .
+    }
+   
+}
