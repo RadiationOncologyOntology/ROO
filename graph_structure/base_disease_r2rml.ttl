@@ -1,0 +1,197 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix map: <http://mapping.local/>.
+@prefix sty: <http://purl.bioontology.org/ontology/STY/>.
+@prefix sio: <http://semanticscience.org/resource/SIO_>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix roo: <http://www.cancerdata.org/roo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix skos: <http://www.w3.org/2008/05/skos#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix uo: <http://purl.obolibrary.org/obo/UO_>.
+
+map:basicQueryDisease a rr:LogicalTable;
+    rr:sqlQuery """SELECT PatientID as id,  ROUND(CAST(Age as decimal),0) as age, Gender as sex, Clinical_T_Stage as clinical_t, Clinical_N_Stage as clinical_n,
+SurvivalTime as survival_time,DeadStatus as vital_status, 
+(CASE WHEN (CAST(SurvivalTime as decimal)>730) THEN 1 WHEN (CAST(SurvivalTime as decimal)<=730 AND DeadStatus='1') THEN 0 ELSE NULL END) AS survival_2y 
+FROM PBDWHackathon2018;""";
+    rdfs:label """Every row in this table should correspond to a unique patient.<br/>
+The target variables have the following name and specific meaning:
+The table should contain a unique patient identifier, age, sex, t-stage, n-stage, survival time in days and vital status at this time.<br/>
+<ul>
+<li>id: unique identifier of the patient</li>
+<li>age:  patient's age at diagnosis</li>
+<li>sex:  patient's biological sex</li>
+<li>clinical_t: clinical <strong>tumor</strong> stage</li>
+<li>clinical_n: clinical <strong>nodal</strong> stage</li>
+<li>survival_2y: two year survival </li>
+</ul>""";
+    skos:definition "id,age,sex,clinical_t,clinical_n,survival_2y".
+
+##########################################
+# Disease
+##########################################
+map:disease a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease";
+        rr:class ncit:C3262;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100243;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100021;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:histology;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100041;
+        rr:objectMap [
+            rr:column "date_diagnosis"; 
+            rr:datatype xsd:dateTime;
+        ];
+    ].
+
+######
+# Clinical TNM
+######
+map:clinTNM a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cTNM";
+        rr:class ncit:C48881;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinT;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinN;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100030;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM_procedure;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100219;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM_ajcc;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+# Staging procedure
+map:clinTNM_procedure a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/procedure/{clinical_tnm_procedure}";
+        rr:class ncit:C18020;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_tnm_procedure"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Staging version
+map:clinTNM_ajcc a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/ajcc/{clinical_tnm_ajcc}";
+        rr:class roo:C100051;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_tnm_ajcc"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical T stage
+map:clinT a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cT";
+        rr:class ncit:C48885;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_t"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical N stage
+map:clinN a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cN";
+        rr:class ncit:C48884;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_n"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+######
+# Histology
+######
+map:histology a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/histology/{histology}";
+        rr:class ncit:C4741;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "histology"; 
+            rr:datatype xsd:string;
+        ];
+    ].
