@@ -279,7 +279,7 @@ map:treatmentChemo a rr:TriplesMap;
     rr:logicalTable map:basicQueryTreatment;
     rr:subjectMap [
         rr:template "patient/{id}/treatment/chemo";
-        rr:class ncit:C15329;
+        rr:class ncit:C15632;
     ];
     rr:predicateObjectMap [
         rr:predicate roo:local_value;
@@ -327,4 +327,4 @@ map:treatmentChemoSubstance a rr:TriplesMap;
             rr:column "chemo_substance"; 
             rr:datatype xsd:string;
         ];
-    ];
+    ].

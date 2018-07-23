@@ -13,6 +13,8 @@
 @prefix skos: <http://www.w3.org/2008/05/skos#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix uo: <http://purl.obolibrary.org/obo/UO_>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix read: <http://purl.bioontology.org/ontology/RCD/>.
 
 map:basicQueryDisease a rr:LogicalTable;
     rr:sqlQuery """SELECT PatientID as id,  ROUND(CAST(Age as decimal),0) as age, Gender as sex, Clinical_T_Stage as clinical_t, Clinical_N_Stage as clinical_n,
@@ -79,7 +81,7 @@ map:disease a rr:TriplesMap;
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate roo:P100022;
+        rr:predicate roo:P100025;
         rr:objectMap [ 
             rr:parentTriplesMap map:residualTumor;
             rr:joinCondition [
@@ -329,7 +331,7 @@ map:pathT a rr:TriplesMap;
         ];
     ].
 
-# Clinical N stage
+# Pathologic N stage
 map:pathN a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
@@ -344,8 +346,8 @@ map:pathN a rr:TriplesMap;
         ];
     ].
 
-# Clinical M stage
-map:pathN a rr:TriplesMap;
+# Pathologic M stage
+map:pathM a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
         rr:template "patient/{id}/disease/pM";
