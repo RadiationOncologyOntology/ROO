@@ -77,6 +77,16 @@ map:disease a rr:TriplesMap;
             rr:column "date_diagnosis"; 
             rr:datatype xsd:dateTime;
         ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100022;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:residualTumor;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
     ].
 
 ######
@@ -363,5 +373,43 @@ map:histology a rr:TriplesMap;
         rr:objectMap [
             rr:column "histology"; 
             rr:datatype xsd:string;
+        ];
+    ].
+
+###########################################
+# Add residual tumor classification
+###########################################
+map:patient rr:predicateObjectMap [
+        rr:predicate roo:P100022;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:residualTumor;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:residualTumor a rr:TriplesMap;
+    rr:logicalTable map:rectumQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/residual";
+        rr:class read:X7A6g;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "residual_tumor_status"; 
+            rr:datatype xsd:string;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate time:after;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatment;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
         ];
     ].
