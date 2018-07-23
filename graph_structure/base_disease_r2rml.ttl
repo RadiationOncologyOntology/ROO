@@ -205,6 +205,141 @@ map:clinN a rr:TriplesMap;
     ].
 
 ######
+# Pathologic TNM
+######
+map:pathTNM a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/pTNM";
+        rr:class ncit:C48739;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:pathT;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:pathN;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:pathM;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100030;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:pathTNM_procedure;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100219;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:pathTNM_ajcc;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+# Staging procedure
+map:pathTNM_procedure a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/procedure/{pathologic_tnm_procedure}";
+        rr:class ncit:C18020;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "pathologic_tnm_procedure"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Staging version
+map:pathTNM_ajcc a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/ajcc/{pathologic_tnm_ajcc}";
+        rr:class roo:C100051;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "pathologic_tnm_ajcc"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Pathologic T stage
+map:pathT a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/pT";
+        rr:class ncit:C48885;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "pathologic_t"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical N stage
+map:pathN a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/pN";
+        rr:class ncit:C48884;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "pathologic_n"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical M stage
+map:pathN a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/pM";
+        rr:class ncit:C48883;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "pathologic_m"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+######
 # Histology
 ######
 map:histology a rr:TriplesMap;
