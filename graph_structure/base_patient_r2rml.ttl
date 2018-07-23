@@ -90,6 +90,26 @@ map:patient a rr:TriplesMap;
         ];
     ];
     rr:predicateObjectMap [
+        rr:predicate roo:P100024;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatmentSurgery;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100024;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatmentChemo;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
         rr:predicate roo:P100008;
         rr:objectMap [ 
             rr:parentTriplesMap map:disease;
