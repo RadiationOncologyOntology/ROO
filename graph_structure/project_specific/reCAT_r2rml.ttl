@@ -381,7 +381,7 @@ map:clinN a rr:TriplesMap;
     ].
 
 # Clinical M stage
-map:clinN a rr:TriplesMap;
+map:clinM a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
         rr:template "patient/{id}/disease/cM";
