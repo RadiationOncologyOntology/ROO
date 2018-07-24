@@ -1,0 +1,396 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix map: <http://mapping.local/>.
+@prefix sty: <http://purl.bioontology.org/ontology/STY/>.
+@prefix sio: <http://semanticscience.org/resource/SIO_>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix roo: <http://www.cancerdata.org/roo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix skos: <http://www.w3.org/2008/05/skos#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix uo: <http://purl.obolibrary.org/obo/UO_>.
+@prefix time: <http://www.w3.org/2006/time#>.
+
+
+map:basicQuery a rr:LogicalTable;
+    rr:sqlQuery """SELECT * FROM PBDWHackathon2018;""";
+    rdfs:label """Every row in this table should correspond to a unique patient.<br/>
+The target variables have the following name and specific meaning:
+<ul>
+<li>id: unique identifier of the patient</li>
+<li>age:  patient's age at diagnosis</li>
+<li>sex:  patient's biological sex</li>
+<li>vital_status: status whether the patient is alive or dead</li>
+<li>vital_status_months: number of months after treatment when this measurement was taken</li>
+</ul>""";
+    skos:definition "id,age,sex,vital_status,vital_status_months".
+
+map:basicQueryDisease a rr:LogicalTable;
+    rr:sqlQuery """SELECT * FROM PBDWHackathon2018;""";
+    rdfs:label """Every row in this table should correspond to a unique patient.<br/>
+The target variables have the following name and specific meaning:
+<ul>
+<li>id: unique identifier of the patient</li>
+<li>diagnosis: definition of diagnosis (e.g. rectal cancer)</li>
+<li>clinical_tnm_procedure:  The procedure how the clinical TNM stage was derived (e.g. CT scan)</li>
+<li>clinical_tnm_ajcc:  Staging (AJCC) version used to derive TNM stage</li>
+<li>clinical_t: Clinical tumor stage</li>
+<li>clinical_n: Clinical nodal stage</li>
+<li>clinical_m: Clinical metastases (cM) stage</li>
+</ul>""";
+    skos:definition "id,clinical_tnm_procedure,clinical_tnm_ajcc,clinical_t,clinical_n,clinical_m".
+
+###########################################
+# Add patient
+###########################################
+map:patient a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}";
+        rr:class ncit:C16960;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:column "id"; 
+            rr:datatype xsd:string;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100018;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:gender;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100000;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:age;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100008;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:disease;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100028;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatus;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100026;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTime;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:gender a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/sex";
+        rr:class ncit:C28421;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "sex"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+map:age a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/age";
+        rr:class roo:C100002;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100038;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:disease;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:age_unit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:age_unit a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/age_unit";
+        rr:class uo:0000036;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100042;
+        rr:objectMap [
+            rr:column "age"; 
+            rr:datatype xsd:integer;
+        ];
+    ].
+
+##########################
+# Add vital status
+##########################
+map:vitalStatus a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatus";
+        rr:class ncit:C25717;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100026;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTime;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "vital_status"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+map:vitalStatusTime a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatusTime";
+        rr:class roo:C100014;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate time:after;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatment;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTimeUnit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+map:vitalStatusTimeUnit a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatusTime/months";
+        rr:class uo:0000035;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "vital_status_months"; 
+            rr:datatype xsd:double;
+        ];
+    ].
+
+##########################################
+# Disease
+##########################################
+map:disease a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease";
+        rr:class ncit:C3262;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "diagnosis"; 
+            rr:datatype xsd:string;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100243;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+######
+# Clinical TNM
+######
+map:clinTNM a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cTNM";
+        rr:class ncit:C48881;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinT;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinN;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100025;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinM;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100030;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM_procedure;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100219;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:clinTNM_ajcc;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+# Staging procedure
+map:clinTNM_procedure a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/procedure/{clinical_tnm_procedure}";
+        rr:class ncit:C18020;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_tnm_procedure"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Staging version
+map:clinTNM_ajcc a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "disease/staging/ajcc/{clinical_tnm_ajcc}";
+        rr:class roo:C100051;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_tnm_ajcc"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical T stage
+map:clinT a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cT";
+        rr:class ncit:C48885;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_t"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical N stage
+map:clinN a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cN";
+        rr:class ncit:C48884;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_n"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+# Clinical M stage
+map:clinN a rr:TriplesMap;
+    rr:logicalTable map:basicQueryDisease;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/cM";
+        rr:class ncit:C48883;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "clinical_m"; 
+            rr:datatype xsd:string;
+        ];
+    ].
