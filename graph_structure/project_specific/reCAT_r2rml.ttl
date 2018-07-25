@@ -216,7 +216,7 @@ map:vitalStatusTimeUnit a rr:TriplesMap;
         rr:class uo:0000035;
     ];
     rr:predicateObjectMap [
-        rr:predicate roo:local_value;
+        rr:predicate roo:P100042;
         rr:objectMap [
             rr:column "vital_status_months"; 
             rr:datatype xsd:double;
