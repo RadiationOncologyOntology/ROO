@@ -114,7 +114,7 @@ map:patient a rr:TriplesMap;
 map:gender a rr:TriplesMap;
     rr:logicalTable map:basicQuery;
     rr:subjectMap [
-        rr:template "patient/{id}/sex";
+        rr:template "sex/{sex}";
         rr:class ncit:C28421;
     ];
     rr:predicateObjectMap [
@@ -344,7 +344,7 @@ map:clinTNM_ajcc a rr:TriplesMap;
 map:clinT a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
-        rr:template "patient/{id}/disease/cT";
+        rr:template "disease/cT/{clinical_t}";
         rr:class ncit:C48885;
     ];
     rr:predicateObjectMap [
@@ -359,7 +359,7 @@ map:clinT a rr:TriplesMap;
 map:clinN a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
-        rr:template "patient/{id}/disease/cN";
+        rr:template "disease/cN/{clinical_n}";
         rr:class ncit:C48884;
     ];
     rr:predicateObjectMap [
@@ -374,7 +374,7 @@ map:clinN a rr:TriplesMap;
 map:clinM a rr:TriplesMap;
     rr:logicalTable map:basicQueryDisease;
     rr:subjectMap [
-        rr:template "patient/{id}/disease/cM";
+        rr:template "disease/cM/{clinical_m}";
         rr:class ncit:C48883;
     ];
     rr:predicateObjectMap [
