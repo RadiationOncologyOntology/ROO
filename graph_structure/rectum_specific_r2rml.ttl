@@ -76,7 +76,7 @@ map:tDistance a rr:TriplesMap;
             ];
         ];
     ].
-map:tDistanceValue a rr:TriplesMap;
+map:tDistanceUnit a rr:TriplesMap;
     rr:logicalTable map:rectumQuery;
     rr:subjectMap [
         rr:template "patient/{id}/disease/tDistance/cm";
@@ -131,7 +131,7 @@ map:tLength a rr:TriplesMap;
             ];
         ];
     ].
-map:tDistanceValue a rr:TriplesMap;
+map:tLenthUnit a rr:TriplesMap;
     rr:logicalTable map:rectumQuery;
     rr:subjectMap [
         rr:template "patient/{id}/disease/tLength/cm";
