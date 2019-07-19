@@ -1,0 +1,146 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix map: <http://mapping.local/>.
+@prefix sty: <http://purl.bioontology.org/ontology/STY/>.
+@prefix sio: <http://semanticscience.org/resource/SIO_>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix roo: <http://www.cancerdata.org/roo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix skos: <http://www.w3.org/2008/05/skos#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix uo: <http://purl.obolibrary.org/obo/UO_>.
+@prefix read: <http://purl.bioontology.org/ontology/RCD/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+
+
+map:rectumQuery a rr:LogicalTable;
+    rr:sqlQuery """SELECT PatientID as id,  ROUND(CAST(Age as decimal),0) as age, Gender as sex, Clinical_T_Stage as clinical_t, Clinical_N_Stage as clinical_n,
+SurvivalTime as survival_time,DeadStatus as vital_status, 
+(CASE WHEN (CAST(SurvivalTime as decimal)>730) THEN 1 WHEN (CAST(SurvivalTime as decimal)<=730 AND DeadStatus='1') THEN 0 ELSE NULL END) AS survival_2y 
+FROM PBDWHackathon2018;""";
+    rdfs:label """Every row in this table should correspond to a unique patient.<br/>
+The target variables have the following name and specific meaning:
+The table should contain a unique patient identifier, age, sex, t-stage, n-stage, survival time in days and vital status at this time.<br/>
+<ul>
+<li>id: unique identifier of the patient</li>
+<li>age:  patient's age at diagnosis</li>
+<li>sex:  patient's biological sex</li>
+<li>clinical_t: clinical <strong>tumor</strong> stage</li>
+<li>clinical_n: clinical <strong>nodal</strong> stage</li>
+<li>survival_2y: two year survival </li>
+</ul>""";
+    skos:definition "id,age,sex,clinical_t,clinical_n,survival_2y".
+
+###########################################
+# Add tDistance
+###########################################
+map:patient rr:predicateObjectMap [
+        rr:predicate roo:P100214;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tDistance;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:disease rr:predicateObjectMap [
+        rr:predicate roo:P100214;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tDistance;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:tDistance a rr:TriplesMap;
+    rr:logicalTable map:rectumQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/tDistance";
+        rr:class ncit:C139184;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tDistanceUnit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+map:tDistanceUnit a rr:TriplesMap;
+    rr:logicalTable map:rectumQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/tDistance/cm";
+        rr:class uo:0000015;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100042;
+        rr:objectMap [
+            rr:column "tDistance"; 
+            rr:datatype xsd:double;
+        ];
+    ].
+
+###########################################
+# Add tLength
+###########################################
+map:patient rr:predicateObjectMap [
+        rr:predicate roo:P100214;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tLength;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:disease rr:predicateObjectMap [
+        rr:predicate roo:P100214;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tLength;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:tLength a rr:TriplesMap;
+    rr:logicalTable map:rectumQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/tLength";
+        rr:class roo:C100074;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:tLenthUnit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+map:tLenthUnit a rr:TriplesMap;
+    rr:logicalTable map:rectumQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/disease/tLength/cm";
+        rr:class uo:0000015;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100042;
+        rr:objectMap [
+            rr:column "tLength"; 
+            rr:datatype xsd:double;
+        ];
+    ].

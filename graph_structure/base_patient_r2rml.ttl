@@ -1,0 +1,278 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix map: <http://mapping.local/>.
+@prefix sty: <http://purl.bioontology.org/ontology/STY/>.
+@prefix sio: <http://semanticscience.org/resource/SIO_>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>.
+@prefix roo: <http://www.cancerdata.org/roo/>.
+@prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
+@prefix skos: <http://www.w3.org/2008/05/skos#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix uo: <http://purl.obolibrary.org/obo/UO_>.
+@prefix time: <http://www.w3.org/2006/time#>.
+
+
+map:basicQuery a rr:LogicalTable;
+    rr:sqlQuery """SELECT PatientID as id,  ROUND(CAST(Age as decimal),0) as age, Gender as sex, Clinical_T_Stage as clinical_t, Clinical_N_Stage as clinical_n,
+SurvivalTime as survival_time,DeadStatus as vital_status, 
+(CASE WHEN (CAST(SurvivalTime as decimal)>730) THEN 1 WHEN (CAST(SurvivalTime as decimal)<=730 AND DeadStatus='1') THEN 0 ELSE NULL END) AS survival_2y 
+FROM PBDWHackathon2018;""";
+    rdfs:label """Every row in this table should correspond to a unique patient.<br/>
+The target variables have the following name and specific meaning:
+The table should contain a unique patient identifier, age, sex, t-stage, n-stage, survival time in days and vital status at this time.<br/>
+<ul>
+<li>id: unique identifier of the patient</li>
+<li>age:  patient's age at diagnosis</li>
+<li>sex:  patient's biological sex</li>
+<li>clinical_t: clinical <strong>tumor</strong> stage</li>
+<li>clinical_n: clinical <strong>nodal</strong> stage</li>
+<li>survival_2y: two year survival </li>
+</ul>""";
+    skos:definition "id,age,sex,clinical_t,clinical_n,survival_2y".
+
+###########################################
+# Add patient
+###########################################
+map:patient a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}";
+        rr:class ncit:C16960;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:column "id"; 
+            rr:datatype xsd:string;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100018;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:gender;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100311;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:survival;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100000;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:age;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100024;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatment;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100024;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatmentSurgery;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100024;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatmentChemo;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100008;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:disease;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100028;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatus;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100026;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTime;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:gender a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/sex";
+        rr:class ncit:C28421;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "sex"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+map:age a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/age";
+        rr:class roo:C100002;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100038;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:disease;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:age_unit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+
+map:age_unit a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/age_unit";
+        rr:class uo:0000036;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100042;
+        rr:objectMap [
+            rr:column "age"; 
+            rr:datatype xsd:integer;
+        ];
+    ].
+
+map:survival a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/survival_2y";
+        rr:class roo:C100014;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "survival_2y"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+##########################
+# Add vital status
+##########################
+map:vitalStatus a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatus";
+        rr:class ncit:C25717;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100026;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTime;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "vital_status"; 
+            rr:datatype xsd:string;
+        ];
+    ].
+
+map:vitalStatusTime a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatusTime";
+        rr:class roo:C100014;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate time:after;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:treatment;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:P100027;
+        rr:objectMap [ 
+            rr:parentTriplesMap map:vitalStatusTimeUnit;
+            rr:joinCondition [
+                rr:child "id";
+                rr:parent "id";
+            ];
+        ];
+    ].
+map:vitalStatusTimeUnit a rr:TriplesMap;
+    rr:logicalTable map:basicQuery;
+    rr:subjectMap [
+        rr:template "patient/{id}/vitalStatusTime/months";
+        rr:class uo:0000035;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate roo:local_value;
+        rr:objectMap [
+            rr:column "vital_status_months"; 
+            rr:datatype xsd:double;
+        ];
+    ].
