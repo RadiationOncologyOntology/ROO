@@ -6,4 +6,4 @@ This ontology repository contains three aspects:
 * Shape Expressions to check if a certain endpoint contains the proper graph structure (in the "shape_expressions" folder)
 
 ## How to contribute?
-Contribution can be done by forking and sending a pull request. Please see [the GitHub guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) on contributing using forks and pull requests.
+Contribution can be done by forking the development branch and sending a pull request. Please see [the GitHub guide] (https://docs.github.com/en/get-started/quickstart/contributing-to-projects) on contributing using forks and pull requests. Requests will be handled as soon as is possible but formal version updates to the ROO will happen about every 6 months starting in the end of 2022.
