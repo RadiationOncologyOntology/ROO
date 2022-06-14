@@ -7,3 +7,4 @@ This ontology repository contains three aspects:
 
 ## How to contribute?
 Contribution can be done by forking and sending a pull request. Please see [the GitHub guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) on contributing using forks and pull requests.
+Requests will be handled as soon as possible but formal version updates to the ROO (on bioportal) will happen about every 6 months starting in the end of 2022.
