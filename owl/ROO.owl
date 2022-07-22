@@ -2790,6 +2790,8 @@
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120284">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25681"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Tumor Size</rdfs:label>
         <skos:definition xml:lang="en">The size of a tumor in its greatest dimension.</skos:definition>
     </owl:Class>
@@ -2920,7 +2922,7 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132299 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132299">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Protocol Identifier</rdfs:label>
         <skos:definition xml:lang="en">A sequence of letters, numbers, or other characters that uniquely identifies a study protocol.</skos:definition>
@@ -3083,6 +3085,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14376 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14376">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T001"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Other Organism Groupings</rdfs:label>
+        <skos:definition xml:lang="en">A non-taxonomic grouping of organisms based on a shared characteristic.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1450 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1450">
@@ -3197,6 +3210,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Surgical Procedure</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15350 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15350">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T061"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Total-Body Irradiation</rdfs:label>
+        <skos:definition xml:lang="en">A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.</skos:definition>
     </owl:Class>
     
 
@@ -3327,6 +3351,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C157120 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C157120">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Site of Tumor</rdfs:label>
+        <skos:definition xml:lang="en">The anatomic site of the tumor.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15725 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15725">
@@ -3412,6 +3447,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164320 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164320">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adverse Event Term</rdfs:label>
+        <skos:definition xml:lang="en">A term that refers to an adverse event, often taken from a list of standardized terms.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16457 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16457">
@@ -3444,6 +3490,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Female</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16631 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16631">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T032"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Genotype</rdfs:label>
+        <skos:definition xml:lang="en">The genetic constitution of an organism or cell, as distinct from its expressed features or phenotype.</skos:definition>
     </owl:Class>
     
 
@@ -3489,6 +3546,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Positron Emission Tomography</rdfs:label>
         <skos:altLabel xml:lang="en">PET Scan</skos:altLabel>
         <skos:definition xml:lang="en">A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170990 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170990">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T083"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Country of Investigational Site</rdfs:label>
+        <skos:definition xml:lang="en">The country in which the study investigational site is located.</skos:definition>
     </owl:Class>
     
 
@@ -3559,6 +3627,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Blood Sample</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A small volume of blood removed for testing or storage.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T080"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Other</rdfs:label>
+        <skos:definition xml:lang="en">Different than the one(s) previously specified or mentioned.</skos:definition>
     </owl:Class>
     
 
@@ -3644,6 +3723,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:altLabel>Institute</skos:altLabel>
         <skos:definition xml:lang="en">Institutions with an organized medical staff for the medical care, treatment, and cure of the sick and wounded, for the study of disease, and for the training of physicians, nurses, and allied health personnel.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19487 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19487">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Institutional Animal Care and Use Committee</rdfs:label>
+        <skos:definition xml:lang="en">A self-regulating entity mandated by federal law to be established at an institution that uses laboratory animals for research or instructional purposes to oversee and evaluate all aspects of the institution&apos;s animal use and care program.</skos:definition>
     </owl:Class>
     
 
@@ -3992,15 +4082,6 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Count</rdfs:label>
         <skos:definition xml:lang="en">To determine the number or amount of something; the result of this activity.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48938">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Cell Count</rdfs:label>
-        <skos:definition xml:lang="en">A procedure to determine the number of cells in a sample.</skos:definition>
     </owl:Class>
     
 
@@ -4425,6 +4506,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28160 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28160">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Injection Route of Administration</rdfs:label>
+        <skos:definition xml:lang="en">Administration of a drug into a location within the body; this can be achieved either through an established access or via a needle.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28384 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28384">
@@ -4729,6 +4821,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37939 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37939">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Data and Time</rdfs:label>
+        <skos:definition xml:lang="en">An expression of both date and time that an event has happened or will happen.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37987 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37987">
@@ -4774,6 +4877,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Forced Expiratory Volume in 1 Second</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A test of lung function, the FEV1 is the volume exhaled during the first second of a forced expiratory maneuver started from the level of total lung capacity. It is the most frequently used index for assessing bronchoconstriction or bronchodilatation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Route of Administration</rdfs:label>
+        <skos:definition xml:lang="en">Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.</skos:definition>
     </owl:Class>
     
 
@@ -4889,14 +5003,6 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Adverse Event</rdfs:label>
         <skos:definition xml:lang="en">Any unfavorable or unintended symptom, sign, or disease including an abnormal laboratory finding) temporally associated with the use of a medical treatment or procedure that may or may not be considered related to the medical treatment or procedure. Such events can be intervention related, dose related, route related, patient related, or caused by an interaction with another drug(s) or procedure(s).</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C52681">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Adverse Event by Cause</rdfs:label>
-    </owl:Class>
     
 
 
@@ -4907,6 +5013,50 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">KRAS Gene Mutation</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Name</rdfs:label>
+        <skos:definition xml:lang="en">The words or language units by which a thing is known.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42753 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42753">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T077"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Workflow</rdfs:label>
+        <skos:definition xml:lang="en">The operational aspect of a work procedure: how tasks are structured, who performs them, what their relative order is, how they are synchronized, how information flows to support the tasks and how tasks are being tracked.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45254 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45254">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Boolean</rdfs:label>
+        <skos:definition xml:lang="en">The type of an expression with two possible values, &quot;true&quot; and &quot;false&quot;.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45293 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45293">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+        <skos:definition xml:lang="en">A group of organisms that differ from all other groups of organisms and that are capable of breeding and producing fertile offspring.</skos:definition>
     </owl:Class>
     
 
@@ -4930,6 +5080,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Doxorubicin</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">An anthracycline antibiotic with antineoplastic activity. Doxorubicin, isolated from the bacterium Streptomyces peucetius var. caesius, is the hydroxylated congener of daunorubicin. Doxorubicin intercalates between base pairs in the DNA helix, thereby preventing DNA replication and ultimately inhibiting protein synthesis. Additionally, doxorubicin inhibits topoisomerase II which results in an increased and stabilized cleavable enzyme-DNA linked complex during DNA replication and subsequently prevents the ligation of the nucleotide strand after double-strand breakage. Doxorubicin also forms oxygen free radicals resulting in cytotoxicity secondary to lipid peroxidation of cell membrane lipids; the formation of oxygen free radicals also contributes to the toxicity of the anthracycline antibiotics, namely the cardiac and cutaneous vascular effects.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45790 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45790">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T130"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Solvent</rdfs:label>
+        <skos:definition xml:lang="en">A liquid that dissolves or that is capable of dissolving; the component of a solution that is present in greater amount.</skos:definition>
     </owl:Class>
     
 
@@ -5010,6 +5171,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Cancer TNM Finding</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A cancer finding in the TNM system that is relevant to the diagnosis of cancer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48307 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48307">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Spontaneous</rdfs:label>
+        <skos:definition xml:lang="en">Happening or arising without apparent external cause.</skos:definition>
     </owl:Class>
     
 
@@ -5445,6 +5617,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48938 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48938">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25463"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Cell Count</rdfs:label>
+        <skos:definition xml:lang="en">A procedure to determine the number of cells in a sample.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48944 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48944">
@@ -5618,6 +5801,28 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51873 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51873">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Site Investigator</rdfs:label>
+        <skos:definition xml:lang="en">An investigator designated to a specific study location.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51874 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51874">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Site Leader</rdfs:label>
+        <skos:definition xml:lang="en">A person in charge of a group at the location of a research project.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51949 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51949">
@@ -5636,6 +5841,16 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Product</rdfs:label>
         <skos:definition xml:lang="en">The end result of a manufacturing process; anything that is produced.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C52681 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C52681">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41331"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adverse Event by Cause</rdfs:label>
     </owl:Class>
     
 
@@ -6377,6 +6592,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C69256 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C69256">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70663"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Subject Unique Identifier</rdfs:label>
+        <skos:definition xml:lang="en">A unique identifier for a subject in a study.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C69310 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C69310">
@@ -6397,24 +6623,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Unique Identifier</rdfs:label>
         <skos:definition xml:lang="en">A set of characters used as a code that is unique in the context or the system for which it is created. It serves as a means of identification and reference (often instead of a name) for an entity, person, thing, function, procedure, activity, variable, or body of data.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70818">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70663"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Concept Unique Identifier</rdfs:label>
-        <skos:definition xml:lang="en">A unique identifier (code) assigned for each concept that belongs to a particular controlled terminology.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C69256">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70663"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Subject Unique Identifier</rdfs:label>
-        <skos:definition xml:lang="en">A unique identifier for a subject in a study.</skos:definition>
-    </owl:Class>
     
 
 
@@ -6425,6 +6633,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Biospecimen</rdfs:label>
         <skos:definition xml:lang="en">Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70818 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70818">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70663"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Concept Unique Identifier</rdfs:label>
+        <skos:definition xml:lang="en">A unique identifier (code) assigned for each concept that belongs to a particular controlled terminology.</skos:definition>
     </owl:Class>
     
 
@@ -6512,6 +6731,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80403 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80403">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Study Site</rdfs:label>
+        <skos:definition xml:lang="en">A facility in which study/protocol activities are conducted.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81239 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81239">
@@ -6568,6 +6798,28 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83078 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83078">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/C100060"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Investigator Identifier</rdfs:label>
+        <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study investigator.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83081 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83081">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Study Site Identifier</rdfs:label>
+        <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study site.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83083 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83083">
@@ -6577,6 +6829,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">Studynumber</skos:altLabel>
         <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study subject.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83217 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83217">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Birth Date and Time</rdfs:label>
+        <skos:definition xml:lang="en">The date and time of a birth event.</skos:definition>
     </owl:Class>
     
 
@@ -6642,6 +6905,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Teniposide</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A semisynthetic derivative of podophyllotoxin with antineoplastic activity. Teniposide forms a ternary complex with the enzyme topoisomerase II and DNA, resulting in dose-dependent single- and double-stranded breaks in DNA, DNA: protein cross-links, inhibition of DNA strand religation, and cytotoxicity. This agent acts in the late S or early G phase of the cell cycle. (NCI04)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C89081 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C89081">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Dose Frequency</rdfs:label>
+        <skos:definition xml:lang="en">The number of times a substance is administered within a specific time period.</skos:definition>
     </owl:Class>
     
 
@@ -6716,6 +6990,28 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Vindesine</rdfs:label>
         <rdfs:seeAlso>EuroCAT Umbrella Protocol for NSCLC</rdfs:seeAlso>
         <skos:definition xml:lang="en">A synthetic derivative of vinblastine, a naturally occurring vinca alkaloid. Vindesine binds to and stabilizes tubulin, thereby interrupting tubulin polymerization and preventing the formation of the mitotic spindle and cell division; treated cells are unable to undergo mitosis and are arrested in metaphase. This agent also disrupts macromolecular synthesis. (NCI04)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C93707 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C93707">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Adverse Event Action Taken Relationship Type Code</rdfs:label>
+        <skos:definition xml:lang="en">A coded value specifying the kind of action taken for the adverse event.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94171 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94171">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14376"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Animal Organism Strain</rdfs:label>
+        <skos:definition xml:lang="en">A group of presumed common ancestry with clear-cut physiological but usually not morphological distinctions.</skos:definition>
     </owl:Class>
     
 
@@ -7439,24 +7735,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Organism</rdfs:label>
         <skos:definition xml:lang="en">Generally, a living individual, including all plants and animals.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14376">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T001"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Other Organism Groupings</rdfs:label>
-        <skos:definition xml:lang="en">A non-taxonomic grouping of organisms based on a shared characteristic.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94171">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14376"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Animal Organism Strain</rdfs:label>
-        <skos:definition xml:lang="en">A group of presumed common ancestry with clear-cut physiological but usually not morphological distinctions.</skos:definition>
-    </owl:Class>
     
 
 
@@ -7755,15 +8033,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Organism Attribute</rdfs:label>
         <skos:definition xml:lang="en">A property of the organism or its major parts.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16631">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T032"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Genotype</rdfs:label>
-        <skos:definition xml:lang="en">The genetic constitution of an organism or cell, as distinct from its expressed features or phenotype.</skos:definition>
-    </owl:Class>
     
 
 
@@ -7774,24 +8043,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Finding</rdfs:label>
         <skos:definition xml:lang="en">That which is discovered by direct observation or measurement of an organism attribute or condition, including the clinical history of the patient. The history of the presence of a disease is a &apos;Finding&apos; and is distinguished from the disease itself.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C157120">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Site of Tumor</rdfs:label>
-        <skos:definition xml:lang="en">The anatomic site of the tumor.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C120284">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Tumor Size</rdfs:label>
-        <skos:definition xml:lang="en">The size of a tumor in its greatest dimension.</skos:definition>
     </owl:Class>
     
 
@@ -8079,15 +8330,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Therapeutic or Preventive Procedure</rdfs:label>
         <skos:definition xml:lang="en">A procedure, method, or technique designed to prevent a disease or a disorder, or to improve physical function, or used in the process of treating a disease or injury.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15350">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T061"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Total-Body Irradiation</rdfs:label>
-        <skos:definition xml:lang="en">A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.</skos:definition>
-    </owl:Class>
     
 
 
@@ -8253,16 +8495,7 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Conceptual Entity</rdfs:label>
         <skos:definition xml:lang="en">A broad type for grouping abstract entities or concepts.</skos:definition>
     </owl:Class>
-
     
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42753">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T077"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Workflow</rdfs:label>
-        <skos:definition xml:lang="en">The operational aspect of a work procedure: how tasks are structured, who performs them, what their relative order is, how they are synchronized, how information flows to support the tasks and how tasks are being tracked.</skos:definition>
-    </owl:Class>    
-
 
 
     <!-- http://purl.bioontology.org/ontology/STY/T078 -->
@@ -8284,33 +8517,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Temporal Concept</rdfs:label>
         <skos:definition xml:lang="en">A concept which pertains to time or duration.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37939">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Data and Time</rdfs:label>
-        <skos:definition xml:lang="en">An expression of both date and time that an event has happened or will happen.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C89081">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Dose Frequency</rdfs:label>
-        <skos:definition xml:lang="en">The number of times a substance is administered within a specific time period.</skos:definition>
-    </owl:Class>
-    
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83217">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Birth Date and Time</rdfs:label>
-        <skos:definition xml:lang="en">The date and time of a birth event.</skos:definition>
-    </owl:Class>
     
 
 
@@ -8321,15 +8527,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Qualitative Concept</rdfs:label>
         <skos:definition xml:lang="en">A concept which is an assessment of some quality, rather than a direct measurement.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T080"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Other</rdfs:label>
-        <skos:definition xml:lang="en">Different than the one(s) previously specified or mentioned.</skos:definition>
     </owl:Class>
     
 
@@ -8356,15 +8553,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
     
 
 
-     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80403">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Study Site</rdfs:label>
-        <skos:definition xml:lang="en">A facility in which study/protocol activities are conducted.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.bioontology.org/ontology/STY/T083 -->
 
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/STY/T083">
@@ -8372,15 +8560,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Geographic Area</rdfs:label>
         <skos:definition xml:lang="en">A geographic location, generally having definite boundaries.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170990">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T083"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Country of Investigational Site</rdfs:label>
-        <skos:definition xml:lang="en">The country in which the study investigational site is located.</skos:definition>
     </owl:Class>
     
 
@@ -8524,69 +8703,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Professional or Occupational Group</rdfs:label>
         <skos:definition xml:lang="en">An individual or individuals classified according to their vocation.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51873">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Site Investigator</rdfs:label>
-        <skos:definition xml:lang="en">An investigator designated to a specific study location.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C19487">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Institutional Animal Care and Use Committee</rdfs:label>
-        <skos:definition xml:lang="en">A self-regulating entity mandated by federal law to be established at an institution that uses laboratory animals for research or instructional purposes to oversee and evaluate all aspects of the institution's animal use and care program.</skos:definition>
-    </owl:Class>
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C51874">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Site Leader</rdfs:label>
-        <skos:definition xml:lang="en">A person in charge of a group at the location of a research project.</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.cancerdata.org/roo/DKFZ000005 -->
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000005">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
-        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
-        <rdfs:label xml:lang="en">Regierungspräsidium</rdfs:label>
-        <skos:definition xml:lang="en">A regional organization in Germany responsible for approval and notification procedures for animal experiments according to the Animal Welfare Act and the Animal Welfare Experimental Animal Ordinance.</skos:definition>
-    </owl:Class>
-
-
-    <!-- http://www.cancerdata.org/roo/DKFZ000002 -->
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000002">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
-        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
-        <rdfs:label xml:lang="en">TVA Responsible</rdfs:label>
-        <skos:definition xml:lang="en">A person with responsibility on a study and providing report to the regional Regierungspräsidium (RP).</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://www.cancerdata.org/roo/DKFZ000003 -->
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000003">
-        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/DKFZ000002"/>
-        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
-        <rdfs:label xml:lang="en">Main TVA Responsible Person</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.cancerdata.org/roo/DKFZ000004 -->
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000004">
-        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/DKFZ000002"/>
-        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
-        <rdfs:label xml:lang="en">Deputy TVA Responsible Person</rdfs:label>
     </owl:Class>
     
 
@@ -8864,15 +8980,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Indicator, Reagent, or Diagnostic Aid</rdfs:label>
         <skos:definition xml:lang="en">A substance primarily of interest for its use in laboratory or diagnostic tests and procedures to detect, measure, examine, or analyze other chemicals, processes, or conditions.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45790">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T130"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Solvent</rdfs:label>
-        <skos:definition xml:lang="en">A liquid that dissolves or that is capable of dissolving; the component of a solution that is present in greater amount.</skos:definition>
-    </owl:Class>
     
 
 
@@ -8917,33 +9024,8 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Functional Concept</rdfs:label>
         <skos:definition xml:lang="en">A concept which is of interest because it pertains to the carrying out of a process or activity.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Route of Administration</rdfs:label>
-        <skos:definition xml:lang="en">Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28160">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38114"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Injection Route of Administration</rdfs:label>
-        <skos:definition xml:lang="en">Administration of a drug into a location within the body; this can be achieved either through an established access or via a needle.</skos:definition>
-    </owl:Class>
-
-
     
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48307">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Spontaneous</rdfs:label>
-        <skos:definition xml:lang="en">Happening or arising without apparent external cause.</skos:definition>
-    </owl:Class>
+
 
     <!-- http://purl.bioontology.org/ontology/STY/T170 -->
 
@@ -8952,69 +9034,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Intellectual Product</rdfs:label>
         <skos:definition xml:lang="en">A conceptual entity resulting from human endeavor. Concepts assigned to this type generally refer to information created by humans for some purpose.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45254">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Boolean</rdfs:label>
-        <skos:definition xml:lang="en">The type of an expression with two possible values, "true" and "false".</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Name</rdfs:label>
-        <skos:definition xml:lang="en">The words or language units by which a thing is known.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83078">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Investigator Identifier</rdfs:label>
-        <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study investigator.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83081">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Study Site Identifier</rdfs:label>
-        <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study site.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164320">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Adverse Event Term</rdfs:label>
-        <skos:definition xml:lang="en">A term that refers to an adverse event, often taken from a list of standardized terms.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164320">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Adverse Event Term</rdfs:label>
-        <skos:definition xml:lang="en">A term that refers to an adverse event, often taken from a list of standardized terms.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C93707">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T170"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Adverse Event Action Taken Relationship Type Code</rdfs:label>
-        <skos:definition xml:lang="en">A coded value specifying the kind of action taken for the adverse event.</skos:definition>
     </owl:Class>
     
 
@@ -9049,15 +9068,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Classification</rdfs:label>
         <skos:definition xml:lang="en">A term or system of terms denoting an arrangement by class or category.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45293">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Species</rdfs:label>
-        <skos:definition xml:lang="en">A group of organisms that differ from all other groups of organisms and that are capable of breeding and producing fertile offspring.</skos:definition>
-    </owl:Class>
     
 
 
@@ -9080,6 +9090,7 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Neoplastic Process</rdfs:label>
         <skos:definition xml:lang="en">A new and abnormal growth of tissue in which the growth is uncontrolled and progressive. The growths may be malignant or benign.</skos:definition>
     </owl:Class>
+    
 
 
     <!-- http://purl.bioontology.org/ontology/STY/T192 -->
@@ -9233,15 +9244,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">kilogram</rdfs:label>
         <skos:definition xml:lang="en">A mass unit which is equal to the mass of the International Prototype Kilogram kept by the BIPM at Svres, France.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000021">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/UO</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">gram</rdfs:label>
-        <skos:definition xml:lang="en">A mass unit which is equal to one thousandth of a kilogram or 10^[-3] kg.</skos:definition>
-    </owl:Class>
     
 
 
@@ -9252,6 +9254,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/UO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">centimeter</rdfs:label>
         <skos:definition xml:lang="en">A length unit which is equal to one hundredth of a meter or 10^[-2] m.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/UO</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">gram</rdfs:label>
+        <skos:definition xml:lang="en">A mass unit which is equal to one thousandth of a kilogram or 10^[-3] kg.</skos:definition>
     </owl:Class>
     
 
@@ -9374,15 +9387,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/UO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">count unit</rdfs:label>
         <skos:definition xml:lang="en">A dimensionless unit which denotes a simple count of things.</skos:definition>
-    </owl:Class>
-
-
-    <!-- http://www.cancerdata.org/roo/DKFZ000001 -->
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
-        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
-        <rdfs:label xml:lang="en">cells</rdfs:label>
-        <skos:definition xml:lang="en">A dimensionless unit which denotes a count of cells from a laboratory procedure.</skos:definition>
     </owl:Class>
     
 
@@ -20525,6 +20529,59 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Andre Dekker</dc:creator>
         <rdfs:label xml:lang="en">Extra mesorectal lymph node group</rdfs:label>
         <skos:definition>Lymph nodes outside the mesorectum.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000001 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000189"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">cells</rdfs:label>
+        <skos:definition xml:lang="en">A dimensionless unit which denotes a count of cells from a laboratory procedure.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000002 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000002">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">TVA Responsible</rdfs:label>
+        <skos:definition xml:lang="en">A person with responsibility on a study and providing report to the regional Regierungspräsidium (RP).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000003 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000003">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/DKFZ000002"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">Main TVA Responsible Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000004 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000004">
+        <rdfs:subClassOf rdf:resource="http://www.cancerdata.org/roo/DKFZ000002"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">Deputy TVA Responsible Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000005 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000005">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T097"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">Regierungspräsidium</rdfs:label>
+        <skos:definition xml:lang="en">A regional organization in Germany responsible for approval and notification procedures for animal experiments according to the Animal Welfare Act and the Animal Welfare Experimental Animal Ordinance.</skos:definition>
     </owl:Class>
     
 
