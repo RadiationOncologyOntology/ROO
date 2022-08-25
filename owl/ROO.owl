@@ -6806,6 +6806,17 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Investigator Identifier</rdfs:label>
         <skos:definition xml:lang="en">A sequence of characters used to identify, name, or characterize the study investigator.</skos:definition>
     </owl:Class>
+
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000006 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000006">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364"/>
+        <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
+        <rdfs:label xml:lang="en">Animal Identifier</rdfs:label>
+        <skos:definition xml:lang="en">An identifier which is used to uniquely identify an animal in a certain context (cohort, hospital, trial). Can be a pseudonym.</skos:definition>
+    </owl:Class>
     
 
 
