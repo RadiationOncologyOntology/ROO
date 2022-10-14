@@ -20619,6 +20619,7 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     <!-- http://www.cancerdata.org/roo/DKFZ000006 -->
 
     <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000006">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364"/>
         <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
         <rdfs:label xml:lang="en">Animal Identifier</rdfs:label>
         <skos:definition xml:lang="en">An identifier which is used to uniquely identify an animal in a certain context (cohort, hospital, trial). Can be a pseudonym.</skos:definition>
