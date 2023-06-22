@@ -1,0 +1,598 @@
+\documentclass[a4paper,12pt,oneside]{article}
+
+% To use this template, you have to have a halfway complete LaTeX
+% installation and you have to run pdflatex, followed by bibtex,
+% following by one-two more pdflatex runs.
+%
+% Note thad usimg a spel chequer (e.g. ispell, aspell) is generolz
+% a very guud ideo.
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+\usepackage[english]{babel}     %% typographie franÃ§aise
+\usepackage[style=numeric,language=english]{biblatex}
+\usepackage{parskip}		%% blank lines between paragraphs, no indent
+\usepackage[margin=1cm]{caption}%% give long captions a margin
+\usepackage{booktabs}           %% typesetting nice tables
+\usepackage[pdftex]{graphicx}	%% include graphics, preferrably pdf
+\usepackage[pdftex]{hyperref}	%% many PDF options can be set here
+\pdfadjustspacing=1		%% force LaTeX-like character spacing
+\usepackage{tabularx}
+\usepackage{hyperref}
+%\usepackage[ngerman]{babel}
+
+\newcommand{\mylastname}{DKFZ Team}
+\newcommand{\myfirstname}{RadPlanBio}
+\newcommand{\mynumber}{30001921}
+\newcommand{\myname}{\myfirstname{} \mylastname{}}
+\newcommand{\mytitle}{Mapping SQL (Pre)-clinical Data from Cancer Radiooncology and
+Radiobiology Studies to Ontology}
+\newcommand{\mysupervisor}{Wahyu Wijaya Hadiwikarta, PhD.}
+
+\hypersetup{
+  pdfauthor = {\myname},
+  pdftitle = {\mytitle},
+  pdfkeywords = {},
+  colorlinks = {true},
+  linkcolor = {blue}
+}
+
+\addbibresource{bsc-sample.bib}
+
+\begin{document}
+  \pagenumbering{roman}
+
+  \thispagestyle{empty}
+
+% \begin{flushleft}
+%    \includegraphics[scale=0.8]{bsc-logo}
+%  \end{flushleft}
+  \vspace*{40mm}
+  \begin{center}
+    \huge
+    \textbf{\mytitle}
+  \end{center}
+  \vspace*{4mm}
+  \begin{center}
+   \Large by
+  \end{center}
+  \vspace*{4mm}
+  \begin{center}
+    \LARGE
+    \textbf{\myname}
+  \end{center}
+  \vspace*{20mm}
+  \begin{center}
+    \Large
+    The Documentation of the added concepts to \texttt{ROO.owl}
+  \end{center}
+  \vfill
+  \begin{flushleft}
+    \large
+    %Submission: \today \hfill 
+    Supervisors: \mysupervisor \\
+    \rule{\textwidth}{1pt}
+  \end{flushleft}
+  \begin{center}
+    Jacobs University Bremen $|$ Department of Computer Science and Electrical Engineering $|$ 
+    DKFZ $|$ Department of Radiooncology and Radiobiology
+  \end{center}
+
+  \newpage
+  \thispagestyle{empty}
+  
+  \newpage
+  \tableofcontents
+
+  \clearpage
+  \pagenumbering{arabic}
+
+  \section{Added concepts}
+
+  \subsection{cells}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000001
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: cells
+      \item \textbf{Definition}: A dimensionless unit which denotes a count of cells from a laboratory procedure.
+  \end{itemize}  
+
+  \subsection{TVA Responsible}
+
+  \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000002
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: TVA Responsible
+       \item \textbf{Definition}: A person with responsibility on a study and providing report to the regional Regierungspräsidium (RP).
+  \end{itemize}  
+
+  \subsection{Main TVA Responsible Person}
+
+  \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000003
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: Main TVA Responsible Person
+  \end{itemize}  
+
+  \subsection{Deputy TVA Responsible Person}
+
+  \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000004
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: Deputy TVA Responsible
+  \end{itemize}  
+
+
+  \subsection{Regierungspräsidium}
+
+  \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000005
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: Regierungspräsidium
+      \item \textbf{Definition}: A regional organization in Germany responsible for approval and notification procedures for animal experiments according to the Animal Welfare Act and the Animal Welfare Experimental Animal Ordinance.
+  \end{itemize}  
+
+
+  \subsection{Animal Identifier}
+
+  \begin{itemize}
+      \item \textbf{IRI}: http://www.cancerdata.org/roo/DKFZ000006
+      \item \textbf{Creator}: Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim
+      \item \textbf{label}: Animal Identifier
+      \item \textbf{Definition}: An identifier which is used to uniquely identify an animal in a certain context (cohort, hospital, trial). Can be a pseudonym.
+  \end{itemize}
+
+  
+  \subsection{Patient Derived Xenograft}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C122936
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Patient Derived Xenograft
+      \item \textbf{Definition}: A mouse model for human cancer studies in which a human-derived tumor sample is transplanted into an immunodeficient mouse.
+  \end{itemize}  
+  
+  \subsection{Protocol Identifier}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C132299
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Protocol Identifier
+      \item \textbf{Definition}: A sequence of letters, numbers, or other characters that uniquely identifies a study protocol.
+  \end{itemize}
+  
+  \subsection{Other Organism Groupings}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C14376
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Other Organism Groupings
+      \item \textbf{Definition}: A non-taxonomic grouping of organisms based on a shared characteristic.
+  \end{itemize}  
+
+  \subsection{Other Organism Groupings}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C15350
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Total-Body Irradiation
+      \item \textbf{Definition}: A therapeutic procedure that involves the irradiation of the whole body with ionizing or non-ionizing radiation.
+  \end{itemize}  
+
+
+   \subsection{Cell Line-Derived Xenograft}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C156443
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Cell Line-Derived Xenograft
+      \item \textbf{Definition}: A biospecimen derived from the culturing of a derived cell line in a non-human organism.
+  \end{itemize}  
+
+
+  \subsection{Site of Tumor}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C157120
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Site of Tumor
+      \item \textbf{Definition}: The anatomic site of the tumor.
+  \end{itemize}
+
+
+   \subsection{Adverse Event Term}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C164320
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Adverse Event Term
+      \item \textbf{Definition}: A term that refers to an adverse event, often taken from a list of standardized terms.
+  \end{itemize}  
+
+
+  \subsection{Genotype}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C16631
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Genotype
+      \item \textbf{Definition}: The genetic constitution of an organism or cell, as distinct from its expressed features or phenotype.
+  \end{itemize}  
+
+
+   \subsection{Histology}
+
+   \begin{itemize}
+      \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C16681
+      \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+      \item \textbf{label}: Histology
+      \item \textbf{Definition}: The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains.
+  \end{itemize}  
+
+
+  \subsection{Country of Investigational Site}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C170990
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Country of Investigational Site
+     \item \textbf{Definition}: The country in which the study investigational site is located.
+  \end{itemize}  
+
+
+  \subsection{Investigational Arm}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C174266
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Investigational Arm
+     \item \textbf{Definition}: An arm describing the intervention or treatment plan for a group of participants in the study receiving test product(s).
+  \end{itemize}  
+
+
+  \subsection{Other}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C17649
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Other
+     \item \textbf{Definition}: Different than the one(s) previously specified or mentioned.
+  \end{itemize}  
+
+  
+  \subsection{Institutional Animal Care and Use Committee}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C19487
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Institutional Animal Care and Use Committee
+     \item \textbf{Definition}: A self-regulating entity mandated by federal law to be established at an institution that uses laboratory animals for research or instructional purposes to oversee and evaluate all aspects of the institution's animal use and care program.
+  \end{itemize}
+
+
+  \subsection{Social Circumstances}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C20188
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Social Circumstances
+     \item \textbf{Definition}: A set of concepts that results from or is influenced by criteria or activities associated with the social environment of a person.
+  \end{itemize}
+
+
+  \subsection{Principal Investigator}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C19924
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Principal Investigator
+     \item \textbf{Definition}: An investigator who is responsible for all aspects of the conduct of a study.
+  \end{itemize}
+
+
+  \subsection{Anesthetic Agent}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C245
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Anesthetic Agent
+     \item \textbf{Definition}: A pharmacological agent that acts in a reversible fashion and can be applied either locally or systemically to cause a partial or total loss of sensation and pain or to induce unconsciousness.
+  \end{itemize}
+
+
+
+  \subsection{Address}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C25407
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Address
+     \item \textbf{Definition}: A standardized representation of the location of a person, business, building, or organization.
+  \end{itemize}
+
+
+  
+  \subsection{Virus-Related Malignant Neoplasm}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C27673
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Virus-Related Malignant Neoplasm
+     \item \textbf{Definition}: This category currently includes only malignancies in which there is a well documented association between the neoplastic process and a specific virus as a causative agent.
+  \end{itemize}
+
+
+  \subsection{Injection Route of Administration}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C28160
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Injection Route of Administration
+     \item \textbf{Definition}: Administration of a drug into a location within the body; this can be achieved either through an established access or via a needle.
+  \end{itemize}
+
+
+  \subsection{Data and Time}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C37939
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Data and Time
+     \item \textbf{Definition}: An expression of both date and time that an event has happened or will happen.
+  \end{itemize}
+
+
+  \subsection{Route of Administration}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C38114
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Route of Administration
+     \item \textbf{Definition}: Designation of the part of the body through which or into which, or the way in which, the medicinal product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration.
+  \end{itemize}
+
+
+  \subsection{Name}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C42614
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Name
+     \item \textbf{Definition}: The words or language units by which a thing is known.
+  \end{itemize}
+
+
+  \subsection{Workflow}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C42753
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Workflow
+     \item \textbf{Definition}: The operational aspect of a work procedure: how tasks are structured, who performs them, what their relative order is, how they are synchronized, how information flows to support the tasks and how tasks are being tracked.
+  \end{itemize}
+
+
+  \subsection{Boolean}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C45254
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Boolean
+     \item \textbf{Definition}: The type of an expression with two possible values, "true" and "false".
+  \end{itemize}
+
+
+  \subsection{Species}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C45293
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Species
+     \item \textbf{Definition}: A group of organisms that differ from all other groups of organisms and that are capable of breeding and producing fertile offspring.
+  \end{itemize}
+
+
+  \subsection{Solvent}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C45790
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Solvent
+     \item \textbf{Definition}: A liquid that dissolves or that is capable of dissolving; the component of a solution that is present in greater amount.
+  \end{itemize}
+
+
+  \subsection{Spontaneous}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C48307
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Spontaneous
+     \item \textbf{Definition}: Happening or arising without apparent external cause.
+  \end{itemize}
+
+
+  \subsection{Cell Count}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C48938
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Cell Count
+     \item \textbf{Definition}: A procedure to determine the number of cells in a sample.
+  \end{itemize}
+
+
+  \subsection{Site Investigator}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C51873
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Site Investigator
+     \item \textbf{Definition}: An investigator designated to a specific study location.
+  \end{itemize}
+
+
+  \subsection{Site Leader}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C51874
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Site Leader
+     \item \textbf{Definition}: A person in charge of a group at the location of a research project.
+  \end{itemize}
+
+
+  \subsection{Product}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C51980
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Product
+     \item \textbf{Definition}: The end result of a manufacturing process; anything that is produced.
+  \end{itemize}
+
+
+  \subsection{Adverse Event by Cause}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C52681
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Adverse Event by Cause
+  \end{itemize}
+
+
+  \subsection{Subject Unique Identifier}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C69256
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Subject Unique Identifier
+     \item \textbf{Definition}: A unique identifier for a subject in a study.
+  \end{itemize}
+
+
+  \subsection{Concept Unique Identifier}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C70818
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Concept Unique Identifier
+     \item \textbf{Definition}: A unique identifier (code) assigned for each concept that belongs to a particular controlled terminology.
+  \end{itemize}
+
+
+  \subsection{Study Site}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C80403
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Study Site
+     \item \textbf{Definition}: A facility in which study/protocol activities are conducted.
+  \end{itemize}
+
+
+  \subsection{Investigator Identifier}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C83078
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Investigator Identifier
+     \item \textbf{Definition}: A facility in which study/protocol activities are conducted.
+  \end{itemize}
+
+
+  \subsection{Birth Date and Time}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C83217
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Birth Date and Time
+     \item \textbf{Definition}: The date and time of a birth event.
+  \end{itemize}
+
+
+  \subsection {Adverse Event Action Taken Relationship Type Code}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C93707
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Adverse Event Action Taken Relationship Type Code
+     \item \textbf{Definition}: A coded value specifying the kind of action taken for the adverse event.
+  \end{itemize}
+
+
+  \subsection {Animal Organism Strain}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C94171
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Animal Organism Strain
+     \item \textbf{Definition}: A group of presumed common ancestry with clear-cut physiological but usually not morphological distinctions.
+  \end{itemize}
+
+
+  \subsection {Filter}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C41199
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Filter
+     \item \textbf{Definition}: A device that removes something from whatever passes through it.
+  \end{itemize}
+
+
+  \subsection {Stage}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C48308
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Stage
+     \item \textbf{Definition}: Any distinct time period in a sequence of events.
+  \end{itemize}
+
+
+  \subsection {Measurement}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl\#C25209
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/NCIT
+     \item \textbf{label}: Measurement
+     \item \textbf{Definition}: Annotation used to indicate the size or magnitude of something that was determined by comparison to a standard.
+  \end{itemize}
+
+  
+  \subsection {Primary Health Condition}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://purl.bioontology.org/ontology/LNC/LP189402-3
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/LNC
+     \item \textbf{label}: Primary Health Condition
+  \end{itemize}
+
+
+  \subsection {gram}
+
+  \begin{itemize}
+     \item \textbf{IRI}: http://purl.obolibrary.org/obo/UO\_0000021
+     \item \textbf{Defined By}: http://purl.bioontology.org/ontology/UO
+     \item \textbf{label}: gram
+     \item \textbf{Definition}: A mass unit which is equal to one thousandth of a kilogram or $10^{-3}$ kg.
+  \end{itemize}
+  
+
+  
+
+
+  
+  
+  \nocite{JS06}
+
+  \newpage
+  %\bibliographystyle{unsrt}
+  %\bibliography{bsc-sample}
+  \printbibliography
+  
+\end{document}

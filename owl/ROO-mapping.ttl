@@ -1,0 +1,14 @@
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:mapping--325974154> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT \"participantid\" FROM \"studydataset\".\"c18d131_a_subject_30f6wo_30gy\""
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class ncit:C83083;
+      rr:template "http://www.cancerdata.org/roo/labkey/c18d131_a_subject_30f6wo_30gy/{participantid}";
+      rr:termType rr:IRI
+    ] .

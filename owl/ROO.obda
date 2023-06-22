@@ -1,0 +1,31 @@
+[PrefixDeclaration]
+:		http://www.cancerdata.org/roo/
+dc:		http://purl.org/dc/elements/1.1/
+gn:		http://www.geonames.org/ontology#
+dcm:		http://semantic-dicom.org/dcm#
+fma:		http://purl.org/sig/ont/fma/
+obo:		http://purl.obolibrary.org/obo/
+owl:		http://www.w3.org/2002/07/owl#
+rcd:		http://purl.bioontology.org/ontology/RCD/
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+sty:		http://purl.bioontology.org/ontology/STY/
+wgs:		http://www.w3.org/2003/01/geo/wgs84_pos#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+ncit:		http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#
+obda:		https://w3id.org/obda/vocabulary#
+ocre:		http://purl.org/net/OCRe/statistics.owl#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+ctcae:		http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#
+icd10:		http://purl.bioontology.org/ontology/ICD10/
+radlex:		http://www.owl-ontologies.com/Ontology1415135201.owl#
+metadata:	http://data.bioontology.org/metadata/
+bioportal:	http://bioportal.bioontology.org#
+
+[MappingDeclaration] @collection [[
+mappingId	mapping-1177255632
+target		:labkey/c18d131_a_subject_30f6wo_30gy/{participantid} a ncit:C83083 . 
+source		SELECT "participantid" FROM "studydataset"."c18d131_a_subject_30f6wo_30gy"
+]]
+
