@@ -2855,7 +2855,14 @@
         <skos:definition xml:lang="en">A mouse model for human cancer studies in which a human-derived tumor sample is transplanted into an immunodeficient mouse.</skos:definition>
     </owl:Class>
     
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532 -->
 
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">With configuration</rdfs:label>
+        <skos:definition xml:lang="en">The spatial property of the way in which something is placed.</skos:definition>
+    </owl:Class>
 
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603 -->
 
@@ -20593,6 +20600,15 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <rdfs:label xml:lang="en">Main TVA Responsible Person</rdfs:label>
     </owl:Class>
     
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000007 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000007">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T075"/>
+        <dc:creator>DKFZ E220</dc:creator>
+        <rdfs:label xml:lang="en">Radiation Research Device</rdfs:label>
+        <skos:definition xml:lang="en">A device that is used to perform preclinical/laboratory research activities on radiation therapy.</skos:definition>
+    </owl:Class>
 
 
     <!-- http://www.cancerdata.org/roo/DKFZ000004 -->
