@@ -20594,6 +20594,15 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     </owl:Class>
     
 
+    <!-- http://www.cancerdata.org/roo/DKFZ000007 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000007">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T075"/>
+        <dc:creator>DKFZ E220</dc:creator>
+        <rdfs:label xml:lang="en">Radiation Research Device</rdfs:label>
+        <skos:definition xml:lang="en">A device that is used to perform preclinical/laboratory research activities on radiation therapy.</skos:definition>
+    </owl:Class>
+
 
     <!-- http://www.cancerdata.org/roo/DKFZ000004 -->
 
