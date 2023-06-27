@@ -2855,7 +2855,14 @@
         <skos:definition xml:lang="en">A mouse model for human cancer studies in which a human-derived tumor sample is transplanted into an immunodeficient mouse.</skos:definition>
     </owl:Class>
     
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532 -->
 
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">With configuration</rdfs:label>
+        <skos:definition xml:lang="en">The spatial property of the way in which something is placed.</skos:definition>
+    </owl:Class>
 
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603 -->
 
