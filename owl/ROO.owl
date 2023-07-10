@@ -2855,14 +2855,7 @@
         <skos:definition xml:lang="en">A mouse model for human cancer studies in which a human-derived tumor sample is transplanted into an immunodeficient mouse.</skos:definition>
     </owl:Class>
     
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">With configuration</rdfs:label>
-        <skos:definition xml:lang="en">The spatial property of the way in which something is placed.</skos:definition>
-    </owl:Class>
 
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C123603 -->
 
@@ -3942,6 +3935,7 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25190">
         <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T016"/>
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T098"/>
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Person</rdfs:label>
         <skos:definition xml:lang="en">A human being.</skos:definition>
@@ -3956,6 +3950,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Weight</rdfs:label>
         <skos:definition xml:lang="en">The vertical force exerted by a mass as a result of gravity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25209 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25209">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+        <skos:definition xml:lang="en">Annotation used to indicate the size or magnitude of something that was determined by comparison to a standard.</skos:definition>
     </owl:Class>
     
 
@@ -3990,6 +3995,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Left</rdfs:label>
         <skos:definition xml:lang="en">Being or located on or directed toward the side of the body to the west when facing north.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25284 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25284">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T080"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <skos:definition xml:lang="en">Something distinguishable as an identifiable class based on common qualities.</skos:definition>
     </owl:Class>
     
 
@@ -4993,6 +5009,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
     
 
 
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41199 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41199">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T073"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+        <skos:definition xml:lang="en">A device that removes something from whatever passes through it.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41227">
@@ -5191,6 +5218,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Spontaneous</rdfs:label>
         <skos:definition xml:lang="en">Happening or arising without apparent external cause.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48308 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48308">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Stage</rdfs:label>
+        <skos:definition xml:lang="en">Any distinct time period in a sequence of events.</skos:definition>
     </owl:Class>
     
 
@@ -6233,6 +6271,17 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Leucovorin Calcium</rdfs:label>
         <skos:altLabel xml:lang="en">Calcium Folinate</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61532">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T082"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">With configuration</rdfs:label>
+        <skos:definition xml:lang="en">The spatial property of the way in which something is placed.</skos:definition>
     </owl:Class>
     
 
@@ -8472,15 +8521,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:label xml:lang="en">Manufactured Object</rdfs:label>
         <skos:definition xml:lang="en">A physical object made by human beings.</skos:definition>
     </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41199">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T073"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Filter</rdfs:label>
-        <skos:definition xml:lang="en">A device that removes something from whatever passes through it.</skos:definition>
-    </owl:Class>
     
 
 
@@ -8535,15 +8575,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Temporal Concept</rdfs:label>
         <skos:definition xml:lang="en">A concept which pertains to time or duration.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48308">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Stage</rdfs:label>
-        <skos:definition xml:lang="en">Any distinct time period in a sequence of events.</skos:definition>
     </owl:Class>
     
 
@@ -9051,15 +9082,6 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/STY</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Functional Concept</rdfs:label>
         <skos:definition xml:lang="en">A concept which is of interest because it pertains to the carrying out of a process or activity.</skos:definition>
-    </owl:Class>
-
-
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25209">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T169"/>
-        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Measurement</rdfs:label>
-        <skos:definition xml:lang="en">Annotation used to indicate the size or magnitude of something that was determined by comparison to a standard.</skos:definition>
     </owl:Class>
     
 
@@ -20601,15 +20623,6 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
     </owl:Class>
     
 
-    <!-- http://www.cancerdata.org/roo/DKFZ000007 -->
-
-    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000007">
-        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T075"/>
-        <dc:creator>DKFZ E220</dc:creator>
-        <rdfs:label xml:lang="en">Radiation Research Device</rdfs:label>
-        <skos:definition xml:lang="en">A device that is used to perform preclinical/laboratory research activities on radiation therapy.</skos:definition>
-    </owl:Class>
-
 
     <!-- http://www.cancerdata.org/roo/DKFZ000004 -->
 
@@ -20639,6 +20652,17 @@ For more information: http://dx.doi.org/10.1093/jicru/ndq001</skos:definition>
         <dc:creator>Wahyu W. Hadiwikarta and Abumansur Sabyrrakhim</dc:creator>
         <rdfs:label xml:lang="en">Animal Identifier</rdfs:label>
         <skos:definition xml:lang="en">An identifier which is used to uniquely identify an animal in a certain context (cohort, hospital, trial). Can be a pseudonym.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cancerdata.org/roo/DKFZ000007 -->
+
+    <owl:Class rdf:about="http://www.cancerdata.org/roo/DKFZ000007">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T075"/>
+        <dc:creator>DKFZ E220</dc:creator>
+        <rdfs:label xml:lang="en">Radiation Research Device</rdfs:label>
+        <skos:definition xml:lang="en">A device that is used to perform preclinical/laboratory research activities on radiation therapy.</skos:definition>
     </owl:Class>
     
 
