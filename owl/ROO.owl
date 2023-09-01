@@ -2503,6 +2503,26 @@
         <rdfs:label xml:lang="en">Scanning Proton Beam Therapy</rdfs:label>
         <skos:definition xml:lang="en">Proton beam radiation therapy in which magnets deflect and steer the proton beam.</skos:definition>
     </owl:Class>
+
+
+       <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54652 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54652">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T029"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Radiation Arc</rdfs:label>
+        <skos:definition xml:lang="en">The path or area of the body covered by a moving source of radiation during treatment.</skos:definition>
+    </owl:Class>
+
+    
+       <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C49881 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C49881">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T074"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Collimator Device</rdfs:label>
+        <skos:definition xml:lang="en">A diaphragm or system of diaphragms made of an absorbing material, designed to define and restrict the dimensions and direction of a beam of radiation.</skos:definition>
+    </owl:Class>
     
 
 
@@ -2513,6 +2533,27 @@
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Scattering Proton Beam Therapy</rdfs:label>
         <skos:definition xml:lang="en">Proton beam radiation therapy in which the proton beam is spread by placing scattering material in the path of the protons.</skos:definition>
+    </owl:Class>
+
+
+      <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179804 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179804">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T081"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Number Fraction</rdfs:label>
+        <skos:definition xml:lang="en">The quotient of the number of particular entities (constituents) and the number of all constituents in the system.</skos:definition>
+    </owl:Class>
+
+
+
+     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42543 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42543">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T081"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Radian</rdfs:label>
+        <skos:definition xml:lang="en">A SI-derived unit of plane angle measurement defined and named by James Thomson in 1873. One radian is the plane angle between two radii of a circle that cuts off on the circumference an arc equal in length to the radius. There are 2pi radians in a complete circle. SI units: m/m = 1.</skos:definition>
     </owl:Class>
     
 
@@ -4854,6 +4895,16 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Data and Time</rdfs:label>
         <skos:definition xml:lang="en">An expression of both date and time that an event has happened or will happen.</skos:definition>
     </owl:Class>
+
+
+        <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25709 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25709 ">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T081"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/NCIT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+        <skos:definition xml:lang="en">A named quantity in terms of which other quantities are measured or specified, used as a standard measurement of like kinds.</skos:definition>
+    </owl:Class>
     
 
 
@@ -5742,7 +5793,9 @@ For most authors, this is the cerebral hemispheres plus the basal ganglia, but m
         <rdfs:label xml:lang="en">Therapeutic Procedure</rdfs:label>
         <skos:definition xml:lang="en">An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process.</skos:definition>
     </owl:Class>
-    
+
+
+
 
 
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C505 -->
@@ -7588,7 +7641,16 @@ The Mayo Clinic regimen, Roswell Park regimen, and de Gramont regimen are differ
         <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/LNC</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Primary Health Condition</rdfs:label>
     </owl:Class>
-    
+
+
+        <!-- http://purl.bioontology.org/ontology/LNC/LP207118-3 -->
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/LNC/LP207118-3">
+        <rdfs:subClassOf rdf:resource="http://purl.bioontology.org/ontology/STY/T079"/>
+        <rdfs:isDefinedBy>http://purl.bioontology.org/ontology/LNC</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Date and Time Range</rdfs:label>
+    </owl:Class>
+
 
 
     <!-- http://purl.bioontology.org/ontology/RCD/X20XN -->
