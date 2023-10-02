@@ -52,6 +52,7 @@
 \contentsline {subsection}{\numberline {1.50}gram}{11}{subsection.1.50}%
 \contentsline {subsection}{\numberline {1.51}Radiation Research Device}{11}{subsection.1.51}%
 \contentsline {subsection}{\numberline {1.52}With configuration}{11}{subsection.1.52}%
+<<<<<<< Updated upstream
 \contentsline {subsection}{\numberline {1.53}Study}{11}{subsection.1.53}%
 \contentsline {subsection}{\numberline {1.54}Mortality and Death Details}{12}{subsection.1.54}%
 \contentsline {subsection}{\numberline {1.55}Adverse Events}{12}{subsection.1.55}%
@@ -60,3 +61,21 @@
 \contentsline {subsection}{\numberline {1.58}Cervical Dislocation}{12}{subsection.1.58}%
 \contentsline {subsection}{\numberline {1.59}Asphyxia}{13}{subsection.1.59}%
 \contentsline {subsection}{\numberline {1.60}Blood Draining}{13}{subsection.1.60}%
+=======
+\contentsline {subsection}{\numberline {1.53}Person}{11}{subsection.1.53}%
+\contentsline {subsection}{\numberline {1.54}Type}{12}{subsection.1.54}%
+\contentsline {subsection}{\numberline {1.55}Unit of measure}{12}{subsection.1.55}%
+\contentsline {subsection}{\numberline {1.56}Fraction}{12}{subsection.1.56}%
+\contentsline {subsection}{\numberline {1.57}Radiation Arc}{12}{subsection.1.57}%
+\contentsline {subsection}{\numberline {1.58}Collimator Device}{12}{subsection.1.58}%
+\contentsline {subsection}{\numberline {1.59}Number Fraction}{13}{subsection.1.59}%
+\contentsline {subsection}{\numberline {1.60}Angle}{13}{subsection.1.60}%
+\contentsline {subsection}{\numberline {1.61}Static}{13}{subsection.1.61}%
+\contentsline {subsection}{\numberline {1.62}Dynamic}{13}{subsection.1.62}%
+\contentsline {subsection}{\numberline {1.63}Laboratory Test Time}{13}{subsection.1.63}%
+\contentsline {subsection}{\numberline {1.64}Length of external beam radiation therapy beam}{14}{subsection.1.64}%
+\contentsline {subsection}{\numberline {1.65}Photon}{14}{subsection.1.65}%
+\contentsline {subsection}{\numberline {1.66}Proton}{14}{subsection.1.66}%
+\contentsline {subsection}{\numberline {1.67}Ion}{14}{subsection.1.67}%
+\contentsline {subsection}{\numberline {1.68}Substance}{14}{subsection.1.68}%
+>>>>>>> Stashed changes
