@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.7.17)  4 AUG 2023 15:57
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.22)  17 SEP 2023 02:06
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,9 +10,15 @@ entering extended mode
 (main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30>
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\size12.clo
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+>>>>>>> Stashed changes
 File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
@@ -23,11 +33,16 @@ File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+>>>>>>> Stashed changes
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -39,6 +54,19 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+>>>>>>> Stashed changes
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count193
@@ -54,28 +82,49 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks19
 
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/psnfss\helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
 (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+) (C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+>>>>>>> Stashed changes
 Package: babel 2023/03/28 3.87 The Babel package
 \babel@savecnt=\count196
 \U@D=\dimen149
 \l@unhyphenated=\language79
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+>>>>>>> Stashed changes
 \bbl@readstream=\read2
 \bbl@dirlevel=\count197
 
 *************************************
 * Local config file bblopts.cfg used
 *
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
 (C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.
+ldf
+>>>>>>> Stashed changes
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -84,6 +133,7 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
 ))
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -99,12 +149,33 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babe
+l-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+>>>>>>> Stashed changes
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count198
@@ -126,6 +197,30 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (C:\Program Files\MiKTeX\tex/latex/url\url.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count198
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+y
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count199
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+>>>>>>> Stashed changes
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -189,7 +284,11 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-dm.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+>>>>>>> Stashed changes
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -281,13 +380,22 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-compat.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.de
+f
+>>>>>>> Stashed changes
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+>>>>>>> Stashed changes
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \c@textcitecount=\count380
 \c@textcitetotal=\count381
@@ -306,12 +414,22 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.b
+bx
+>>>>>>> Stashed changes
 File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.
+bbx
+>>>>>>> Stashed changes
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count389
 \c@bbx:relatedtotal=\count390
@@ -319,7 +437,12 @@ File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.c
+bx
+>>>>>>> Stashed changes
 File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -336,16 +459,28 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.cfg
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+>>>>>>> Stashed changes
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
+<<<<<<< Updated upstream
 
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2023-03-30 L3 programming layer (loader) 
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-03-30 L3 programming layer (loader) 
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+>>>>>>> Stashed changes
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count391
 \l__pdf_internal_box=\box51
@@ -355,12 +490,20 @@ Package biblatex Info: ... and expl3
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 (C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl
+3.sty
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
+se.sty
+>>>>>>> Stashed changes
 Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/parskip\parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 )
@@ -368,6 +511,15 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 Package: caption 2023/03/12 v3.6j Customizing captions (AR)
 
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+>>>>>>> Stashed changes
 Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
 \caption@tempdima=\dimen150
 \captionmargin=\dimen151
@@ -381,8 +533,13 @@ Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count392
 \c@continuedfloat=\count393
+<<<<<<< Updated upstream
 )
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
+=======
+) (C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.st
+y
+>>>>>>> Stashed changes
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen158
 \lightrulewidth=\dimen159
@@ -402,6 +559,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count397
 \@thisrulewidth=\dimen170
 )
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -412,16 +570,35 @@ Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
+>>>>>>> Stashed changes
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f
+>>>>>>> Stashed changes
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen171
 \Gin@req@width=\dimen172
 )
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
 
@@ -447,6 +624,37 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestring
 .sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacr
+o.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
+>>>>>>> Stashed changes
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count398
@@ -454,11 +662,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \@linkdim=\dimen173
 \Hy@linkcounter=\count399
 \Hy@pagecounter=\count400
+<<<<<<< Updated upstream
  (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+=======
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+>>>>>>> Stashed changes
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
@@ -468,6 +682,17 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 \Hy@SavedSpaceFactor=\count401
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
+y
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count401
+ (C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+>>>>>>> Stashed changes
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -482,11 +707,19 @@ Package hyperref Info: Bookmarks ON on input line 4425.
 \c@Hy@tempcnt=\count402
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen174
+<<<<<<< Updated upstream
 
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty
+>>>>>>> Stashed changes
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -501,7 +734,11 @@ Package hyperref Info: Link coloring OFF on input line 6062.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+>>>>>>> Stashed changes
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -510,11 +747,18 @@ package with kernel methods
 \c@Hfootnote=\count406
 )
 Package hyperref Info: Driver: hpdftex.
+<<<<<<< Updated upstream
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
 
 (C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
+=======
+ (C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+>>>>>>> Stashed changes
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
@@ -522,22 +766,39 @@ with kernel methods
 \Fld@listcount=\count407
 \c@bookmark@seq@number=\count408
 
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.s
 ty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.s
 ty
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty
+>>>>>>> Stashed changes
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip72
+<<<<<<< Updated upstream
 ) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
 (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+=======
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+>>>>>>> Stashed changes
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen177
 \ar@mcellbox=\box52
@@ -565,9 +826,16 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotereset=\count411
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 4
 4.
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (main.aux)
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+)
+(main.aux)
+>>>>>>> Stashed changes
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -625,7 +893,13 @@ LaTeX Font Info:    ... okay on input line 44.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+=======
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.l
+bx
+>>>>>>> Stashed changes
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -642,7 +916,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
+>>>>>>> Stashed changes
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count412
 \scratchdimen=\dimen184
@@ -655,11 +934,18 @@ Package caption Info: End \AtBeginDocument code.
 \MPnumerator=\count416
 \makeMPintoPDFobject=\count417
 \everyMPtoPDFconversion=\toks23
+<<<<<<< Updated upstream
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+=======
+)
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
+>>>>>>> Stashed changes
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -667,14 +953,31 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 
 (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+>>>>>>> Stashed changes
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 
+<<<<<<< Updated upstream
 (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 44.
  (main.out)
 (main.out)
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+))
+Package hyperref Info: Link coloring ON on input line 44.
+ (main.out) (main.out)
+>>>>>>> Stashed changes
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -686,8 +989,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 79.
  [1
 
+<<<<<<< Updated upstream
 {C:/Users/Myta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Fil
 es/MiKTeX/fonts/enc/dvips/base/8r.enc}] (main.toc [2])
+=======
+{C:/Users/betül/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/bet
+ül/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (main.toc [2])
+>>>>>>> Stashed changes
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -695,9 +1003,16 @@ es/MiKTeX/fonts/enc/dvips/base/8r.enc}] (main.toc [2])
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
 7.
 
+<<<<<<< Updated upstream
 (C:\Users\Myta\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 ) [1
+=======
+(C:\Users\betül\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+[1
+>>>>>>> Stashed changes
 
 ]
 Overfull \hbox (2.3989pt too wide) in paragraph at lines 164--165
@@ -705,6 +1020,7 @@ Overfull \hbox (2.3989pt too wide) in paragraph at lines 164--165
 , or other char-ac-ters that uniquely
  []
 
+<<<<<<< Updated upstream
 [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
 
 LaTeX Warning: Citation 'JS06' undefined on input line 679.
@@ -712,6 +1028,15 @@ LaTeX Warning: Citation 'JS06' undefined on input line 679.
 [13]
 
 LaTeX Warning: Empty bibliography on input line 684.
+=======
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
+
+LaTeX Warning: Citation 'JS06' undefined on input line 752.
+
+[15]
+
+LaTeX Warning: Empty bibliography on input line 757.
+>>>>>>> Stashed changes
 
 (main.aux)
 
@@ -723,8 +1048,13 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
+<<<<<<< Updated upstream
 (rerunfilecheck)             Before: 8652A6EE7F0AA3B90EC7D08B488E37A0;9120
 (rerunfilecheck)             After:  ED04FA4F565A3528B57B04A74350B537;9128.
+=======
+(rerunfilecheck)             Before: 7F3B04273D09CA8DE360A41353D563F1;9789
+(rerunfilecheck)             After:  0B36FC32BD9E865DE1919E869F372D39;9893.
+>>>>>>> Stashed changes
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -735,6 +1065,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< Updated upstream
  18748 strings out of 476331
  334844 string characters out of 5797583
  1869660 words of memory out of 5000000
@@ -753,4 +1084,26 @@ PDF statistics:
  434 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 500000)
  489 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 18765 strings out of 476331
+ 338356 string characters out of 5787293
+ 1869660 words of memory out of 5000000
+ 38900 multiletter control sequences out of 15000+600000
+ 530162 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 63i,6n,68p,1131b,2199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/betül/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/betül/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr8.pfb><C:/Users/betül/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/Users/betül/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/betül/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/betül/AppData/Local/
+Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/betül/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (18 pages, 136331 bytes).
+PDF statistics:
+ 479 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 545 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> Stashed changes
 
